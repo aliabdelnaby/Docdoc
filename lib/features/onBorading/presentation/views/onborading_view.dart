@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class StartView extends StatelessWidget {
-  const StartView({super.key});
+class OnBoardingView extends StatelessWidget {
+  const OnBoardingView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
         child: Text(
-          'Start View',
+          'OnBoarding View',
         ),
       ),
     );
