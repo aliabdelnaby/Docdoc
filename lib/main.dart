@@ -13,7 +13,11 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Docdoc',
-      home: Scaffold(),
+      home: Scaffold(
+        body: Center(
+          child: Text('Docdoc'),
+        ),
+      ),
     );
   }
 }
