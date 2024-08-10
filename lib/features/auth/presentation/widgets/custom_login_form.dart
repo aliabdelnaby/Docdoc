@@ -1,4 +1,5 @@
 import 'package:docdoc/features/auth/presentation/widgets/custom_auth_text_field.dart';
+import 'package:docdoc/features/auth/presentation/widgets/remember_me_and_forgot_password.dart';
 import 'package:flutter/material.dart';
 
 class CustomLoginForm extends StatelessWidget {
@@ -33,6 +34,8 @@ class CustomLoginForm extends StatelessWidget {
           },
           onChanged: (p0) {},
         ),
+        const RememberMeAndForgotPassword(),
+        const SizedBox(height: 32),
       ],
     );
   }
