@@ -10,4 +10,6 @@ class AppColors {
   static const Color loginOptions = Color(0xFFF5F5F5);
   static const Color flagArrow = Color(0xFFF5F5F5);
   static const Color loginBlack = Color(0xFF242424);
+  static const Color textFieldBorder = Color(0xFFEDEDED);
+  static const Color filledTextField = Color(0xffFDFDFF);
 }

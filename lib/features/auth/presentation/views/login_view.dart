@@ -1,3 +1,4 @@
+import 'package:docdoc/features/auth/presentation/widgets/custom_login_form.dart';
 import 'package:docdoc/features/auth/presentation/widgets/login_header_text.dart';
 import 'package:flutter/material.dart';
 
@@ -10,16 +11,13 @@ class LoginView extends StatelessWidget {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsetsDirectional.only(
-              top: 50,
-              bottom: 20,
-              start: 24,
-              end: 24,
-            ),
+            padding:
+                EdgeInsetsDirectional.symmetric(horizontal: 24, vertical: 50),
             child: Column(
               children: [
                 LoginHeaderText(),
                 SizedBox(height: 36),
+                CustomLoginForm(),
               ],
             ),
           ),
