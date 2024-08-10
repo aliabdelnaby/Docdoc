@@ -1,3 +1,5 @@
+import 'package:go_router/go_router.dart';
+
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
@@ -52,7 +54,7 @@ class _RememberMeAndForgotPasswordState
         ),
         InkWell(
           onTap: () {
-            // Navigate to Forgot Password screen
+            context.push('/forgotPassword');
           },
           child: Text(
             "Forgot Password?",

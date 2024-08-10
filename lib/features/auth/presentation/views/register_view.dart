@@ -1,7 +1,7 @@
-import 'package:docdoc/features/auth/presentation/widgets/login/login_header_text_section.dart';
-import 'package:docdoc/features/auth/presentation/widgets/login/login_options_section.dart';
-import 'package:docdoc/features/auth/presentation/widgets/login/terms_and_dont_have_account_section.dart';
-import 'package:docdoc/features/auth/presentation/widgets/register/custom_register_form_section.dart';
+import '../widgets/login/login_header_text_section.dart';
+import '../widgets/login/login_options_section.dart';
+import '../widgets/login/terms_and_dont_have_account_section.dart';
+import '../widgets/custom_register_form_section.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
