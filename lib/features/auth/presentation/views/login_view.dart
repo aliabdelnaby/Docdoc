@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../widgets/login/custom_login_form_section.dart';
 import '../widgets/login/login_header_text_section.dart';
@@ -10,25 +11,31 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsetsDirectional.only(
+            padding: const EdgeInsetsDirectional.only(
                 start: 24, end: 24, top: 50, bottom: 20),
             child: Column(
               children: [
-                CustomAuthHeaderTextSection(
+                const CustomAuthHeaderTextSection(
                   title: 'Welcome Back',
                   subTitle:
                       "We're excited to have you back, can't wait to see what you've been up to since you last logged in.",
                 ),
-                SizedBox(height: 36),
-                CustomLoginFormSection(),
-                SizedBox(height: 46),
-                CustomLoginOptionsSection(),
-                SizedBox(height: 32),
-                CustomTermsAndDontHaveAccountSection(),
+                const SizedBox(height: 36),
+                const CustomLoginFormSection(),
+                const SizedBox(height: 46),
+                const CustomLoginOptionsSection(),
+                const SizedBox(height: 32),
+                CustomTermsAndDontHaveAccountSection(
+                  onTap: () {
+                    context.pushReplacement('/register');
+                  },
+                  text1: 'Don\'t have an account? ',
+                  text2: 'Sign up',
+                ),
               ],
             ),
           ),

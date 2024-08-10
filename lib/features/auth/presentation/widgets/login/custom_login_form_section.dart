@@ -22,27 +22,31 @@ class CustomLoginFormSection extends StatelessWidget {
               CustomAuthTextField(
                 hintText: 'Email',
                 keyboardType: TextInputType.emailAddress,
-                validator: (p0) {
-                  if (p0 == null || p0.isEmpty) {
+                validator: (email) {
+                  if (email == null || email.isEmpty) {
                     return 'Please enter your email';
                   } else if (!RegExp(
                     r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
-                  ).hasMatch(p0)) {
+                  ).hasMatch(email)) {
                     return 'Please enter a valid email';
                   }
                   return null;
                 },
-                onChanged: (p0) {},
+                onChanged: (email) {
+                  cubit.email = email;
+                },
               ),
               CustomAuthTextField(
                 hintText: 'Password',
-                validator: (p0) {
-                  if (p0 == null || p0.isEmpty) {
+                validator: (password) {
+                  if (password == null || password.isEmpty) {
                     return 'Please enter your password';
                   }
                   return null;
                 },
-                onChanged: (p0) {},
+                onChanged: (password) {
+                  cubit.password = password;
+                },
               ),
               const RememberMeAndForgotPassword(),
               const SizedBox(height: 32),
