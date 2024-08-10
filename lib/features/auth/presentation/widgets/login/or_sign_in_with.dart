@@ -14,7 +14,7 @@ class OrSignInWithDivider extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 3),
+          padding: EdgeInsetsDirectional.symmetric(horizontal: 3),
           child: Text(
             "Or sign in with",
             style: TextStyle(

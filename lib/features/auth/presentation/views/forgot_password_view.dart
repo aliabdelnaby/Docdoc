@@ -42,7 +42,7 @@ class ForgotPasswordView extends StatelessWidget {
                 ),
                 const Spacer(),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  padding: const EdgeInsetsDirectional.symmetric(horizontal: 8),
                   child: CustomAuthBtn(
                     onPressed: () {
                       if (cubit.forgotPasswordFormKey.currentState!

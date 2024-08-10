@@ -12,7 +12,7 @@ class OnBoardingView extends StatelessWidget {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.only(top: 22, bottom: 32),
+            padding: EdgeInsetsDirectional.only(top: 22, bottom: 32),
             child: Column(
               children: [
                 AppLogo(),
