@@ -1,3 +1,4 @@
+import 'package:docdoc/core/function/onboarding.dart';
 import 'auth_brn.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/utils/app_text_styles.dart';
@@ -20,6 +21,7 @@ class SubTitleTextAndBtn extends StatelessWidget {
           const SizedBox(height: 32),
           CustomAuthBtn(
             onPressed: () {
+              onBoardingVisited();
               context.pushReplacement('/login');
             },
             text: "Get Started",

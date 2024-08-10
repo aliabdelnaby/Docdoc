@@ -1,3 +1,4 @@
+import 'package:docdoc/core/cache/cache_helper.dart';
 import 'package:docdoc/core/services/service_locator.dart';
 import 'package:flutter/material.dart';
 import 'core/router/app_router.dart';
@@ -5,6 +6,7 @@ import 'core/router/app_router.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   setupServiceLocator();
+  await getIt<CacheHelper>().init();
   runApp(const Docdoc());
 }
 
