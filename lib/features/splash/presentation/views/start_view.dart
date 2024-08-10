@@ -7,7 +7,9 @@ class StartView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text('Start View'),
+        child: Text(
+          'Start View',
+        ),
       ),
     );
   }
