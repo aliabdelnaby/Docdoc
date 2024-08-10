@@ -1,4 +1,4 @@
-import 'package:docdoc/core/utils/app_colors.dart';
+import 'app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppStyles {
