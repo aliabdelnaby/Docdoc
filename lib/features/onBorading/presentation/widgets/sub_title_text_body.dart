@@ -1,5 +1,5 @@
+import 'package:docdoc/features/onBorading/presentation/widgets/auth_brn.dart';
 import 'package:go_router/go_router.dart';
-import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -18,27 +18,15 @@ class SubTitleTextAndBtn extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 32),
-          SizedBox(
-            width: double.infinity,
-            child: ElevatedButton(
-              onPressed: () {
-                context.pushReplacement('/login');
-              },
-              style: ElevatedButton.styleFrom(
-                fixedSize: const Size(double.infinity, 52),
-                backgroundColor: AppColors.primary,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
-                ),
-              ),
-              child: const Text(
-                "Get Started",
-                style: AppStyles.style16W600,
-              ),
-            ),
+          CustomAuthBtn(
+            onPressed: () {
+              context.pushReplacement('/login');
+            },
+            text: "Get Started",
           ),
         ],
       ),
     );
   }
 }
+
