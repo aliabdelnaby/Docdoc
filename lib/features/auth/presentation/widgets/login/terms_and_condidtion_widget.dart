@@ -1,4 +1,4 @@
-import 'package:docdoc/core/utils/app_text_styles.dart';
+import '../../../../../core/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class TermsAndConditionsTextWidget extends StatelessWidget {

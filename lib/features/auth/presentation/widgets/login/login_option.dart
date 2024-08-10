@@ -1,5 +1,5 @@
-import 'package:docdoc/core/utils/assets.dart';
-import 'package:docdoc/features/auth/presentation/widgets/login_option_item.dart';
+import '../../../../../core/utils/assets.dart';
+import 'login_option_item.dart';
 import 'package:flutter/material.dart';
 
 class LoginOptions extends StatelessWidget {

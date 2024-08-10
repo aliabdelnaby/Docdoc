@@ -1,5 +1,6 @@
-import 'package:docdoc/features/auth/presentation/cubit/auth_cubit.dart';
-import 'package:docdoc/features/auth/presentation/views/login_view.dart';
+import '../../features/auth/presentation/views/register_view.dart';
+import '../../features/auth/presentation/cubit/auth_cubit.dart';
+import '../../features/auth/presentation/views/login_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
 import '../../features/onBorading/presentation/views/onborading_view.dart';
@@ -21,6 +22,13 @@ final GoRouter router = GoRouter(
       builder: (context, state) => BlocProvider(
         create: (context) => AuthCubit(),
         child: const LoginView(),
+      ),
+    ),
+    GoRoute(
+      path: '/register',
+      builder: (context, state) => BlocProvider(
+        create: (context) => AuthCubit(),
+        child: const RegisterView(),
       ),
     ),
   ],

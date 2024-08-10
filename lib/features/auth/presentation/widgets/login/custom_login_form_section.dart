@@ -1,13 +1,13 @@
-import 'package:docdoc/features/auth/presentation/cubit/auth_cubit.dart';
-import 'package:docdoc/features/auth/presentation/cubit/auth_state.dart';
-import 'package:docdoc/features/auth/presentation/widgets/custom_auth_text_field.dart';
-import 'package:docdoc/features/auth/presentation/widgets/remember_me_and_forgot_password.dart';
-import 'package:docdoc/features/onBorading/presentation/widgets/auth_brn.dart';
+import '../../cubit/auth_cubit.dart';
+import '../../cubit/auth_state.dart';
+import '../custom_auth_text_field.dart';
+import 'remember_me_and_forgot_password.dart';
+import '../../../../onBorading/presentation/widgets/auth_brn.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class CustomLoginForm extends StatelessWidget {
-  const CustomLoginForm({super.key});
+class CustomLoginFormSection extends StatelessWidget {
+  const CustomLoginFormSection({super.key});
 
   @override
   Widget build(BuildContext context) {

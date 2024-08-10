@@ -1,4 +1,4 @@
-import 'package:docdoc/features/onBorading/presentation/widgets/auth_brn.dart';
+import 'auth_brn.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
