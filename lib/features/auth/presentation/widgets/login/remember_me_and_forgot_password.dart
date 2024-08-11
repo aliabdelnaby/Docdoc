@@ -39,7 +39,7 @@ class _RememberMeAndForgotPasswordState
                 width: 2,
               ),
               shape: ContinuousRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadiusDirectional.circular(8),
                 side: const BorderSide(
                   color: AppColors.checkBox,
                   width: 2,

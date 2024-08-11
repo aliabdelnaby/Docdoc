@@ -10,7 +10,7 @@ class AppColors {
   static const Color rememberMe = Color(0xFF9E9E9E);
   static const Color loginOptions = Color(0xFFF5F5F5);
   static const Color flagArrow = Color(0xFFF5F5F5);
-  static const Color loginBlack = Color(0xFF242424);
+  static const Color black2 = Color(0xFF242424);
   static const Color textFieldBorder = Color(0xFFEDEDED);
   static const Color filledTextField = Color(0xffFDFDFF);
   static const Color checkBox = Color(0xffA9B2B9);

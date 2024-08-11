@@ -20,7 +20,7 @@ class LoginOptionItem extends StatelessWidget {
         padding: const EdgeInsetsDirectional.all(11),
         decoration: BoxDecoration(
           color: AppColors.loginOptions,
-          borderRadius: BorderRadius.circular(100),
+          borderRadius: BorderRadiusDirectional.circular(100),
         ),
         child: SvgPicture.asset(
           image,

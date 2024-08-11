@@ -41,11 +41,11 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
         elevation: 0,
         clipBehavior: Clip.none,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(24),
+          borderRadius: BorderRadiusDirectional.circular(24),
         ),
         child: Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(24),
+            borderRadius: BorderRadiusDirectional.circular(24),
             color: AppColors.primary,
           ),
           child: SvgPicture.asset(

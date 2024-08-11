@@ -34,7 +34,7 @@ class AppStyles {
     fontWeight: FontWeight.w400,
   );
   static const TextStyle style11W500 = TextStyle(
-    color: AppColors.loginBlack,
+    color: AppColors.black2,
     fontSize: 11,
     fontWeight: FontWeight.w500,
   );
@@ -42,5 +42,10 @@ class AppStyles {
     color: AppColors.primary,
     fontSize: 11,
     fontWeight: FontWeight.w600,
+  );
+  static const TextStyle style18W700 = TextStyle(
+    color: AppColors.black2,
+    fontSize: 18,
+    fontWeight: FontWeight.w700,
   );
 }

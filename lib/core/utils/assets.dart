@@ -53,6 +53,10 @@ class Assets {
   /// assets/images/navprofile.svg
   static const String imagesNavprofile = "assets/images/navprofile.svg";
 
+  /// Assets for imagesNotofication
+  /// assets/images/notofication.svg
+  static const String imagesNotofication = "assets/images/notofication.svg";
+
   /// Assets for imagesSplash
   /// assets/images/splash.png
   static const String imagesSplash = "assets/images/splash.png";

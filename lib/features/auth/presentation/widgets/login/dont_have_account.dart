@@ -26,7 +26,7 @@ class DontHaveAccount extends StatelessWidget {
               text: text1,
               style: AppStyles.style11W400.copyWith(
                 fontSize: 13,
-                color: AppColors.loginBlack,
+                color: AppColors.black2,
               ),
             ),
             TextSpan(
