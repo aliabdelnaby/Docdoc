@@ -1,4 +1,5 @@
 import 'package:docdoc/core/utils/app_colors.dart';
+import 'package:go_router/go_router.dart';
 
 import '../cubit/auth_cubit.dart';
 import '../cubit/auth_state.dart';
@@ -14,14 +15,33 @@ class CustomRegisterFormSection extends StatelessWidget {
   Widget build(BuildContext context) {
     AuthCubit cubit = context.read<AuthCubit>();
     return BlocConsumer<AuthCubit, AuthState>(
-      listener: (context, state) {},
+      listener: (context, state) {
+        if (state is SignUpSuccessState) {
+          context.pushReplacement('/login');
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Sign Up Successful'),
+              backgroundColor: AppColors.primary,
+              behavior: SnackBarBehavior.floating,
+            ),
+          );
+        } else if (state is SignUpFailureState) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(state.errMessage),
+              backgroundColor: AppColors.red,
+              behavior: SnackBarBehavior.floating,
+            ),
+          );
+        }
+      },
       builder: (context, state) {
         return Form(
           key: cubit.registerFormKey,
           child: Column(
             children: [
               CustomAuthTextField(
-                hintText: 'name',
+                hintText: 'Name',
                 validator: (name) {
                   if (name == null || name.isEmpty) {
                     return 'Please enter your name';
@@ -113,12 +133,18 @@ class CustomRegisterFormSection extends StatelessWidget {
                 obscureText: cubit.obscurePasswordTextValue,
               ),
               const SizedBox(height: 16),
-              CustomAuthBtn(
-                onPressed: () {
-                  if (cubit.registerFormKey.currentState!.validate()) {}
-                },
-                text: "Create Account",
-              ),
+              state is SignUpLoadingState
+                  ? const CircularProgressIndicator(
+                      color: AppColors.primary,
+                    )
+                  : CustomAuthBtn(
+                      onPressed: () {
+                        if (cubit.registerFormKey.currentState!.validate()) {
+                          cubit.register();
+                        }
+                      },
+                      text: "Create Account",
+                    ),
             ],
           ),
         );
