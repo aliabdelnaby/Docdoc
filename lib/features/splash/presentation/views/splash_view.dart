@@ -1,4 +1,5 @@
 import 'package:docdoc/core/cache/cache_helper.dart';
+import 'package:docdoc/core/constants/constants.dart';
 import 'package:docdoc/core/services/service_locator.dart';
 
 import '../../../../core/utils/assets.dart';
@@ -18,7 +19,11 @@ class _SplashViewState extends State<SplashView> {
     bool isOnBoardingVisited =
         getIt<CacheHelper>().getData(key: 'isOnBoardingVisited') ?? false;
     if (isOnBoardingVisited) {
-      delayedNavigate('/login');
+      if (token == null) {
+        delayedNavigate('/login');
+      } else {
+        delayedNavigate('/home');
+      }
     } else {
       delayedNavigate('/onBoarding');
     }
