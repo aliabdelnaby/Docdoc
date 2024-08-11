@@ -33,6 +33,26 @@ class Assets {
   /// assets/images/logoOpacity.svg
   static const String imagesLogoOpacity = "assets/images/logoOpacity.svg";
 
+  /// Assets for imagesNavSearch
+  /// assets/images/navSearch.svg
+  static const String imagesNavSearch = "assets/images/navSearch.svg";
+
+  /// Assets for imagesNavappointment
+  /// assets/images/navappointment.svg
+  static const String imagesNavappointment = "assets/images/navappointment.svg";
+
+  /// Assets for imagesNavhome
+  /// assets/images/navhome.svg
+  static const String imagesNavhome = "assets/images/navhome.svg";
+
+  /// Assets for imagesNavmessage
+  /// assets/images/navmessage.svg
+  static const String imagesNavmessage = "assets/images/navmessage.svg";
+
+  /// Assets for imagesNavprofile
+  /// assets/images/navprofile.svg
+  static const String imagesNavprofile = "assets/images/navprofile.svg";
+
   /// Assets for imagesSplash
   /// assets/images/splash.png
   static const String imagesSplash = "assets/images/splash.png";

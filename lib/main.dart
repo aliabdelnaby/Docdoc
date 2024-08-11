@@ -1,6 +1,7 @@
 import 'package:docdoc/core/cache/cache_helper.dart';
 import 'package:docdoc/core/function/get_user_token.dart';
 import 'package:docdoc/core/services/service_locator.dart';
+import 'package:docdoc/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'core/router/app_router.dart';
 
@@ -22,7 +23,7 @@ class Docdoc extends StatelessWidget {
       title: 'Docdoc',
       theme: ThemeData(
         fontFamily: 'Poppins',
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: AppColors.white,
       ),
       routerConfig: router,
     );

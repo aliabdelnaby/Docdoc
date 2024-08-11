@@ -22,7 +22,7 @@ class _SplashViewState extends State<SplashView> {
       if (token == null) {
         delayedNavigate('/login');
       } else {
-        delayedNavigate('/home');
+        delayedNavigate('/mainView');
       }
     } else {
       delayedNavigate('/onBoarding');
