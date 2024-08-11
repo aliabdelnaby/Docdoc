@@ -1,8 +1,8 @@
 import 'dart:convert';
-import 'package:docdoc/core/cache/cache_helper.dart';
-import 'package:docdoc/core/constants/constants.dart';
-import 'package:docdoc/core/database/api/end_points.dart';
-import 'package:docdoc/core/services/service_locator.dart';
+import '../../../../core/cache/cache_helper.dart';
+import '../../../../core/constants/constants.dart';
+import '../../../../core/database/api/end_points.dart';
+import '../../../../core/services/service_locator.dart';
 import 'auth_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

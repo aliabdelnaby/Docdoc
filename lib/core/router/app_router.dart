@@ -1,10 +1,10 @@
-import 'package:docdoc/core/services/service_locator.dart';
-import 'package:docdoc/features/appointment/presentation/views/appointment_view.dart';
-import 'package:docdoc/features/home/presentation/views/home_view.dart';
-import 'package:docdoc/features/home/presentation/widgets/nav_bar_widget.dart';
-import 'package:docdoc/features/messages/presentation/views/messages_view.dart';
-import 'package:docdoc/features/profile/presentation/views/profile_view.dart';
-import 'package:docdoc/features/search/presentation/views/search_view.dart';
+import '../services/service_locator.dart';
+import '../../features/appointment/presentation/views/appointment_view.dart';
+import '../../features/home/presentation/views/home_view.dart';
+import '../../features/home/presentation/widgets/nav_bar_widget.dart';
+import '../../features/messages/presentation/views/messages_view.dart';
+import '../../features/profile/presentation/views/profile_view.dart';
+import '../../features/search/presentation/views/search_view.dart';
 import '../../features/auth/presentation/views/forgot_password_view.dart';
 import '../../features/auth/presentation/views/register_view.dart';
 import '../../features/auth/presentation/cubit/auth_cubit.dart';

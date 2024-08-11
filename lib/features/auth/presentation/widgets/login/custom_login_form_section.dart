@@ -1,4 +1,4 @@
-import 'package:docdoc/core/utils/app_colors.dart';
+import '../../../../../core/utils/app_colors.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../cubit/auth_cubit.dart';

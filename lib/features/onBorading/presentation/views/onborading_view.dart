@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
+
 import '../widgets/app_logo.dart';
 import '../widgets/doctor_image_and_text.dart';
 import '../widgets/sub_title_text_body.dart';
-import 'package:flutter/material.dart';
 
 class OnBoardingView extends StatelessWidget {
   const OnBoardingView({super.key});

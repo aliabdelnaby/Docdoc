@@ -5,6 +5,10 @@ class Assets {
   /// assets/images/apple.svg
   static const String imagesApple = "assets/images/apple.svg";
 
+  /// Assets for imagesBlueCardBackground
+  /// assets/images/blue_card_Background.png
+  static const String imagesBlueCardBackground = "assets/images/blue_card_Background.png";
+
   /// Assets for imagesDocLogo
   /// assets/images/doc_logo.png
   static const String imagesDocLogo = "assets/images/doc_logo.png";
@@ -20,6 +24,10 @@ class Assets {
   /// Assets for imagesFacebook
   /// assets/images/facebook.svg
   static const String imagesFacebook = "assets/images/facebook.svg";
+
+  /// Assets for imagesFemileDoctor
+  /// assets/images/femile_doctor.png
+  static const String imagesFemileDoctor = "assets/images/femile_doctor.png";
 
   /// Assets for imagesGoogle
   /// assets/images/google.svg

@@ -1,6 +1,6 @@
-import 'package:docdoc/core/cache/cache_helper.dart';
-import 'package:docdoc/core/constants/constants.dart';
-import 'package:docdoc/core/services/service_locator.dart';
+import '../../../../core/cache/cache_helper.dart';
+import '../../../../core/constants/constants.dart';
+import '../../../../core/services/service_locator.dart';
 
 import '../../../../core/utils/assets.dart';
 import 'package:flutter/material.dart';
