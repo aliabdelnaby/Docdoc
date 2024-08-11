@@ -1,4 +1,5 @@
 import 'package:docdoc/core/utils/app_colors.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../cubit/auth_cubit.dart';
 import '../../cubit/auth_state.dart';
@@ -15,7 +16,26 @@ class CustomLoginFormSection extends StatelessWidget {
   Widget build(BuildContext context) {
     AuthCubit cubit = context.read<AuthCubit>();
     return BlocConsumer<AuthCubit, AuthState>(
-      listener: (context, state) {},
+      listener: (context, state) {
+        if (state is LoginSuccessState) {
+          context.pushReplacement('/home');
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Login Successful'),
+              backgroundColor: AppColors.primary,
+              behavior: SnackBarBehavior.floating,
+            ),
+          );
+        } else if (state is LoginFailureState) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(state.errMessage),
+              backgroundColor: AppColors.red,
+              behavior: SnackBarBehavior.floating,
+            ),
+          );
+        }
+      },
       builder: (context, state) {
         return Form(
           key: cubit.loginFormKey,
@@ -64,12 +84,18 @@ class CustomLoginFormSection extends StatelessWidget {
               ),
               const RememberMeAndForgotPassword(),
               const SizedBox(height: 32),
-              CustomAuthBtn(
-                onPressed: () {
-                  if (cubit.loginFormKey.currentState!.validate()) {}
-                },
-                text: 'Login',
-              ),
+              state is LoginLoadingState
+                  ? const CircularProgressIndicator(
+                      color: AppColors.primary,
+                    )
+                  : CustomAuthBtn(
+                      onPressed: () async {
+                        if (cubit.loginFormKey.currentState!.validate()) {
+                          await cubit.login();
+                        }
+                      },
+                      text: 'Login',
+                    ),
             ],
           ),
         );

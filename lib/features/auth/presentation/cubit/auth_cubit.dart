@@ -1,5 +1,8 @@
 import 'dart:convert';
+import 'package:docdoc/core/cache/cache_helper.dart';
+import 'package:docdoc/core/constants/constants.dart';
 import 'package:docdoc/core/database/api/end_points.dart';
+import 'package:docdoc/core/services/service_locator.dart';
 import 'auth_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -33,7 +36,6 @@ class AuthCubit extends Cubit<AuthState> {
           ApiKeys.confirmPassword: confirmPassword,
         },
       );
-
       var responseData = jsonDecode(response.body);
       if (response.statusCode == 200 || responseData[ApiKeys.status] == true) {
         //* Success
@@ -77,6 +79,34 @@ class AuthCubit extends Cubit<AuthState> {
       }
     } else {
       emit(SignUpFailureState(errMessage: 'Unknown error occurred.'));
+    }
+  }
+
+  //! Login function
+  Future<void> login() async {
+    try {
+      emit(LoginLoadingState());
+      var response = await http.post(
+        Uri.parse(EndPoints.baserUrl + EndPoints.login),
+        body: {
+          ApiKeys.email: email,
+          ApiKeys.password: password,
+        },
+      );
+      var responseData = jsonDecode(response.body);
+      if (response.statusCode == 200 || responseData[ApiKeys.status] == true) {
+        await getIt<CacheHelper>().saveData(
+          key: ApiKeys.token,
+          value: responseData[ApiKeys.data][ApiKeys.token],
+        );
+        token = responseData[ApiKeys.data][ApiKeys.token];
+        emit(LoginSuccessState());
+      } else {
+        emit(LoginFailureState(
+            errMessage: responseData[ApiKeys.message].toString()));
+      }
+    } catch (e) {
+      emit(LoginFailureState(errMessage: e.toString()));
     }
   }
 

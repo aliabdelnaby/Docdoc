@@ -42,6 +42,7 @@ class CustomRegisterFormSection extends StatelessWidget {
             children: [
               CustomAuthTextField(
                 hintText: 'Name',
+                keyboardType: TextInputType.name,
                 validator: (name) {
                   if (name == null || name.isEmpty) {
                     return 'Please enter your name';
@@ -138,9 +139,9 @@ class CustomRegisterFormSection extends StatelessWidget {
                       color: AppColors.primary,
                     )
                   : CustomAuthBtn(
-                      onPressed: () {
+                      onPressed: () async {
                         if (cubit.registerFormKey.currentState!.validate()) {
-                          cubit.register();
+                          await cubit.register();
                         }
                       },
                       text: "Create Account",
