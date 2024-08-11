@@ -10,6 +10,8 @@ class CustomAuthTextField extends StatelessWidget {
     this.keyboardType,
     this.controller,
     this.onChanged,
+    this.suffixIcon,
+    this.obscureText,
   });
 
   final TextEditingController? controller;
@@ -17,6 +19,8 @@ class CustomAuthTextField extends StatelessWidget {
   final String? Function(String?)? validator;
   final TextInputType? keyboardType;
   final void Function(String)? onChanged;
+  final Widget? suffixIcon;
+  final bool? obscureText;
 
   @override
   Widget build(BuildContext context) {
@@ -30,16 +34,28 @@ class CustomAuthTextField extends StatelessWidget {
           fillColor: AppColors.filledTextField,
           border: buildBorder(),
           enabledBorder: buildBorder(),
-          focusedBorder: buildBorder(),
+          focusedBorder: focusedBorder(),
           hintText: hintText,
           hintStyle: AppStyles.style14W400.copyWith(
             fontWeight: FontWeight.w500,
             color: AppColors.hintText,
           ),
+          suffixIcon: suffixIcon,
         ),
+        obscureText: obscureText ?? false,
         validator: validator,
         keyboardType: keyboardType,
         onChanged: onChanged,
+      ),
+    );
+  }
+
+  OutlineInputBorder focusedBorder() {
+    return OutlineInputBorder(
+      borderRadius: BorderRadius.circular(16),
+      borderSide: const BorderSide(
+        color: AppColors.primary,
+        width: 2,
       ),
     );
   }

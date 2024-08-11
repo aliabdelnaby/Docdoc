@@ -1,3 +1,5 @@
+import 'package:docdoc/core/utils/app_colors.dart';
+
 import '../cubit/auth_cubit.dart';
 import '../cubit/auth_state.dart';
 import 'custom_auth_text_field.dart';
@@ -71,6 +73,18 @@ class CustomRegisterFormSection extends StatelessWidget {
                 onChanged: (password) {
                   cubit.password = password;
                 },
+                suffixIcon: IconButton(
+                  color: AppColors.primary,
+                  icon: Icon(
+                    cubit.obscurePasswordTextValue == true
+                        ? Icons.visibility_outlined
+                        : Icons.visibility_off_outlined,
+                  ),
+                  onPressed: () {
+                    cubit.obscurePasswordText();
+                  },
+                ),
+                obscureText: cubit.obscurePasswordTextValue,
               ),
               CustomAuthTextField(
                 hintText: 'Confirm Password',
@@ -85,6 +99,18 @@ class CustomRegisterFormSection extends StatelessWidget {
                 onChanged: (confirmPassword) {
                   cubit.confirmPassword = confirmPassword;
                 },
+                suffixIcon: IconButton(
+                  color: AppColors.primary,
+                  icon: Icon(
+                    cubit.obscurePasswordTextValue == true
+                        ? Icons.visibility_outlined
+                        : Icons.visibility_off_outlined,
+                  ),
+                  onPressed: () {
+                    cubit.obscurePasswordText();
+                  },
+                ),
+                obscureText: cubit.obscurePasswordTextValue,
               ),
               const SizedBox(height: 16),
               CustomAuthBtn(

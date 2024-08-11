@@ -1,3 +1,5 @@
+import 'package:docdoc/core/utils/app_colors.dart';
+
 import '../../cubit/auth_cubit.dart';
 import '../../cubit/auth_state.dart';
 import '../custom_auth_text_field.dart';
@@ -47,6 +49,18 @@ class CustomLoginFormSection extends StatelessWidget {
                 onChanged: (password) {
                   cubit.password = password;
                 },
+                suffixIcon: IconButton(
+                  color: AppColors.primary,
+                  icon: Icon(
+                    cubit.obscurePasswordTextValue == true
+                        ? Icons.visibility_outlined
+                        : Icons.visibility_off_outlined,
+                  ),
+                  onPressed: () {
+                    cubit.obscurePasswordText();
+                  },
+                ),
+                obscureText: cubit.obscurePasswordTextValue,
               ),
               const RememberMeAndForgotPassword(),
               const SizedBox(height: 32),
