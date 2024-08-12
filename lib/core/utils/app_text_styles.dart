@@ -58,4 +58,14 @@ class AppStyles {
     fontSize: 18,
     fontWeight: FontWeight.w600,
   );
+  static const TextStyle style16W700 = TextStyle(
+    color: AppColors.black2,
+    fontSize: 16,
+    fontWeight: FontWeight.w700,
+  );
+  static const TextStyle style12W500 = TextStyle(
+    color: AppColors.textGrey,
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+  );
 }

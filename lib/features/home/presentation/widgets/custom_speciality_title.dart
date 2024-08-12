@@ -11,15 +11,17 @@ class CustomSectionTitle extends StatelessWidget {
 
   final String text;
   final void Function()? onTapSeeAll;
-  
+
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          text,
-          style: AppStyles.style18W600,
+        Expanded(
+          child: Text(
+            text,
+            style: AppStyles.style18W600,
+          ),
         ),
         InkWell(
           onTap: onTapSeeAll,

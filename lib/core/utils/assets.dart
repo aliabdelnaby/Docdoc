@@ -65,6 +65,10 @@ class Assets {
   /// assets/images/notofication.svg
   static const String imagesNotofication = "assets/images/notofication.svg";
 
+  /// Assets for imagesRECOMMENDDOCTOR
+  /// assets/images/RECOMMEND_DOCTOR.png
+  static const String imagesRECOMMENDDOCTOR = "assets/images/RECOMMEND_DOCTOR.png";
+
   /// Assets for imagesSplash
   /// assets/images/splash.png
   static const String imagesSplash = "assets/images/splash.png";

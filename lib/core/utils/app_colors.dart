@@ -15,4 +15,5 @@ class AppColors {
   static const Color filledTextField = Color(0xffFDFDFF);
   static const Color checkBox = Color(0xffA9B2B9);
   static const Color greyBackground = Color(0xffF4F8FF);
+  static const Color ratingStart = Color(0xffFFD600);
 }

@@ -1,3 +1,4 @@
+import 'package:docdoc/features/home/presentation/widgets/custom_recommendation_doctor_section.dart';
 import 'package:docdoc/features/home/presentation/widgets/doctor_speciality_section.dart';
 import '../widgets/book_doctor_blue_card.dart';
 import '../widgets/custom_home_app_bar.dart';
@@ -13,13 +14,17 @@ class HomeView extends StatelessWidget {
         body: Padding(
           padding:
               EdgeInsetsDirectional.symmetric(horizontal: 16, vertical: 12),
-          child: Column(
-            children: [
-              CustomHomeAppBar(),
-              BookDoctorBlueCard(),
-              SizedBox(height: 24),
-              DoctorSpecialitySection(),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                CustomHomeAppBar(),
+                BookDoctorBlueCard(),
+                SizedBox(height: 24),
+                DoctorSpecialitySection(),
+                SizedBox(height: 24),
+                CustomRecommendationDoctorSection(),
+              ],
+            ),
           ),
         ),
       ),
