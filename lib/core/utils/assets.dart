@@ -5,6 +5,14 @@ class Assets {
   /// assets/images/apple.svg
   static const String imagesApple = "assets/images/apple.svg";
 
+  /// Assets for imagesAppointmentCancelled 
+  /// assets/images/AppointmentCancelled .svg
+  static const String imagesAppointmentCancelled  = "assets/images/AppointmentCancelled .svg";
+
+  /// Assets for imagesAppointmentSuccess 
+  /// assets/images/AppointmentSuccess .svg
+  static const String imagesAppointmentSuccess  = "assets/images/AppointmentSuccess .svg";
+
   /// Assets for imagesBlueCardBackground
   /// assets/images/blue_card_Background.png
   static const String imagesBlueCardBackground = "assets/images/blue_card_Background.png";
@@ -61,6 +69,10 @@ class Assets {
   /// assets/images/navprofile.svg
   static const String imagesNavprofile = "assets/images/navprofile.svg";
 
+  /// Assets for imagesNewPaymentAdded
+  /// assets/images/NewPaymentAdded.svg
+  static const String imagesNewPaymentAdded = "assets/images/NewPaymentAdded.svg";
+
   /// Assets for imagesNotofication
   /// assets/images/notofication.svg
   static const String imagesNotofication = "assets/images/notofication.svg";
@@ -69,8 +81,16 @@ class Assets {
   /// assets/images/RECOMMEND_DOCTOR.png
   static const String imagesRECOMMENDDOCTOR = "assets/images/RECOMMEND_DOCTOR.png";
 
+  /// Assets for imagesScheduleChanged
+  /// assets/images/ScheduleChanged.svg
+  static const String imagesScheduleChanged = "assets/images/ScheduleChanged.svg";
+
   /// Assets for imagesSplash
   /// assets/images/splash.png
   static const String imagesSplash = "assets/images/splash.png";
+
+  /// Assets for imagesVideoCallAppointment
+  /// assets/images/VideoCallAppointment.svg
+  static const String imagesVideoCallAppointment = "assets/images/VideoCallAppointment.svg";
 }
 

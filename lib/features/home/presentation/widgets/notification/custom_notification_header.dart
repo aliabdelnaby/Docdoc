@@ -7,25 +7,28 @@ class CustomNotificationsHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          'Today',
-          style: AppStyles.style12W500.copyWith(
-            color: AppColors.rememberMe,
-          ),
-        ),
-        InkWell(
-          onTap: () {},
-          child: Text(
-            'Mark all as read',
-            style: AppStyles.style12W400.copyWith(
-              color: AppColors.primary,
+    return Padding(
+      padding: const EdgeInsetsDirectional.only(top: 32, start: 24, end: 24),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            'Today',
+            style: AppStyles.style12W500.copyWith(
+              color: AppColors.rememberMe,
             ),
           ),
-        ),
-      ],
+          InkWell(
+            onTap: () {},
+            child: Text(
+              'Mark all as read',
+              style: AppStyles.style12W400.copyWith(
+                color: AppColors.primary,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
