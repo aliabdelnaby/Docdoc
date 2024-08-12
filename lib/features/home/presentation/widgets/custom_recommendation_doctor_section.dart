@@ -34,34 +34,38 @@ class CustomRecommendationDoctorSection extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 16),
-                    const Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Dr. Randy Wigham",
-                          style: AppStyles.style16W700,
-                        ),
-                        SizedBox(height: 8),
-                        Text(
-                          "General | RSUD Gatot Subroto",
-                          style: AppStyles.style12W500,
-                        ),
-                        SizedBox(height: 12),
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.star,
-                              color: AppColors.ratingStart,
-                              size: 18,
-                            ),
-                            SizedBox(width: 4),
-                            Text(
-                              "4.8 (4,279 reviews)",
-                              style: AppStyles.style12W500,
-                            ),
-                          ],
-                        ),
-                      ],
+                    const Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Dr. Randy Wigham",
+                            style: AppStyles.style16W700,
+                          ),
+                          SizedBox(height: 8),
+                          Text(
+                            "General | RSUD Gatot Subroto",
+                            style: AppStyles.style12W500,
+                          ),
+                          SizedBox(height: 12),
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.star,
+                                color: AppColors.ratingStart,
+                                size: 18,
+                              ),
+                              SizedBox(width: 4),
+                              Expanded(
+                                child: Text(
+                                  "4.8 (4,279 reviews)",
+                                  style: AppStyles.style12W500,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
