@@ -1,7 +1,7 @@
-import '../widgets/custom_recommendation_doctor_section.dart';
-import '../widgets/doctor_speciality_section.dart';
-import '../widgets/book_doctor_blue_card.dart';
-import '../widgets/custom_home_app_bar.dart';
+import '../widgets/home/custom_recommendation_doctor_section.dart';
+import '../widgets/home/doctor_speciality_section.dart';
+import '../widgets/home/book_doctor_blue_card.dart';
+import '../widgets/home/custom_home_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {

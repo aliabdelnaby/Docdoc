@@ -1,7 +1,9 @@
+import 'package:docdoc/features/home/presentation/views/notification_view.dart';
+
 import '../services/service_locator.dart';
 import '../../features/appointment/presentation/views/appointment_view.dart';
 import '../../features/home/presentation/views/home_view.dart';
-import '../../features/home/presentation/widgets/nav_bar_widget.dart';
+import '../../features/home/presentation/widgets/home/nav_bar_widget.dart';
 import '../../features/messages/presentation/views/messages_view.dart';
 import '../../features/profile/presentation/views/profile_view.dart';
 import '../../features/search/presentation/views/search_view.dart';
@@ -53,6 +55,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/homeView',
       builder: (context, state) => const HomeView(),
+    ),
+    GoRoute(
+      path: '/notificationView',
+      builder: (context, state) => const NotificationView(),
     ),
     GoRoute(
       path: '/searchView',

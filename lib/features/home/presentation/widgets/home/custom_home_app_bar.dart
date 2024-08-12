@@ -1,6 +1,8 @@
-import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_text_styles.dart';
-import '../../../../core/utils/assets.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_text_styles.dart';
+import '../../../../../core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -29,7 +31,9 @@ class CustomHomeAppBar extends StatelessWidget {
           ],
         ),
         InkWell(
-          onTap: () {},
+          onTap: () {
+            context.push('/notificationView');
+          },
           child: Container(
             constraints: const BoxConstraints(minHeight: 48, minWidth: 48),
             padding: const EdgeInsetsDirectional.all(12),

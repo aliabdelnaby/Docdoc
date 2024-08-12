@@ -1,12 +1,12 @@
-import '../../../../core/utils/assets.dart';
-import '../../../appointment/presentation/views/appointment_view.dart';
+import '../../../../../core/utils/assets.dart';
+import '../../../../appointment/presentation/views/appointment_view.dart';
 import 'user_bottom_nav_bar_widget.dart';
-import '../../../messages/presentation/views/messages_view.dart';
-import '../views/home_view.dart';
-import '../../../profile/presentation/views/profile_view.dart';
+import '../../../../messages/presentation/views/messages_view.dart';
+import '../../views/home_view.dart';
+import '../../../../profile/presentation/views/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_colors.dart';
 
 class UserMainLayoutScreen extends StatefulWidget {
   const UserMainLayoutScreen({super.key});
