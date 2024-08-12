@@ -8,12 +8,12 @@ PreferredSizeWidget buildAppBar(context) {
     elevation: 0,
     centerTitle: true,
     surfaceTintColor: Colors.transparent,
-    leadingWidth: 70,
+    leadingWidth: 60,
     leading: InkWell(
       onTap: () => Navigator.pop(context),
       child: Container(
         constraints: const BoxConstraints(minHeight: 40, minWidth: 40),
-        margin: const EdgeInsetsDirectional.only(start: 16),
+        margin: const EdgeInsetsDirectional.only(start: 16, top: 5),
         padding: const EdgeInsetsDirectional.all(8),
         decoration: BoxDecoration(
           borderRadius: BorderRadiusDirectional.circular(10),
