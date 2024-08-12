@@ -1,3 +1,4 @@
+import 'package:docdoc/features/home/presentation/widgets/doctor_speciality_section.dart';
 import '../widgets/book_doctor_blue_card.dart';
 import '../widgets/custom_home_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class HomeView extends StatelessWidget {
               CustomHomeAppBar(),
               BookDoctorBlueCard(),
               SizedBox(height: 24),
+              DoctorSpecialitySection(),
             ],
           ),
         ),
