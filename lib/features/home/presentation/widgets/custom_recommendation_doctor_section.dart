@@ -1,7 +1,7 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/app_text_styles.dart';
-import 'package:docdoc/core/utils/assets.dart';
-import 'package:docdoc/features/home/presentation/widgets/custom_speciality_title.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_text_styles.dart';
+import '../../../../core/utils/assets.dart';
+import 'custom_speciality_title.dart';
 import 'package:flutter/material.dart';
 
 class CustomRecommendationDoctorSection extends StatelessWidget {
@@ -25,7 +25,7 @@ class CustomRecommendationDoctorSection extends StatelessWidget {
                 child: Row(
                   children: [
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadiusDirectional.circular(12),
                       child: Image.asset(
                         Assets.imagesRECOMMENDDOCTOR,
                         fit: BoxFit.cover,
@@ -41,11 +41,13 @@ class CustomRecommendationDoctorSection extends StatelessWidget {
                           Text(
                             "Dr. Randy Wigham",
                             style: AppStyles.style16W700,
+                            overflow: TextOverflow.ellipsis,
                           ),
                           SizedBox(height: 8),
                           Text(
                             "General | RSUD Gatot Subroto",
                             style: AppStyles.style12W500,
+                            overflow: TextOverflow.ellipsis,
                           ),
                           SizedBox(height: 12),
                           Row(
@@ -60,6 +62,7 @@ class CustomRecommendationDoctorSection extends StatelessWidget {
                                 child: Text(
                                   "4.8 (4,279 reviews)",
                                   style: AppStyles.style12W500,
+                                  overflow: TextOverflow.ellipsis,
                                 ),
                               ),
                             ],

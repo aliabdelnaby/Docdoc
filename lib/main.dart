@@ -1,9 +1,10 @@
+import 'package:flutter/material.dart';
+
 import 'core/cache/cache_helper.dart';
 import 'core/function/get_user_token.dart';
+import 'core/router/app_router.dart';
 import 'core/services/service_locator.dart';
 import 'core/utils/app_colors.dart';
-import 'package:flutter/material.dart';
-import 'core/router/app_router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

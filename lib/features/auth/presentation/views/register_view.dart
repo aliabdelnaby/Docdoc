@@ -1,9 +1,10 @@
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+import '../widgets/custom_register_form_section.dart';
 import '../widgets/login/login_header_text_section.dart';
 import '../widgets/login/login_options_section.dart';
 import '../widgets/login/terms_and_dont_have_account_section.dart';
-import '../widgets/custom_register_form_section.dart';
-import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class RegisterView extends StatelessWidget {
   const RegisterView({super.key});
