@@ -1,11 +1,9 @@
+import 'package:docdoc/features/home/presentation/cubit/home_cubit.dart';
+import 'package:docdoc/features/home/presentation/views/doctor_speciality_view.dart';
 import '../../features/home/presentation/views/notification_view.dart';
-
 import '../services/service_locator.dart';
-import '../../features/appointment/presentation/views/appointment_view.dart';
 import '../../features/home/presentation/views/home_view.dart';
 import '../../features/home/presentation/widgets/home/nav_bar_widget.dart';
-import '../../features/messages/presentation/views/messages_view.dart';
-import '../../features/profile/presentation/views/profile_view.dart';
 import '../../features/search/presentation/views/search_view.dart';
 import '../../features/auth/presentation/views/forgot_password_view.dart';
 import '../../features/auth/presentation/views/register_view.dart';
@@ -65,16 +63,11 @@ final GoRouter router = GoRouter(
       builder: (context, state) => const SearchView(),
     ),
     GoRoute(
-      path: '/messagesView',
-      builder: (context, state) => const MessagesView(),
-    ),
-    GoRoute(
-      path: '/appointmentView',
-      builder: (context, state) => const AppointmentView(),
-    ),
-    GoRoute(
-      path: '/profileView',
-      builder: (context, state) => const ProfileView(),
+      path: '/doctorSpecialityView',
+      builder: (context, state) => BlocProvider(
+        create: (context) => HomeCubit()..getAllSpecialities(),
+        child: const DoctorSpecialityView(),
+      ),
     ),
   ],
 );

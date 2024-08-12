@@ -13,7 +13,7 @@ PreferredSizeWidget buildAppBar(context) {
       onTap: () => Navigator.pop(context),
       child: Container(
         constraints: const BoxConstraints(minHeight: 40, minWidth: 40),
-        margin: const EdgeInsetsDirectional.only(start: 16, top: 5),
+        margin: const EdgeInsetsDirectional.only(start: 16, top: 5, bottom: 5),
         padding: const EdgeInsetsDirectional.all(8),
         decoration: BoxDecoration(
           borderRadius: BorderRadiusDirectional.circular(10),
