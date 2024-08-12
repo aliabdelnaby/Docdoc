@@ -1,9 +1,10 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../onBorading/presentation/widgets/auth_brn.dart';
 import '../cubit/auth_cubit.dart';
 import '../widgets/custom_auth_text_field.dart';
 import '../widgets/login/login_header_text_section.dart';
-import '../../../onBorading/presentation/widgets/auth_brn.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ForgotPasswordView extends StatelessWidget {
   const ForgotPasswordView({super.key});

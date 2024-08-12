@@ -1,4 +1,4 @@
-import 'package:docdoc/features/home/presentation/views/notification_view.dart';
+import '../../features/home/presentation/views/notification_view.dart';
 
 import '../services/service_locator.dart';
 import '../../features/appointment/presentation/views/appointment_view.dart';

@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import 'dont_have_account.dart';
 import 'terms_and_condidtion_widget.dart';
-import 'package:flutter/material.dart';
 
 class CustomTermsAndDontHaveAccountSection extends StatelessWidget {
   const CustomTermsAndDontHaveAccountSection({

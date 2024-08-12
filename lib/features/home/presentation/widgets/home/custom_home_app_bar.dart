@@ -30,7 +30,7 @@ class CustomHomeAppBar extends StatelessWidget {
             ),
           ],
         ),
-        InkWell(
+        GestureDetector(
           onTap: () {
             context.push('/notificationView');
           },
