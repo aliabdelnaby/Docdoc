@@ -1,4 +1,3 @@
-import 'package:docdoc/core/services/service_locator.dart';
 import 'package:docdoc/features/home/presentation/cubit/home_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -28,7 +27,9 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
     super.initState();
     screens = [
       BlocProvider(
-        create: (context) => getIt<HomeCubit>()..getProfile(),
+        create: (context) => HomeCubit()
+          ..getProfile()
+          ..getAllSpecialities(),
         child: const HomeView(),
       ),
       const MessagesView(),

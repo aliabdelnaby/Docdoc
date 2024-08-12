@@ -1,4 +1,5 @@
 import 'package:docdoc/features/home/data/models/profile_model/profile_model.dart';
+import 'package:docdoc/features/home/data/models/specialization_response_model/specialization_response_model.dart';
 
 class HomeState {}
 
@@ -16,4 +17,18 @@ final class GetProfileFailureState extends HomeState {
   final String errMessage;
 
   GetProfileFailureState({required this.errMessage});
+}
+
+final class GetAllSpecialitiesLoadingState extends HomeState {}
+
+final class GetAllSpecialitiesSuccessState extends HomeState {
+  final SpecializationResponseModel specializations;
+
+  GetAllSpecialitiesSuccessState({required this.specializations});
+}
+
+final class GetAllSpecialitiesFailureState extends HomeState {
+  final String errMessage;
+
+  GetAllSpecialitiesFailureState({required this.errMessage});
 }

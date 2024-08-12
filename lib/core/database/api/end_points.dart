@@ -4,6 +4,7 @@ class EndPoints {
   static const String register = "auth/register";
   static const String logout = "auth/logout";
   static const String profile = "user/profile";
+  static const String specialization = "specialization/index";
 }
 
 class ApiKeys {
