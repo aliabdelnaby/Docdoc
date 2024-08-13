@@ -73,7 +73,10 @@ final GoRouter router = GoRouter(
     ),
     GoRoute(
       path: '/recommendationDoctorView',
-      builder: (context, state) => const RecommendationDoctorView(),
+      builder: (context, state) => BlocProvider(
+        create: (context) => HomeCubit()..getAllSpecialities(),
+        child: const RecommendationDoctorView(),
+      ),
     ),
   ],
 );
