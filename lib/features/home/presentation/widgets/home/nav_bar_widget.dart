@@ -27,8 +27,9 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
     super.initState();
     screens = [
       BlocProvider(
-        create: (context) => HomeCubit()..getAllSpecialities(),
-        // ..getProfile(),
+        create: (context) => HomeCubit()
+          // ..getProfile()
+          ..getAllSpecialities(),
         child: const HomeView(),
       ),
       const MessagesView(),

@@ -3,6 +3,7 @@ import 'package:docdoc/features/home/data/datasource/reecommendation_doctor_item
 import 'package:docdoc/features/home/presentation/cubit/home_cubit.dart';
 import 'package:docdoc/features/home/presentation/cubit/home_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import 'custom_speciality_title.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,9 @@ class CustomRecommendationDoctorSection extends StatelessWidget {
       children: [
         CustomSectionTitle(
           text: "Recommendation Doctor",
-          onTapSeeAll: () {},
+          onTapSeeAll: () {
+            context.push('/recommendationDoctorView');
+          },
         ),
         const SizedBox(height: 12),
         BlocBuilder<HomeCubit, HomeState>(
