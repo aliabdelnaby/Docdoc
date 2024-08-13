@@ -1,3 +1,5 @@
+import 'package:docdoc/core/utils/my_bloc_observer.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/app/my_App.dart';
 import 'package:flutter/material.dart';
 import 'core/cache/cache_helper.dart';
@@ -9,5 +11,6 @@ void main() async {
   setupServiceLocator();
   await getIt<CacheHelper>().init();
   await getUserToken();
+  Bloc.observer = MyBlocObserver();
   runApp(const Docdoc());
 }
