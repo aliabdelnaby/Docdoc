@@ -1,4 +1,4 @@
-import 'package:docdoc/features/home/presentation/widgets/home/recommendation_doctor_items_list_list.dart';
+import 'recommendation_doctor_items_list_list.dart';
 import 'package:go_router/go_router.dart';
 import 'custom_speciality_title.dart';
 import 'package:flutter/material.dart';

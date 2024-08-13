@@ -22,24 +22,11 @@ class CustomHomeAppBar extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // if (state is GetProfileLoadingState)
                   const Text(
-                    "Hi, Ali",
+                    "Welcome Back!",
                     style: AppStyles.style18W700,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  // if (state is GetProfileSuccessState)
-                  //   Text(
-                  //     "Hi, ${state.profileModel.name}",
-                  //     style: AppStyles.style18W700,
-                  //     overflow: TextOverflow.ellipsis,
-                  //   ),
-                  // if (state is GetProfileFailureState)
-                  //   const Text(
-                  //     "Error",
-                  //     style: AppStyles.style18W700,
-                  //     overflow: TextOverflow.ellipsis,
-                  //   ),
                   const SizedBox(height: 2),
                   Text(
                     "How Are you Today?",

@@ -1,4 +1,4 @@
-import 'package:docdoc/core/utils/my_bloc_observer.dart';
+import 'core/utils/my_bloc_observer.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/app/my_App.dart';
 import 'package:flutter/material.dart';

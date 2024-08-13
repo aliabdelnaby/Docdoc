@@ -1,4 +1,4 @@
-import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
+import '../widgets/notification/notifaction_app_bar.dart';
 
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_text_styles.dart';

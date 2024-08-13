@@ -1,5 +1,5 @@
-import 'package:docdoc/features/home/presentation/widgets/home/recommendation_doctor_items_list_list.dart';
-import 'package:docdoc/features/home/presentation/widgets/recommendation_doctor/search_and_filter_bar.dart';
+import '../home/recommendation_doctor_items_list_list.dart';
+import 'search_and_filter_bar.dart';
 import 'package:flutter/material.dart';
 
 class RecommendationDoctorViewBody extends StatelessWidget {

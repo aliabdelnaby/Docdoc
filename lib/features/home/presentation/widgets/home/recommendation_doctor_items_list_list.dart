@@ -1,8 +1,8 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/app_text_styles.dart';
-import 'package:docdoc/features/home/data/datasource/reecommendation_doctor_item_list_model.dart';
-import 'package:docdoc/features/home/presentation/cubit/home_cubit.dart';
-import 'package:docdoc/features/home/presentation/cubit/home_state.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_text_styles.dart';
+import '../../../data/datasource/reecommendation_doctor_item_list_model.dart';
+import '../../cubit/home_cubit.dart';
+import '../../cubit/home_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

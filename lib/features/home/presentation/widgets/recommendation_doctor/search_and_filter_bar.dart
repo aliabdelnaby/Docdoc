@@ -1,5 +1,5 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/features/home/presentation/widgets/recommendation_doctor/recommendation_doctor_search.dart';
+import '../../../../../core/utils/app_colors.dart';
+import 'recommendation_doctor_search.dart';
 import 'package:flutter/material.dart';
 
 class SearchAndFilterBar extends StatelessWidget {

@@ -35,7 +35,7 @@ class BookDoctorBlueCard extends StatelessWidget {
                 ),
                 const Spacer(),
                 ElevatedButton(
-                  onPressed: null,
+                  onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.white,
                     shape: RoundedRectangleBorder(

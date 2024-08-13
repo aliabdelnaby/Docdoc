@@ -1,5 +1,5 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/app_text_styles.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_text_styles.dart';
 
 import '../widgets/notification/custom_notification_header.dart';
 import '../widgets/notification/notifaction_app_bar.dart';

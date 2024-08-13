@@ -1,8 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
-import 'package:flutter/material.dart';
 
 class RememberMeAndForgotPassword extends StatefulWidget {
   const RememberMeAndForgotPassword({super.key});

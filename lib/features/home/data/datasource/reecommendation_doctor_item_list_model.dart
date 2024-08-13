@@ -1,5 +1,5 @@
-import 'package:docdoc/core/utils/assets.dart';
-import 'package:docdoc/features/home/data/models/static/reecommendation_doctor_item_model.dart';
+import '../../../../core/utils/assets.dart';
+import '../models/static/reecommendation_doctor_item_model.dart';
 
 List<ReecommendationDoctorItemModel> reecommendationDoctorList = [
   ReecommendationDoctorItemModel(
