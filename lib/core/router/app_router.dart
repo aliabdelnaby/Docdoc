@@ -1,5 +1,5 @@
-import 'package:docdoc/features/home/presentation/cubit/home_cubit.dart';
-import 'package:docdoc/features/home/presentation/views/doctor_speciality_view.dart';
+import '../../features/home/presentation/cubit/home_cubit.dart';
+import '../../features/home/presentation/views/doctor_speciality_view.dart';
 import '../../features/home/presentation/views/notification_view.dart';
 import '../services/service_locator.dart';
 import '../../features/home/presentation/views/home_view.dart';

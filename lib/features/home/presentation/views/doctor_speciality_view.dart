@@ -1,11 +1,10 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/app_text_styles.dart';
-import 'package:docdoc/core/utils/assets.dart';
-import 'package:docdoc/features/home/presentation/cubit/home_cubit.dart';
-import 'package:docdoc/features/home/presentation/cubit/home_state.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_text_styles.dart';
+import '../../data/datasource/doctor_speciality_item_list.dart';
+import '../cubit/home_cubit.dart';
+import '../cubit/home_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
 
 class DoctorSpecialityView extends StatelessWidget {
   const DoctorSpecialityView({super.key});
@@ -68,21 +67,27 @@ class DoctorSpecialityView extends StatelessWidget {
                         childAspectRatio: 0.68,
                       ),
                       itemBuilder: (context, index) {
-                        return InkWell(
+                        return GestureDetector(
                           onTap: () {},
                           child: Column(
                             children: [
                               Container(
                                 constraints: const BoxConstraints(
-                                    minHeight: 80, minWidth: 80),
+                                  minHeight: 80,
+                                  minWidth: 80,
+                                ),
                                 decoration: BoxDecoration(
                                   borderRadius:
                                       BorderRadiusDirectional.circular(100),
                                   color: AppColors.primary.withOpacity(0.05),
                                 ),
-                                child: Center(
-                                  child: SvgPicture.asset(
-                                    Assets.imagesApple,
+                                child: Padding(
+                                  padding: const EdgeInsetsDirectional.all(20),
+                                  child: Center(
+                                    child: Image.asset(
+                                      specialitylList.elementAt(index).image,
+                                      height: 40,
+                                    ),
                                   ),
                                 ),
                               ),

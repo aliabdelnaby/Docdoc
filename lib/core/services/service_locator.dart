@@ -1,4 +1,4 @@
-import 'package:docdoc/features/home/presentation/cubit/home_cubit.dart';
+import '../../features/home/presentation/cubit/home_cubit.dart';
 import '../cache/cache_helper.dart';
 import '../../features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:get_it/get_it.dart';

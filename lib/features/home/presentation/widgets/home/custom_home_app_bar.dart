@@ -1,5 +1,5 @@
-import 'package:docdoc/features/home/presentation/cubit/home_cubit.dart';
-import 'package:docdoc/features/home/presentation/cubit/home_state.dart';
+import '../../cubit/home_cubit.dart';
+import '../../cubit/home_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/app_colors.dart';

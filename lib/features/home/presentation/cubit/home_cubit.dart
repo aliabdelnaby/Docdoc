@@ -1,9 +1,9 @@
 import 'dart:convert';
-import 'package:docdoc/core/constants/constants.dart';
-import 'package:docdoc/core/database/api/end_points.dart';
-import 'package:docdoc/features/home/data/models/profile_model/profile_model.dart';
-import 'package:docdoc/features/home/data/models/specialization_response_model/specialization_response_model.dart';
-import 'package:docdoc/features/home/presentation/cubit/home_state.dart';
+import '../../../../core/constants/constants.dart';
+import '../../../../core/database/api/end_points.dart';
+import '../../data/models/profile_model/profile_model.dart';
+import '../../data/models/specialization_response_model/specialization_response_model.dart';
+import 'home_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
 

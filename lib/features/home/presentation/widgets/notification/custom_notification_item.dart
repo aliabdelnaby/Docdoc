@@ -1,4 +1,4 @@
-import 'package:docdoc/features/home/presentation/widgets/notification/notification_item.dart';
+import 'notification_item.dart';
 import '../../../data/datasource/notification_item_list.dart';
 import 'package:flutter/material.dart';
 

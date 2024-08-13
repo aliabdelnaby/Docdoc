@@ -1,5 +1,5 @@
-import 'package:docdoc/features/home/data/models/profile_model/profile_model.dart';
-import 'package:docdoc/features/home/data/models/specialization_response_model/specialization_response_model.dart';
+import '../../data/models/profile_model/profile_model.dart';
+import '../../data/models/specialization_response_model/specialization_response_model.dart';
 
 class HomeState {}
 

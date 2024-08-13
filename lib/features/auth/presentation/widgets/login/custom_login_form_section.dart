@@ -18,7 +18,7 @@ class CustomLoginFormSection extends StatelessWidget {
     return BlocConsumer<AuthCubit, AuthState>(
       listener: (context, state) {
         if (state is LoginSuccessState) {
-          context.pushReplacement('/home');
+          context.pushReplacement('/mainView');
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
               content: Text('Login Successful'),

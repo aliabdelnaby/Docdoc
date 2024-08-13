@@ -1,4 +1,4 @@
-import 'package:docdoc/core/app/my_App.dart';
+import 'core/app/my_App.dart';
 import 'package:flutter/material.dart';
 import 'core/cache/cache_helper.dart';
 import 'core/function/get_user_token.dart';
@@ -11,4 +11,3 @@ void main() async {
   await getUserToken();
   runApp(const Docdoc());
 }
-

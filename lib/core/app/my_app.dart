@@ -1,5 +1,5 @@
-import 'package:docdoc/core/router/app_router.dart';
-import 'package:docdoc/core/utils/app_colors.dart';
+import '../router/app_router.dart';
+import '../utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class Docdoc extends StatelessWidget {

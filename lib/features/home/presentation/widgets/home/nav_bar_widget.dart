@@ -1,4 +1,4 @@
-import 'package:docdoc/features/home/presentation/cubit/home_cubit.dart';
+import '../../cubit/home_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/utils/assets.dart';

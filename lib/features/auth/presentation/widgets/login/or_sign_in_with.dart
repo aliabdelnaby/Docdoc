@@ -1,5 +1,6 @@
-import '../../../../../core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../../core/utils/app_colors.dart';
 
 class OrSignInWithDivider extends StatelessWidget {
   const OrSignInWithDivider({super.key});
