@@ -1,3 +1,5 @@
+import 'package:go_router/go_router.dart';
+
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../data/datasource/reecommendation_doctor_item_list_model.dart';
@@ -25,7 +27,9 @@ class RecommendationDoctorItemsList extends StatelessWidget {
                   itemLength,
                   (index) {
                     return InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        context.push('/doctorDetailsView');
+                      },
                       child: Padding(
                         padding: const EdgeInsetsDirectional.only(
                             start: 8, bottom: 24),

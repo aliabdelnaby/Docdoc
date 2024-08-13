@@ -1,3 +1,5 @@
+import 'package:docdoc/features/home/presentation/views/doctor_details_view.dart';
+
 import '../../features/home/presentation/views/recommendation_doctor_view.dart';
 
 import '../../features/home/presentation/cubit/home_cubit.dart';
@@ -77,6 +79,10 @@ final GoRouter router = GoRouter(
         create: (context) => HomeCubit()..getAllSpecialities(),
         child: const RecommendationDoctorView(),
       ),
+    ),
+     GoRoute(
+      path: '/doctorDetailsView',
+      builder: (context, state) => const DoctorDetailsView(),
     ),
   ],
 );

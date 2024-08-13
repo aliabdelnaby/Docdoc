@@ -12,7 +12,7 @@ class RecommendationDoctorView extends StatelessWidget {
       appBar: buildAppBar(
         context,
         title: "Recommendation Doctor",
-        trailing: const RecommendationDoctorMoreBtn(),
+        trailing: const CustomMoreBtn(),
       ),
       body: const RecommendationDoctorViewBody(),
     );
