@@ -10,16 +10,19 @@ class DoctorDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: buildAppBar(
-        context,
-        title: "Doctor Name",
-        trailing: const CustomMoreBtn(),
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: buildAppBar(
+          context,
+          title: "Doctor Name",
+          trailing: const CustomMoreBtn(),
+        ),
+        bottomNavigationBar: MakeAnAppointmentBtn(
+          onPressed: () {},
+        ),
+        body: const DoctorDetailsViewBody(),
       ),
-      bottomNavigationBar: MakeAnAppointmentBtn(
-        onPressed: () {},
-      ),
-      body: const DoctorDetailsViewBody(),
     );
   }
 }
