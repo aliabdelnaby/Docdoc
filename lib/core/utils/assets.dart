@@ -33,6 +33,46 @@ class Assets {
   /// assets/images/doctor.png
   static const String imagesDoctor = "assets/images/doctor.png";
 
+  /// Assets for imagesDoctor1
+  /// assets/images/doctor1.png
+  static const String imagesDoctor1 = "assets/images/doctor1.png";
+
+  /// Assets for imagesDoctor10
+  /// assets/images/doctor10.png
+  static const String imagesDoctor10 = "assets/images/doctor10.png";
+
+  /// Assets for imagesDoctor2
+  /// assets/images/doctor2.png
+  static const String imagesDoctor2 = "assets/images/doctor2.png";
+
+  /// Assets for imagesDoctor3
+  /// assets/images/doctor3.png
+  static const String imagesDoctor3 = "assets/images/doctor3.png";
+
+  /// Assets for imagesDoctor4
+  /// assets/images/doctor4.png
+  static const String imagesDoctor4 = "assets/images/doctor4.png";
+
+  /// Assets for imagesDoctor5
+  /// assets/images/doctor5.png
+  static const String imagesDoctor5 = "assets/images/doctor5.png";
+
+  /// Assets for imagesDoctor6
+  /// assets/images/doctor6.jpg
+  static const String imagesDoctor6 = "assets/images/doctor6.jpg";
+
+  /// Assets for imagesDoctor7
+  /// assets/images/doctor7.jpg
+  static const String imagesDoctor7 = "assets/images/doctor7.jpg";
+
+  /// Assets for imagesDoctor8
+  /// assets/images/doctor8.png
+  static const String imagesDoctor8 = "assets/images/doctor8.png";
+
+  /// Assets for imagesDoctor9
+  /// assets/images/doctor9.png
+  static const String imagesDoctor9 = "assets/images/doctor9.png";
+
   /// Assets for imagesDodocLogo
   /// assets/images/dodoc_logo.svg
   static const String imagesDodocLogo = "assets/images/dodoc_logo.svg";
@@ -112,10 +152,6 @@ class Assets {
   /// Assets for imagesPsychiatry
   /// assets/images/Psychiatry.png
   static const String imagesPsychiatry = "assets/images/Psychiatry.png";
-
-  /// Assets for imagesRECOMMENDDOCTOR
-  /// assets/images/RECOMMEND_DOCTOR.png
-  static const String imagesRECOMMENDDOCTOR = "assets/images/RECOMMEND_DOCTOR.png";
 
   /// Assets for imagesScheduleChanged
   /// assets/images/ScheduleChanged.svg

@@ -1,5 +1,5 @@
 import '../../../../core/utils/assets.dart';
-import '../models/doctor_speciality_item_model.dart';
+import '../models/static/doctor_speciality_item_model.dart';
 
 List<DoctorSpecialityItemModel> specialitylList = [
   DoctorSpecialityItemModel(

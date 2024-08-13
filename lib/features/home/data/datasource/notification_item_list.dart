@@ -1,6 +1,6 @@
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/assets.dart';
-import '../models/notification_item_model.dart';
+import '../models/static/notification_item_model.dart';
 
 List<NotificationItemModel> notificationItemModelList = [
   NotificationItemModel(
