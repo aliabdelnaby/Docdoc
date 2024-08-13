@@ -2,14 +2,18 @@ import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
-PreferredSizeWidget buildAppBar(context) {
+PreferredSizeWidget buildAppBar(
+  context, {
+  required String title,
+  Widget? trailing, // Make trailing optional and nullable
+}) {
   return AppBar(
     backgroundColor: AppColors.white,
     elevation: 0,
     centerTitle: true,
     surfaceTintColor: Colors.transparent,
     leadingWidth: 60,
-    leading: InkWell(
+    leading: GestureDetector(
       onTap: () => Navigator.pop(context),
       child: Container(
         constraints: const BoxConstraints(minHeight: 40, minWidth: 40),
@@ -30,26 +34,13 @@ PreferredSizeWidget buildAppBar(context) {
       ),
     ),
     title: Text(
-      'Notification',
+      title,
       style: AppStyles.style18W600.copyWith(
         color: AppColors.black2,
       ),
     ),
-    actions: const [
-      Padding(
-        padding: EdgeInsetsDirectional.only(end: 16),
-        child: TextButton(
-          onPressed: null,
-          style: ButtonStyle(
-            backgroundColor: WidgetStatePropertyAll(AppColors.primary),
-            elevation: WidgetStatePropertyAll(0),
-          ),
-          child: Text(
-            '2 NEW',
-            style: AppStyles.style10W500,
-          ),
-        ),
-      ),
+    actions: [
+      if (trailing != null) trailing, // Add trailing only if it's not null
     ],
   );
 }
