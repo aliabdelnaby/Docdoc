@@ -88,4 +88,9 @@ class AppStyles {
     fontSize: 16,
     fontWeight: FontWeight.w500,
   );
+  static const TextStyle style14W700 = TextStyle(
+    color: AppColors.rememberMe,
+    fontSize: 14,
+    fontWeight: FontWeight.w700,
+  );
 }
