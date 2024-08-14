@@ -13,20 +13,29 @@ class DoctorDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     final GoRouterState state = GoRouterState.of(context);
     final extra = state.extra as Map<String, dynamic>?;
-    final String doctor = extra?['doctor'] ?? 'Unknown Details';
-    final List imageAndReviews = extra?['imageAndReviews'] ?? 'Unknown Details';
+    final String doctorName = extra?['doctorName'] ?? 'Unknown Details';
+    final String image = extra?['image'] ?? 'Unknown Details';
+    final String rating = extra?['rating'] ?? 'Unknown Details';
+    final String degree = extra?['degree'] ?? 'Unknown Details';
+    final String specialization = extra?['specialization'] ?? 'Unknown Details';
     return DefaultTabController(
       length: 3,
       child: Scaffold(
         appBar: buildAppBar(
           context,
-          title: doctor,
+          title: doctorName,
           trailing: const CustomMoreBtn(),
         ),
         bottomNavigationBar: MakeAnAppointmentBtn(
           onPressed: () {},
         ),
-        body: const DoctorDetailsViewBody(),
+        body: DoctorDetailsViewBody(
+          name: doctorName,
+          image: image,
+          rating: rating,
+          degree: degree,
+          specialization: specialization,
+        ),
       ),
     );
   }

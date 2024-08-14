@@ -7,19 +7,34 @@ import 'package:docdoc/features/home/presentation/widgets/doctor_details/reviews
 import 'package:flutter/material.dart';
 
 class DoctorDetailsViewBody extends StatelessWidget {
-  const DoctorDetailsViewBody({super.key});
+  const DoctorDetailsViewBody({
+    super.key,
+    required this.image,
+    required this.rating,
+    required this.name,
+    required this.specialization,
+    required this.degree,
+  });
+  final String name, image, rating, specialization, degree;
 
   @override
   Widget build(BuildContext context) {
-    return const DefaultTabController(
+    return DefaultTabController(
       length: 3,
       child: Padding(
-        padding: EdgeInsetsDirectional.symmetric(horizontal: 24, vertical: 16),
+        padding:
+            const EdgeInsetsDirectional.symmetric(horizontal: 24, vertical: 16),
         child: Column(
           children: [
-            DoctordetailsCardInfo(),
-            SizedBox(height: 24),
-            TabBar(
+            DoctordetailsCardInfo(
+              image: image,
+              rating: rating,
+              name: name,
+              specialization: specialization,
+              degree: degree,
+            ),
+            const SizedBox(height: 24),
+            const TabBar(
               labelColor: AppColors.primary,
               unselectedLabelColor: AppColors.rememberMe,
               indicatorColor: AppColors.primary,
@@ -34,7 +49,7 @@ class DoctorDetailsViewBody extends StatelessWidget {
                 Tab(text: 'Reviews'),
               ],
             ),
-            Expanded(
+            const Expanded(
               child: TabBarView(
                 clipBehavior: Clip.none,
                 children: [

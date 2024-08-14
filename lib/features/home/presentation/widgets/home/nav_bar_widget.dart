@@ -28,7 +28,6 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
     screens = [
       BlocProvider(
         create: (context) => HomeCubit()
-          // ..getProfile()
           ..getAllSpecialities(),
         child: const HomeView(),
       ),

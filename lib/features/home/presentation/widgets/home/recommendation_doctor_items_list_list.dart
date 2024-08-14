@@ -32,9 +32,15 @@ class RecommendationDoctorItemsList extends StatelessWidget {
                             context.push(
                               '/doctorDetailsView',
                               extra: {
-                                'doctor': state.specializations
+                                'doctorName': state.specializations
                                     .specializations[index].doctors![0].name,
-                                'imageAndReviews': reecommendationDoctorList,
+                                'image': reecommendationDoctorList[index].image,
+                                'rating': reecommendationDoctorList[index]
+                                    .rateAndReviews,
+                                'degree': state.specializations
+                                    .specializations[index].doctors![0].degree,
+                                'specialization': state.specializations
+                                    .specializations[index].name,
                               },
                             );
                           },
