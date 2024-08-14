@@ -218,10 +218,54 @@ class ReviewsTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Reviews Section',
-        style: AppStyles.style16W700,
+    return Padding(
+      padding: const EdgeInsetsDirectional.only(top: 32),
+      child: Column(
+        children: [
+          ListTile(
+            titleAlignment: ListTileTitleAlignment.top,
+            title: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Jane Cooper",
+                  style: AppStyles.style16W600.copyWith(
+                    color: AppColors.black2,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Row(
+                  children: List.generate(
+                    5,
+                    (index) {
+                      return const Icon(
+                        Icons.star_rate_rounded,
+                        color: AppColors.ratingStart,
+                        size: 24,
+                      );
+                    },
+                  ),
+                ),
+                const SizedBox(height: 10),
+              ],
+            ),
+            subtitle: Text(
+              "As someone who lives in a remote area with limited access to healthcare, this telemedicine app has been a game changer for me. I can easily schedule virtual appointments with doctors and get the care I need without having to travel long distances.",
+              style: AppStyles.style12W400.copyWith(
+                color: AppColors.textGrey,
+              ),
+            ),
+            trailing: const Text(
+              "Today",
+            ),
+            leading: const CircleAvatar(
+              radius: 24,
+              backgroundImage: AssetImage(
+                Assets.imagesDoctor6,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
