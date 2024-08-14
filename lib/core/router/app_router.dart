@@ -1,3 +1,5 @@
+import 'package:docdoc/features/home/presentation/views/doctors_speciality_.dart';
+
 import '../../features/home/presentation/views/doctor_details_view.dart';
 
 import '../../features/home/presentation/views/recommendation_doctor_view.dart';
@@ -80,9 +82,13 @@ final GoRouter router = GoRouter(
         child: const RecommendationDoctorView(),
       ),
     ),
-     GoRoute(
+    GoRoute(
       path: '/doctorDetailsView',
       builder: (context, state) => const DoctorDetailsView(),
+    ),
+    GoRoute(
+      path: '/doctorsSpeciality',
+      builder: (context, state) => const DoctorsSpeciality(),
     ),
   ],
 );

@@ -1,3 +1,6 @@
+import 'package:docdoc/features/home/data/datasource/reecommendation_doctor_item_list_model.dart';
+import 'package:go_router/go_router.dart';
+
 import '../widgets/notification/notifaction_app_bar.dart';
 
 import '../../../../core/utils/app_colors.dart';
@@ -44,7 +47,19 @@ class DoctorSpecialityView extends StatelessWidget {
                       ),
                       itemBuilder: (context, index) {
                         return GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            context.push(
+                              '/doctorsSpeciality',
+                              extra: {
+                                'specialization': state
+                                    .specializations.specializations[index],
+                                // 'doctors': state.specializations
+                                //     .specializations[index].doctors![index],
+                                'imageAndRating':
+                                    reecommendationDoctorList[index],
+                              },
+                            );
+                          },
                           child: Column(
                             children: [
                               Container(
