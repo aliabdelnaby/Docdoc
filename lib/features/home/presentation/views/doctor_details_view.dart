@@ -29,6 +29,7 @@ class DoctorDetailsView extends StatelessWidget {
           onPressed: () {},
         ),
         body: DoctorDetailsViewBody(
+          doctor: doctor,
           name: doctor.name!,
           image: image,
           rating: rating,
@@ -47,8 +48,7 @@ class MakeAnAppointmentBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: AppColors.white,
-      margin:
-          const EdgeInsetsDirectional.symmetric(horizontal: 24, vertical: 16),
+      margin: const EdgeInsetsDirectional.only(start: 24, end: 24, bottom: 16),
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(

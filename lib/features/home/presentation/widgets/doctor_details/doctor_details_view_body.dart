@@ -1,3 +1,5 @@
+import 'package:docdoc/features/home/data/models/specialization_response_model/doctor.dart';
+
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import 'about_tab.dart';
@@ -14,8 +16,11 @@ class DoctorDetailsViewBody extends StatelessWidget {
     required this.name,
     required this.specialization,
     required this.degree,
+    required this.doctor,
   });
+
   final String name, image, rating, specialization, degree;
+  final Doctor doctor;
 
   @override
   Widget build(BuildContext context) {
@@ -49,13 +54,15 @@ class DoctorDetailsViewBody extends StatelessWidget {
                 Tab(text: 'Reviews'),
               ],
             ),
-            const Expanded(
+            Expanded(
               child: TabBarView(
                 clipBehavior: Clip.none,
                 children: [
-                  AboutTab(),
-                  LocationTab(),
-                  ReviewsTab(),
+                  AboutTab(
+                    doctor: doctor,
+                  ),
+                  const LocationTab(),
+                  const ReviewsTab(),
                 ],
               ),
             ),
