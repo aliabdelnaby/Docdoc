@@ -4,18 +4,23 @@ import 'package:docdoc/features/home/presentation/widgets/doctor_details/doctor_
 import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
 import 'package:docdoc/features/home/presentation/widgets/recommendation_doctor/recommendation_doctor_more_btn.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class DoctorDetailsView extends StatelessWidget {
   const DoctorDetailsView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final GoRouterState state = GoRouterState.of(context);
+    final extra = state.extra as Map<String, dynamic>?;
+    final String doctor = extra?['doctor'] ?? 'Unknown Details';
+    final List imageAndReviews = extra?['imageAndReviews'] ?? 'Unknown Details';
     return DefaultTabController(
       length: 3,
       child: Scaffold(
         appBar: buildAppBar(
           context,
-          title: "Doctor Name",
+          title: doctor,
           trailing: const CustomMoreBtn(),
         ),
         bottomNavigationBar: MakeAnAppointmentBtn(
