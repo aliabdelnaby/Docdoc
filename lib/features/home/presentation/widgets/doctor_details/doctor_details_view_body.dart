@@ -1,9 +1,9 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/app_text_styles.dart';
-import 'package:docdoc/features/home/presentation/widgets/doctor_details/about_tab.dart';
-import 'package:docdoc/features/home/presentation/widgets/doctor_details/doctor_details_card_info.dart';
-import 'package:docdoc/features/home/presentation/widgets/doctor_details/location_tab.dart';
-import 'package:docdoc/features/home/presentation/widgets/doctor_details/reviews_tab.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_text_styles.dart';
+import 'about_tab.dart';
+import 'doctor_details_card_info.dart';
+import 'location_tab.dart';
+import 'reviews_tab.dart';
 import 'package:flutter/material.dart';
 
 class DoctorDetailsViewBody extends StatelessWidget {

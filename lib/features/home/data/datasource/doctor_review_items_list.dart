@@ -1,5 +1,5 @@
-import 'package:docdoc/core/utils/assets.dart';
-import 'package:docdoc/features/home/data/models/static/doctor_review_model.dart';
+import '../../../../core/utils/assets.dart';
+import '../models/static/doctor_review_model.dart';
 
 List<DoctorReviewModel> doctorReviewList = [
   DoctorReviewModel(

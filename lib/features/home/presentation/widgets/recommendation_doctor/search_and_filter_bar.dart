@@ -1,5 +1,5 @@
-import 'package:docdoc/features/home/presentation/cubit/home_cubit.dart';
-import 'package:docdoc/features/home/presentation/widgets/recommendation_doctor/modal_sheet_filter_doctors.dart';
+import '../../cubit/home_cubit.dart';
+import 'modal_sheet_filter_doctors.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/utils/app_colors.dart';
 import 'recommendation_doctor_search.dart';

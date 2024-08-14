@@ -1,4 +1,4 @@
-import 'package:docdoc/features/home/presentation/views/doctor_details_view.dart';
+import '../../features/home/presentation/views/doctor_details_view.dart';
 
 import '../../features/home/presentation/views/recommendation_doctor_view.dart';
 

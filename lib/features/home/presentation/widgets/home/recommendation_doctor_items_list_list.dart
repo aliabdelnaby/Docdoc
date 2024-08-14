@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/app_colors.dart';
@@ -5,8 +7,6 @@ import '../../../../../core/utils/app_text_styles.dart';
 import '../../../data/datasource/reecommendation_doctor_item_list_model.dart';
 import '../../cubit/home_cubit.dart';
 import '../../cubit/home_state.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class RecommendationDoctorItemsList extends StatelessWidget {
   const RecommendationDoctorItemsList({
@@ -32,15 +32,11 @@ class RecommendationDoctorItemsList extends StatelessWidget {
                             context.push(
                               '/doctorDetailsView',
                               extra: {
-                                'doctorName': state.specializations
-                                    .specializations[index].doctors![0].name,
+                                'doctor': state.specializations
+                                    .specializations[index].doctors![0],
                                 'image': reecommendationDoctorList[index].image,
                                 'rating': reecommendationDoctorList[index]
                                     .rateAndReviews,
-                                'degree': state.specializations
-                                    .specializations[index].doctors![0].degree,
-                                'specialization': state.specializations
-                                    .specializations[index].name,
                               },
                             );
                           },

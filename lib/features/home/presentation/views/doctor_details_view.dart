@@ -1,8 +1,9 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/app_text_styles.dart';
-import 'package:docdoc/features/home/presentation/widgets/doctor_details/doctor_details_view_body.dart';
-import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
-import 'package:docdoc/features/home/presentation/widgets/recommendation_doctor/recommendation_doctor_more_btn.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_text_styles.dart';
+import '../../data/models/specialization_response_model/doctor.dart';
+import '../widgets/doctor_details/doctor_details_view_body.dart';
+import '../widgets/notification/notifaction_app_bar.dart';
+import '../widgets/recommendation_doctor/recommendation_doctor_more_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -13,28 +14,26 @@ class DoctorDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     final GoRouterState state = GoRouterState.of(context);
     final extra = state.extra as Map<String, dynamic>?;
-    final String doctorName = extra?['doctorName'] ?? 'Unknown Details';
+    final Doctor doctor = extra?['doctor'] ?? 'Unknown Details';
     final String image = extra?['image'] ?? 'Unknown Details';
     final String rating = extra?['rating'] ?? 'Unknown Details';
-    final String degree = extra?['degree'] ?? 'Unknown Details';
-    final String specialization = extra?['specialization'] ?? 'Unknown Details';
     return DefaultTabController(
       length: 3,
       child: Scaffold(
         appBar: buildAppBar(
           context,
-          title: doctorName,
+          title: doctor.name!,
           trailing: const CustomMoreBtn(),
         ),
         bottomNavigationBar: MakeAnAppointmentBtn(
           onPressed: () {},
         ),
         body: DoctorDetailsViewBody(
-          name: doctorName,
+          name: doctor.name!,
           image: image,
           rating: rating,
-          degree: degree,
-          specialization: specialization,
+          degree: doctor.degree!,
+          specialization: doctor.specialization!.name!,
         ),
       ),
     );
