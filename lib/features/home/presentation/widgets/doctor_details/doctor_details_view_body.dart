@@ -91,6 +91,7 @@ class DoctorDetailsViewBody extends StatelessWidget {
             ),
             const Expanded(
               child: TabBarView(
+                clipBehavior: Clip.none,
                 children: [
                   AboutTab(),
                   LocationTab(),
@@ -110,29 +111,62 @@ class AboutTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(16.0),
+    return Padding(
+      padding: const EdgeInsetsDirectional.only(top: 32),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             'About me',
-            style: AppStyles.style16W700,
+            style: AppStyles.style16W600.copyWith(
+              color: AppColors.black2,
+            ),
           ),
-          SizedBox(height: 8),
-          Text(
-            'Dr. Jenny Watson is the top most Immunologists specialist in Christ Hospital at London. She achieved several awards for her wonderful contribution in the medical field. She is available for private consultation.',
-            style: AppStyles.style12W500,
+          const SizedBox(height: 12),
+          const Text(
+            "Dr. Jenny Watson is the top most Immunologists specialist in Christ Hospital at London. She achived several awards for her wonderful contribution in medical field. She is available for private consultation.",
+            style: AppStyles.style14W400,
           ),
-          SizedBox(height: 24),
+          const SizedBox(height: 24),
           Text(
             'Working Time',
-            style: AppStyles.style16W700,
+            style: AppStyles.style16W600.copyWith(
+              color: AppColors.black2,
+            ),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 12),
+          const Text(
+            'Monday - Friday, 14:00:00 PM - 20:00:00 PM',
+            style: AppStyles.style14W400,
+          ),
+          const SizedBox(height: 24),
           Text(
-            'Monday - Friday, 08.00 AM - 20.00 PM',
-            style: AppStyles.style12W500,
+            'Contact Details',
+            style: AppStyles.style16W600.copyWith(
+              color: AppColors.black2,
+            ),
+          ),
+          const SizedBox(height: 12),
+          const Text(
+            '1-307-786-4522',
+            style: AppStyles.style14W400,
+          ),
+          const SizedBox(height: 12),
+          const Text(
+            'muller.russel@example.com',
+            style: AppStyles.style14W400,
+          ),
+          const SizedBox(height: 24),
+          Text(
+            'Appointment Price',
+            style: AppStyles.style16W600.copyWith(
+              color: AppColors.black2,
+            ),
+          ),
+          const SizedBox(height: 12),
+          const Text(
+            '300',
+            style: AppStyles.style14W400,
           ),
         ],
       ),
