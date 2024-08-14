@@ -1,4 +1,3 @@
-import 'package:docdoc/features/home/data/datasource/reecommendation_doctor_item_list_model.dart';
 import 'package:go_router/go_router.dart';
 
 import '../widgets/notification/notifaction_app_bar.dart';
@@ -55,8 +54,8 @@ class DoctorSpecialityView extends StatelessWidget {
                                     .specializations.specializations[index],
                                 // 'doctors': state.specializations
                                 //     .specializations[index].doctors![index],
-                                'imageAndRating':
-                                    reecommendationDoctorList[index],
+                                // 'imageAndRating':
+                                //     reecommendationDoctorList[index],
                               },
                             );
                           },

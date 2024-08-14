@@ -13,7 +13,6 @@ class DoctorsSpeciality extends StatelessWidget {
   Widget build(BuildContext context) {
     final GoRouterState state = GoRouterState.of(context);
     final extra = state.extra as Map<String, dynamic>?;
-    // final Doctor doctor = extra?['doctor'] ?? 'Unknown Details';
     final Specialization specialization =
         extra?['specialization'] ?? 'Unknown Details';
     return Scaffold(
@@ -30,16 +29,15 @@ class DoctorsSpeciality extends StatelessWidget {
               (index) {
                 return InkWell(
                   onTap: () {
-                    // context.push(
-                    //   '/doctorDetailsView',
-                    //   extra: {
-                    //     'doctor': state.specializations
-                    //         .specializations[index].doctors![0],
-                    //     'image': reecommendationDoctorList[index].image,
-                    //     'rating': reecommendationDoctorList[index]
-                    //         .rateAndReviews,
-                    //   },
-                    // );
+                    context.push(
+                      '/doctorDetailsView',
+                      extra: {
+                        'doctor': specialization.doctors![index],
+                        'image': reecommendationDoctorList[index].image,
+                        'rating':
+                            reecommendationDoctorList[index].rateAndReviews,
+                      },
+                    );
                   },
                   child: Padding(
                     padding:
