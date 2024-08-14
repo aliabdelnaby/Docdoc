@@ -1,11 +1,12 @@
+import 'package:docdoc/features/home/data/models/specialization_response_model/doctor.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class LocationTab extends StatelessWidget {
-  const LocationTab({super.key});
-
+  const LocationTab({super.key, required this.doctor});
+final Doctor doctor;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -21,8 +22,8 @@ class LocationTab extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 12),
-            const Text(
-              "770 Delilah Mill\nSteveborough, ME 41454-1846",
+             Text(
+              doctor.address!,
               style: AppStyles.style14W400,
             ),
             const SizedBox(height: 24),

@@ -61,7 +61,9 @@ class DoctorDetailsViewBody extends StatelessWidget {
                   AboutTab(
                     doctor: doctor,
                   ),
-                  const LocationTab(),
+                  LocationTab(
+                    doctor: doctor,
+                  ),
                   const ReviewsTab(),
                 ],
               ),
