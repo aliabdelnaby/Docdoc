@@ -1,6 +1,7 @@
 import 'package:docdoc/core/utils/app_colors.dart';
 import 'package:docdoc/core/utils/app_text_styles.dart';
 import 'package:docdoc/core/utils/assets.dart';
+import 'package:docdoc/features/home/data/datasource/doctor_review_items_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -111,64 +112,66 @@ class AboutTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsetsDirectional.only(top: 32),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'About me',
-            style: AppStyles.style16W600.copyWith(
-              color: AppColors.black2,
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsetsDirectional.only(top: 32),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'About me',
+              style: AppStyles.style16W600.copyWith(
+                color: AppColors.black2,
+              ),
             ),
-          ),
-          const SizedBox(height: 12),
-          const Text(
-            "Dr. Jenny Watson is the top most Immunologists specialist in Christ Hospital at London. She achived several awards for her wonderful contribution in medical field. She is available for private consultation.",
-            style: AppStyles.style14W400,
-          ),
-          const SizedBox(height: 24),
-          Text(
-            'Working Time',
-            style: AppStyles.style16W600.copyWith(
-              color: AppColors.black2,
+            const SizedBox(height: 12),
+            const Text(
+              "Dr. Jenny Watson is the top most Immunologists specialist in Christ Hospital at London. She achived several awards for her wonderful contribution in medical field. She is available for private consultation.",
+              style: AppStyles.style14W400,
             ),
-          ),
-          const SizedBox(height: 12),
-          const Text(
-            'Monday - Friday, 14:00:00 PM - 20:00:00 PM',
-            style: AppStyles.style14W400,
-          ),
-          const SizedBox(height: 24),
-          Text(
-            'Contact Details',
-            style: AppStyles.style16W600.copyWith(
-              color: AppColors.black2,
+            const SizedBox(height: 24),
+            Text(
+              'Working Time',
+              style: AppStyles.style16W600.copyWith(
+                color: AppColors.black2,
+              ),
             ),
-          ),
-          const SizedBox(height: 12),
-          const Text(
-            '1-307-786-4522',
-            style: AppStyles.style14W400,
-          ),
-          const SizedBox(height: 12),
-          const Text(
-            'muller.russel@example.com',
-            style: AppStyles.style14W400,
-          ),
-          const SizedBox(height: 24),
-          Text(
-            'Appointment Price',
-            style: AppStyles.style16W600.copyWith(
-              color: AppColors.black2,
+            const SizedBox(height: 12),
+            const Text(
+              'Monday - Friday, 14:00:00 PM - 20:00:00 PM',
+              style: AppStyles.style14W400,
             ),
-          ),
-          const SizedBox(height: 12),
-          const Text(
-            '300',
-            style: AppStyles.style14W400,
-          ),
-        ],
+            const SizedBox(height: 24),
+            Text(
+              'Contact Details',
+              style: AppStyles.style16W600.copyWith(
+                color: AppColors.black2,
+              ),
+            ),
+            const SizedBox(height: 12),
+            const Text(
+              '1-307-786-4522',
+              style: AppStyles.style14W400,
+            ),
+            const SizedBox(height: 12),
+            const Text(
+              'muller.russel@example.com',
+              style: AppStyles.style14W400,
+            ),
+            const SizedBox(height: 24),
+            Text(
+              'Appointment Price',
+              style: AppStyles.style16W600.copyWith(
+                color: AppColors.black2,
+              ),
+            ),
+            const SizedBox(height: 12),
+            const Text(
+              '300',
+              style: AppStyles.style14W400,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -179,35 +182,37 @@ class LocationTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsetsDirectional.only(top: 32),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Practice Place',
-            style: AppStyles.style16W600.copyWith(
-              color: AppColors.black2,
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsetsDirectional.only(top: 32),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Practice Place',
+              style: AppStyles.style16W600.copyWith(
+                color: AppColors.black2,
+              ),
             ),
-          ),
-          const SizedBox(height: 12),
-          const Text(
-            "770 Delilah Mill\nSteveborough, ME 41454-1846",
-            style: AppStyles.style14W400,
-          ),
-          const SizedBox(height: 24),
-          Text(
-            'Location Map',
-            style: AppStyles.style16W600.copyWith(
-              color: AppColors.black2,
+            const SizedBox(height: 12),
+            const Text(
+              "770 Delilah Mill\nSteveborough, ME 41454-1846",
+              style: AppStyles.style14W400,
             ),
-          ),
-          const SizedBox(height: 12),
-          Image.asset(
-            Assets.imagesLocationMap,
-            fit: BoxFit.cover,
-          ),
-        ],
+            const SizedBox(height: 24),
+            Text(
+              'Location Map',
+              style: AppStyles.style16W600.copyWith(
+                color: AppColors.black2,
+              ),
+            ),
+            const SizedBox(height: 12),
+            Image.asset(
+              Assets.imagesLocationMap,
+              fit: BoxFit.cover,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -218,54 +223,58 @@ class ReviewsTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsetsDirectional.only(top: 32),
-      child: Column(
-        children: [
-          ListTile(
-            titleAlignment: ListTileTitleAlignment.top,
-            title: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Jane Cooper",
-                  style: AppStyles.style16W600.copyWith(
-                    color: AppColors.black2,
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsetsDirectional.only(top: 32),
+        child: Column(
+          children: List.generate(doctorReviewList.length, (index) {
+            return ListTile(
+              contentPadding: EdgeInsets.zero,
+              visualDensity: VisualDensity.compact,
+              titleAlignment: ListTileTitleAlignment.top,
+              title: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    doctorReviewList[index].name,
+                    style: AppStyles.style16W600.copyWith(
+                      color: AppColors.black2,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 8),
-                Row(
-                  children: List.generate(
-                    5,
-                    (index) {
-                      return const Icon(
-                        Icons.star_rate_rounded,
-                        color: AppColors.ratingStart,
-                        size: 24,
-                      );
-                    },
+                  const SizedBox(height: 8),
+                  Row(
+                    children: List.generate(
+                      doctorReviewList[index].rating,
+                      (index) {
+                        return const Icon(
+                          Icons.star_rate_rounded,
+                          color: AppColors.ratingStart,
+                          size: 24,
+                        );
+                      },
+                    ),
                   ),
+                  const SizedBox(height: 10),
+                ],
+              ),
+              subtitle: Text(
+                doctorReviewList[index].description,
+                style: AppStyles.style12W400.copyWith(
+                  color: AppColors.textGrey,
                 ),
-                const SizedBox(height: 10),
-              ],
-            ),
-            subtitle: Text(
-              "As someone who lives in a remote area with limited access to healthcare, this telemedicine app has been a game changer for me. I can easily schedule virtual appointments with doctors and get the care I need without having to travel long distances.",
-              style: AppStyles.style12W400.copyWith(
-                color: AppColors.textGrey,
               ),
-            ),
-            trailing: const Text(
-              "Today",
-            ),
-            leading: const CircleAvatar(
-              radius: 24,
-              backgroundImage: AssetImage(
-                Assets.imagesDoctor6,
+              trailing: Text(
+                doctorReviewList[index].time,
               ),
-            ),
-          ),
-        ],
+              leading: CircleAvatar(
+                radius: 24,
+                backgroundImage: AssetImage(
+                  doctorReviewList[index].image,
+                ),
+              ),
+            );
+          }),
+        ),
       ),
     );
   }

@@ -157,6 +157,22 @@ class Assets {
   /// assets/images/Psychiatry.png
   static const String imagesPsychiatry = "assets/images/Psychiatry.png";
 
+  /// Assets for imagesReview1
+  /// assets/images/review1.jpg
+  static const String imagesReview1 = "assets/images/review1.jpg";
+
+  /// Assets for imagesReview2
+  /// assets/images/review2.jpg
+  static const String imagesReview2 = "assets/images/review2.jpg";
+
+  /// Assets for imagesReview3
+  /// assets/images/review3.png
+  static const String imagesReview3 = "assets/images/review3.png";
+
+  /// Assets for imagesReview4
+  /// assets/images/review4.jpg
+  static const String imagesReview4 = "assets/images/review4.jpg";
+
   /// Assets for imagesScheduleChanged
   /// assets/images/ScheduleChanged.svg
   static const String imagesScheduleChanged = "assets/images/ScheduleChanged.svg";
