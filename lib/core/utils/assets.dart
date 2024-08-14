@@ -97,6 +97,10 @@ class Assets {
   /// assets/images/Gynecology.png
   static const String imagesGynecology = "assets/images/Gynecology.png";
 
+  /// Assets for imagesLocationMap
+  /// assets/images/LocationMap.png
+  static const String imagesLocationMap = "assets/images/LocationMap.png";
+
   /// Assets for imagesLogo
   /// assets/images/logo.png
   static const String imagesLogo = "assets/images/logo.png";

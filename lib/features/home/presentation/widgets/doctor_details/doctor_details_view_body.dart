@@ -179,10 +179,35 @@ class LocationTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Location Information',
-        style: AppStyles.style16W700,
+    return Padding(
+      padding: const EdgeInsetsDirectional.only(top: 32),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Practice Place',
+            style: AppStyles.style16W600.copyWith(
+              color: AppColors.black2,
+            ),
+          ),
+          const SizedBox(height: 12),
+          const Text(
+            "770 Delilah Mill\nSteveborough, ME 41454-1846",
+            style: AppStyles.style14W400,
+          ),
+          const SizedBox(height: 24),
+          Text(
+            'Location Map',
+            style: AppStyles.style16W600.copyWith(
+              color: AppColors.black2,
+            ),
+          ),
+          const SizedBox(height: 12),
+          Image.asset(
+            Assets.imagesLocationMap,
+            fit: BoxFit.cover,
+          ),
+        ],
       ),
     );
   }
