@@ -6,12 +6,13 @@ class StepCircle extends StatelessWidget {
   final bool isActive;
   final String stepLabel;
   final int stepNumber;
-
+  final bool isCompleted;
   const StepCircle({
     super.key,
     required this.isActive,
     required this.stepLabel,
     required this.stepNumber,
+    required this.isCompleted,
   });
 
   @override
@@ -20,7 +21,9 @@ class StepCircle extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: 20,
-          backgroundColor: isActive ? AppColors.primary : AppColors.stepperGrey,
+          backgroundColor: isCompleted
+              ? AppColors.steppergreen
+              : (isActive ? AppColors.primary : AppColors.stepperGrey),
           child: Text(
             "$stepNumber",
             style: AppStyles.style12W500.copyWith(
@@ -32,7 +35,9 @@ class StepCircle extends StatelessWidget {
         Text(
           stepLabel,
           style: AppStyles.style12W400.copyWith(
-            color: isActive ? AppColors.black2 : AppColors.rememberMe,
+            color: isCompleted
+                ? AppColors.steppergreen
+                : (isActive ? AppColors.black2 : AppColors.rememberMe),
           ),
         ),
       ],

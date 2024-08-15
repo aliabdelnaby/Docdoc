@@ -1,4 +1,5 @@
 import 'package:docdoc/features/home/presentation/views/doctor_details_view.dart';
+import 'package:docdoc/features/home/presentation/widgets/book_appointment/date_time_page.dart';
 import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
 import 'package:docdoc/features/home/presentation/widgets/book_appointment/step_indicator.dart';
 import 'package:flutter/material.dart';
@@ -60,30 +61,6 @@ class _BookAppointmentViewState extends State<BookAppointmentView> {
             //! Perform the final booking action
           }
         },
-      ),
-    );
-  }
-}
-
-class DateAndTimePage extends StatelessWidget {
-  const DateAndTimePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text('Select Date', style: TextStyle(fontSize: 18)),
-          // Implement a Date Picker or Calendar here
-          SizedBox(height: 16),
-          Text('Available Time', style: TextStyle(fontSize: 18)),
-          // Implement Time Slots here (e.g., 08:30 AM, 09:00 AM, etc.)
-          SizedBox(height: 16),
-          Text('Appointment Type', style: TextStyle(fontSize: 18)),
-          // Implement radio buttons for In-Person, Video Call, Phone Call
-        ],
       ),
     );
   }

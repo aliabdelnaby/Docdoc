@@ -10,11 +10,12 @@ class StepIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 22),
+      padding: const EdgeInsetsDirectional.only(start: 22, end: 22, bottom: 41),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           StepCircle(
+            isCompleted: currentStep > 0,
             isActive: currentStep == 0,
             stepNumber: 1,
             stepLabel: 'Date & Time',
@@ -29,6 +30,7 @@ class StepIndicator extends StatelessWidget {
             ),
           ),
           StepCircle(
+            isCompleted: currentStep > 1,
             stepNumber: 2,
             isActive: currentStep == 1,
             stepLabel: 'Payment',
@@ -43,6 +45,7 @@ class StepIndicator extends StatelessWidget {
             ),
           ),
           StepCircle(
+            isCompleted: currentStep > 2,
             stepNumber: 3,
             isActive: currentStep == 2,
             stepLabel: 'Summary',
