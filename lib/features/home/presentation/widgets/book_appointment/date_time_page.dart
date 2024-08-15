@@ -7,7 +7,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker_plus/flutter_datetime_picker_plus.dart';
 
 class DateAndTimePage extends StatelessWidget {
-  const DateAndTimePage({super.key});
+  const DateAndTimePage({
+    super.key,
+    this.onDateTimeChanged,
+    this.onDateTimeConfirm, required this.onNoteChanged,
+  });
+
+  final dynamic Function(DateTime)? onDateTimeChanged;
+  final dynamic Function(DateTime)? onDateTimeConfirm;
+  final void Function(String) onNoteChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +39,8 @@ class DateAndTimePage extends StatelessWidget {
                     showTitleActions: true,
                     minTime: DateTime.now(),
                     maxTime: DateTime(2025, 1, 1),
-                    onChanged: (date) {},
-                    onConfirm: (date) {},
+                    onChanged: onDateTimeChanged,
+                    onConfirm: onDateTimeConfirm,
                     currentTime: DateTime.now(),
                     locale: LocaleType.en,
                   );
@@ -51,7 +59,9 @@ class DateAndTimePage extends StatelessWidget {
             onDateChange: (value) {},
           ),
           const SizedBox(height: 24),
-          const AvailableTimeSelection(),
+          AvailableTimeSelection(
+            onChanged: (value) {},
+          ),
           const SizedBox(height: 24),
           Text(
             'Appointment Type',
@@ -61,7 +71,7 @@ class DateAndTimePage extends StatelessWidget {
           ),
           const SizedBox(height: 14),
           AppointmentType(
-            onChanged: (value) {},
+            onChanged: onNoteChanged,
           ),
         ],
       ),

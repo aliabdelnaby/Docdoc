@@ -1,3 +1,5 @@
+import 'package:docdoc/features/home/data/models/specialization_response_model/doctor.dart';
+
 import 'doctor_details_view.dart';
 import '../widgets/book_appointment/date_time_page.dart';
 import '../widgets/book_appointment/payment_page.dart';
@@ -26,6 +28,11 @@ class _BookAppointmentViewState extends State<BookAppointmentView> {
 
   @override
   Widget build(BuildContext context) {
+    final GoRouterState state = GoRouterState.of(context);
+    final extra = state.extra as Map<String, dynamic>?;
+    final Doctor doctor = extra?['doctor'] ?? 'Unknown Details';
+    final String image = extra?['image'] ?? 'Unknown Details';
+    final String rating = extra?['rating'] ?? 'Unknown Details';
     return Scaffold(
       appBar: buildAppBar(context, title: "Book Appointment"),
       body: Padding(
@@ -43,7 +50,14 @@ class _BookAppointmentViewState extends State<BookAppointmentView> {
                   });
                 },
                 children: [
-                  const DateAndTimePage(),
+                  DateAndTimePage(
+                    onDateTimeChanged: (value) {
+                    },
+                    onDateTimeConfirm: (value) {
+                    },
+                    onNoteChanged: (value) {
+                    },
+                  ),
                   PaymentPage(
                     onChanged: (value) {},
                   ),

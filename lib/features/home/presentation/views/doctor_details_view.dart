@@ -28,7 +28,14 @@ class DoctorDetailsView extends StatelessWidget {
         bottomNavigationBar: MakeAnAppointmentBtn(
           text: "Make An Appointment",
           onPressed: () {
-            context.push('/bookAppointmentView');
+            context.push(
+              '/bookAppointmentView',
+              extra: {
+                'doctor': doctor,
+                'image': image,
+                'rating': rating,
+              },
+            );
           },
         ),
         body: DoctorDetailsViewBody(

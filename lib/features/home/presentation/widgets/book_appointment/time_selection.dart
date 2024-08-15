@@ -3,7 +3,8 @@ import '../../../../../core/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class AvailableTimeSelection extends StatefulWidget {
-  const AvailableTimeSelection({super.key});
+  const AvailableTimeSelection({super.key, this.onChanged});
+  final ValueChanged<String>? onChanged;
 
   @override
   State<AvailableTimeSelection> createState() => _AvailableTimeSelectionState();
@@ -52,6 +53,7 @@ class _AvailableTimeSelectionState extends State<AvailableTimeSelection> {
                   setState(() {
                     selectedTime = time;
                   });
+                  widget.onChanged?.call(time);
                 },
                 child: Container(
                   alignment: Alignment.center,
