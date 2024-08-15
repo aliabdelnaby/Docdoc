@@ -17,6 +17,10 @@ class Assets {
   /// assets/images/blue_card_Background.png
   static const String imagesBlueCardBackground = "assets/images/blue_card_Background.png";
 
+  /// Assets for imagesCall
+  /// assets/images/call.svg
+  static const String imagesCall = "assets/images/call.svg";
+
   /// Assets for imagesCardiology
   /// assets/images/Cardiology.png
   static const String imagesCardiology = "assets/images/Cardiology.png";
@@ -96,6 +100,10 @@ class Assets {
   /// Assets for imagesGynecology
   /// assets/images/Gynecology.png
   static const String imagesGynecology = "assets/images/Gynecology.png";
+
+  /// Assets for imagesInperson
+  /// assets/images/inperson.svg
+  static const String imagesInperson = "assets/images/inperson.svg";
 
   /// Assets for imagesLocationMap
   /// assets/images/LocationMap.png

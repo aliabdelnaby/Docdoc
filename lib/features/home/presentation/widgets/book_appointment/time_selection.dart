@@ -34,13 +34,13 @@ class _AvailableTimeSelectionState extends State<AvailableTimeSelection> {
         ),
         const SizedBox(height: 24),
         SizedBox(
-          height: MediaQuery.of(context).size.height * 0.22,
+          height: MediaQuery.of(context).size.height * 0.2,
           child: GridView.builder(
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              crossAxisSpacing: 16.0,
-              mainAxisSpacing: 16.0,
+              crossAxisSpacing: 12.0,
+              mainAxisSpacing: 12.0,
               childAspectRatio: 3.5,
             ),
             itemCount: timeSlots.length,

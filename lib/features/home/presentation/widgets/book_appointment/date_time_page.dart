@@ -1,5 +1,6 @@
 import 'package:docdoc/core/utils/app_colors.dart';
 import 'package:docdoc/core/utils/app_text_styles.dart';
+import 'package:docdoc/features/home/presentation/widgets/book_appointment/appointment_type.dart';
 import 'package:docdoc/features/home/presentation/widgets/book_appointment/select_date_widget.dart';
 import 'package:docdoc/features/home/presentation/widgets/book_appointment/time_selection.dart';
 import 'package:flutter/material.dart';
@@ -51,6 +52,17 @@ class DateAndTimePage extends StatelessWidget {
           ),
           const SizedBox(height: 24),
           const AvailableTimeSelection(),
+          const SizedBox(height: 24),
+          Text(
+            'Appointment Type',
+            style: AppStyles.style16W600.copyWith(
+              color: AppColors.black2,
+            ),
+          ),
+          const SizedBox(height: 14),
+          AppointmentType(
+            onChanged: (value) {},
+          ),
         ],
       ),
     );
