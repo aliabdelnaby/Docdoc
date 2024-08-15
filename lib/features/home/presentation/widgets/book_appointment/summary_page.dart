@@ -1,3 +1,5 @@
+import 'package:docdoc/features/home/data/models/specialization_response_model/doctor.dart';
+
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/utils/assets.dart';
@@ -6,9 +8,19 @@ import 'payment_info_list_tile.dart';
 import 'package:flutter/material.dart';
 
 class SummaryPage extends StatelessWidget {
-  const SummaryPage({super.key, this.selectedDateTime, this.note});
+  const SummaryPage({
+    super.key,
+    this.selectedDateTime,
+    this.note,
+    this.doctor,
+    this.image,
+    this.rating,
+  });
   final DateTime? selectedDateTime;
   final String? note;
+  final Doctor? doctor;
+  final String? image;
+  final String? rating;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -57,40 +69,40 @@ class SummaryPage extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadiusDirectional.circular(12),
                 child: Image.asset(
-                  Assets.imagesDoctor1,
+                  image!,
                   fit: BoxFit.cover,
                   height: 80,
                   width: 80,
                 ),
               ),
               const SizedBox(width: 16),
-              const Expanded(
+              Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Dr. Randy Wigham',
+                      doctor!.name!,
                       style: AppStyles.style16W700,
                       overflow: TextOverflow.ellipsis,
                     ),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     Text(
-                      "General | RSUD Gatot Subroto",
+                      "${doctor!.specialization!.name}| ${doctor!.degree}",
                       style: AppStyles.style12W500,
                       overflow: TextOverflow.ellipsis,
                     ),
-                    SizedBox(height: 12),
+                    const SizedBox(height: 12),
                     Row(
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.star,
                           color: AppColors.ratingStart,
                           size: 16,
                         ),
-                        SizedBox(width: 4),
+                        const SizedBox(width: 4),
                         Expanded(
                           child: Text(
-                            '4.8 (4,279 reviews)',
+                            rating!,
                             style: AppStyles.style12W500,
                             overflow: TextOverflow.ellipsis,
                           ),

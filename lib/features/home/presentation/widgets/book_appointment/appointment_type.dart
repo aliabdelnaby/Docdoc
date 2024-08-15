@@ -13,7 +13,7 @@ class AppointmentType extends StatefulWidget {
 }
 
 class _AppointmentTypeState extends State<AppointmentType> {
-  String _selectedAppointmentType = 'In Person';
+  String _selectedAppointmentType = '';
 
   @override
   Widget build(BuildContext context) {

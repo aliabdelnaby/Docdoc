@@ -66,9 +66,12 @@ class _BookAppointmentViewState extends State<BookAppointmentView> {
                   PaymentPage(
                     onChanged: (value) {},
                   ),
-                   SummaryPage(
+                  SummaryPage(
                     selectedDateTime: selectedDateTime,
                     note: note,
+                    doctor: doctor,
+                    image: image,
+                    rating: rating,
                   ),
                 ],
               ),
