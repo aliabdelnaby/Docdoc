@@ -21,6 +21,8 @@ class _BookAppointmentViewState extends State<BookAppointmentView> {
   int _currentIndex = 0;
   DateTime? selectedDateTime;
   String? note;
+  String? paymentMethod;
+
   @override
   void dispose() {
     _pageController.dispose();
@@ -64,7 +66,11 @@ class _BookAppointmentViewState extends State<BookAppointmentView> {
                     },
                   ),
                   PaymentPage(
-                    onChanged: (value) {},
+                    onChanged: (value) {
+                      setState(() {
+                        paymentMethod = value;
+                      });
+                    },
                   ),
                   SummaryPage(
                     selectedDateTime: selectedDateTime,
@@ -72,6 +78,7 @@ class _BookAppointmentViewState extends State<BookAppointmentView> {
                     doctor: doctor,
                     image: image,
                     rating: rating,
+                    paymentMethod: paymentMethod,
                   ),
                 ],
               ),

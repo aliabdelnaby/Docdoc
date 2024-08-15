@@ -14,7 +14,7 @@ class PaymentPage extends StatefulWidget {
 }
 
 class _PaymentPageState extends State<PaymentPage> {
-  String _selectedPayment = 'Master Card';
+  String _selectedPayment = '';
 
   @override
   Widget build(BuildContext context) {

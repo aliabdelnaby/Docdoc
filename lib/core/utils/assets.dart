@@ -193,6 +193,10 @@ class Assets {
   /// assets/images/ScheduleChanged.svg
   static const String imagesScheduleChanged = "assets/images/ScheduleChanged.svg";
 
+  /// Assets for imagesSmallMoneyIconSvg
+  /// assets/images/small-money-icon-svg.svg
+  static const String imagesSmallMoneyIconSvg = "assets/images/small-money-icon-svg.svg";
+
   /// Assets for imagesSplash
   /// assets/images/splash.png
   static const String imagesSplash = "assets/images/splash.png";

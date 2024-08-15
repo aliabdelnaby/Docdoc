@@ -15,12 +15,14 @@ class SummaryPage extends StatelessWidget {
     this.doctor,
     this.image,
     this.rating,
+    this.paymentMethod,
   });
   final DateTime? selectedDateTime;
   final String? note;
   final Doctor? doctor;
   final String? image;
   final String? rating;
+  final String? paymentMethod;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -48,7 +50,7 @@ class SummaryPage extends StatelessWidget {
           ),
           CustomBookInfoItem(
             title: 'Appointment Type',
-            subtitle: note ?? 'Not provided',
+            subtitle: note ?? 'Not selected',
             image: Assets.imagesAppointmentTypeBookInfo,
             backgroundColor: AppColors.videoCallAppointment,
           ),
@@ -122,12 +124,12 @@ class SummaryPage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 24),
-          const PaymentInformationListTile(
-            backgroundColor: Color(0xffF1F1F1),
+          PaymentInformationListTile(
+            backgroundColor: const Color(0xffF1F1F1),
             btnText: 'Change',
-            image: Assets.imagesMastercard,
+            image: Assets.imagesSmallMoneyIconSvg,
             subtitle: '***** ***** ***** 37842',
-            title: 'Master Card',
+            title: paymentMethod ?? 'Not selected',
           ),
           const SizedBox(height: 24),
           Row(
@@ -140,7 +142,7 @@ class SummaryPage extends StatelessWidget {
                 ),
               ),
               Text(
-                '\$4944',
+                '\$${doctor!.appointPrice}',
                 style: AppStyles.style16W600.copyWith(
                   color: AppColors.black2,
                 ),
