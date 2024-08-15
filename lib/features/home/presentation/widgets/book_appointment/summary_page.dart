@@ -107,7 +107,13 @@ class SummaryPage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 24),
-          const PaymentInformationListTile(),
+          const PaymentInformationListTile(
+            backgroundColor: Color(0xffF1F1F1),
+            btnText: 'Change',
+            image: Assets.imagesMastercard,
+            subtitle: '***** ***** ***** 37842',
+            title: 'Master Card',
+          ),
           const SizedBox(height: 24),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

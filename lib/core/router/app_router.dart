@@ -1,4 +1,5 @@
 import 'package:docdoc/features/home/presentation/views/book_appointment_view.dart.dart';
+import 'package:docdoc/features/home/presentation/views/booking_details_view.dart';
 import 'package:docdoc/features/home/presentation/views/doctors_speciality_.dart';
 import '../../features/home/presentation/views/doctor_details_view.dart';
 import '../../features/home/presentation/views/recommendation_doctor_view.dart';
@@ -91,6 +92,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/bookAppointmentView',
       builder: (context, state) => const BookAppointmentView(),
+    ),
+     GoRoute(
+      path: '/bookingDetailsView',
+      builder: (context, state) => const BookingDetailsView(),
     ),
   ],
 );

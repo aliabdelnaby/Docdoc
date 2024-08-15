@@ -5,6 +5,7 @@ import 'package:docdoc/features/home/presentation/widgets/book_appointment/summa
 import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
 import 'package:docdoc/features/home/presentation/widgets/book_appointment/step_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class BookAppointmentView extends StatefulWidget {
   const BookAppointmentView({super.key});
@@ -62,7 +63,7 @@ class _BookAppointmentViewState extends State<BookAppointmentView> {
               curve: Curves.easeInOut,
             );
           } else {
-            //! Perform the final booking action
+            context.pushReplacement('/bookingDetailsView');
           }
         },
       ),
