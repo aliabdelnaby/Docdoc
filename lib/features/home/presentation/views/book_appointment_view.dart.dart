@@ -1,5 +1,6 @@
 import 'package:docdoc/features/home/presentation/views/doctor_details_view.dart';
 import 'package:docdoc/features/home/presentation/widgets/book_appointment/date_time_page.dart';
+import 'package:docdoc/features/home/presentation/widgets/book_appointment/payment_page.dart';
 import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
 import 'package:docdoc/features/home/presentation/widgets/book_appointment/step_indicator.dart';
 import 'package:flutter/material.dart';
@@ -39,10 +40,12 @@ class _BookAppointmentViewState extends State<BookAppointmentView> {
                     _currentIndex = index;
                   });
                 },
-                children: const [
-                  DateAndTimePage(),
-                  PaymentPage(),
-                  SummaryPage(),
+                children: [
+                  const DateAndTimePage(),
+                  PaymentPage(
+                    onChanged: (value) {},
+                  ),
+                  const SummaryPage(),
                 ],
               ),
             ),
@@ -61,36 +64,6 @@ class _BookAppointmentViewState extends State<BookAppointmentView> {
             //! Perform the final booking action
           }
         },
-      ),
-    );
-  }
-}
-
-class PaymentPage extends StatelessWidget {
-  const PaymentPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text('Payment Option', style: TextStyle(fontSize: 18)),
-          ListTile(
-            title: const Text('Credit Card'),
-            leading: Radio(
-                value: 'credit_card',
-                groupValue: 'payment',
-                onChanged: (value) {}),
-          ),
-          ListTile(
-            title: const Text('Paypal'),
-            leading: Radio(
-                value: 'paypal', groupValue: 'payment', onChanged: (value) {}),
-          ),
-          // Add more payment options here
-        ],
       ),
     );
   }

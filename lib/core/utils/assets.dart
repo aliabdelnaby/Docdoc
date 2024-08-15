@@ -117,6 +117,10 @@ class Assets {
   /// assets/images/logoOpacity.svg
   static const String imagesLogoOpacity = "assets/images/logoOpacity.svg";
 
+  /// Assets for imagesMastercard
+  /// assets/images/mastercard.svg
+  static const String imagesMastercard = "assets/images/mastercard.svg";
+
   /// Assets for imagesNavSearch
   /// assets/images/navSearch.svg
   static const String imagesNavSearch = "assets/images/navSearch.svg";
