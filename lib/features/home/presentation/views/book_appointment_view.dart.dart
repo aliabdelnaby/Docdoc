@@ -1,6 +1,7 @@
 import 'package:docdoc/features/home/presentation/views/doctor_details_view.dart';
 import 'package:docdoc/features/home/presentation/widgets/book_appointment/date_time_page.dart';
 import 'package:docdoc/features/home/presentation/widgets/book_appointment/payment_page.dart';
+import 'package:docdoc/features/home/presentation/widgets/book_appointment/summary_page.dart';
 import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
 import 'package:docdoc/features/home/presentation/widgets/book_appointment/step_indicator.dart';
 import 'package:flutter/material.dart';
@@ -64,72 +65,6 @@ class _BookAppointmentViewState extends State<BookAppointmentView> {
             //! Perform the final booking action
           }
         },
-      ),
-    );
-  }
-}
-
-class SummaryPage extends StatelessWidget {
-  const SummaryPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Booking Information', style: TextStyle(fontSize: 18)),
-            ListTile(
-              leading: Icon(Icons.calendar_today),
-              title: Text('Wednesday, 08 May 2023'),
-              subtitle: Text('08:30 AM'),
-            ),
-            ListTile(
-              leading: Icon(Icons.accessibility),
-              title: Text('In Person'),
-            ),
-            Divider(),
-            Text('Doctor Information', style: TextStyle(fontSize: 18)),
-            ListTile(
-              leading: CircleAvatar(
-                backgroundImage:
-                    NetworkImage('https://via.placeholder.com/150'),
-              ),
-              title: Text('Dr. Randy Wigham'),
-              subtitle: Text('General | RSUD Gatot Subroto'),
-              trailing: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Icon(Icons.star, color: Colors.yellow),
-                  Text('4.8 (4,279 reviews)'),
-                ],
-              ),
-            ),
-            Divider(),
-            Text('Payment Information', style: TextStyle(fontSize: 18)),
-            ListTile(
-              leading: Icon(Icons.payment),
-              title: Text('Paypal'),
-              subtitle: Text('**** 37842'),
-            ),
-            Divider(),
-            Text('Payment Info', style: TextStyle(fontSize: 18)),
-            ListTile(
-              title: Text('Subtotal'),
-              trailing: Text('\$4694'),
-            ),
-            ListTile(
-              title: Text('Tax'),
-              trailing: Text('\$250'),
-            ),
-            ListTile(
-              title: Text('Payment Total'),
-              trailing: Text('\$4944'),
-            ),
-          ],
-        ),
       ),
     );
   }

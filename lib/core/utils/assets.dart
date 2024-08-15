@@ -13,6 +13,10 @@ class Assets {
   /// assets/images/AppointmentSuccess .svg
   static const String imagesAppointmentSuccess  = "assets/images/AppointmentSuccess .svg";
 
+  /// Assets for imagesAppointmentTypeBookInfo
+  /// assets/images/AppointmentTypeBookInfo.svg
+  static const String imagesAppointmentTypeBookInfo = "assets/images/AppointmentTypeBookInfo.svg";
+
   /// Assets for imagesBlueCardBackground
   /// assets/images/blue_card_Background.png
   static const String imagesBlueCardBackground = "assets/images/blue_card_Background.png";
