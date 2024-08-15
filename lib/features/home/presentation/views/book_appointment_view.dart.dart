@@ -1,9 +1,9 @@
-import 'package:docdoc/features/home/presentation/views/doctor_details_view.dart';
-import 'package:docdoc/features/home/presentation/widgets/book_appointment/date_time_page.dart';
-import 'package:docdoc/features/home/presentation/widgets/book_appointment/payment_page.dart';
-import 'package:docdoc/features/home/presentation/widgets/book_appointment/summary_page.dart';
-import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
-import 'package:docdoc/features/home/presentation/widgets/book_appointment/step_indicator.dart';
+import 'doctor_details_view.dart';
+import '../widgets/book_appointment/date_time_page.dart';
+import '../widgets/book_appointment/payment_page.dart';
+import '../widgets/book_appointment/summary_page.dart';
+import '../widgets/notification/notifaction_app_bar.dart';
+import '../widgets/book_appointment/step_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

@@ -1,2 +1,2 @@
 # Docdoc
-Dodoc is an application for telemedicine by booking appointments online or offline at the clinic location
+Dodoc is a telemedicine application by booking appointments online or at the clinic site

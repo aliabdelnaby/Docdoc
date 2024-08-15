@@ -1,6 +1,6 @@
-import 'package:docdoc/features/home/presentation/views/book_appointment_view.dart.dart';
-import 'package:docdoc/features/home/presentation/views/booking_details_view.dart';
-import 'package:docdoc/features/home/presentation/views/doctors_speciality_.dart';
+import '../../features/home/presentation/views/book_appointment_view.dart.dart';
+import '../../features/home/presentation/views/booking_details_view.dart';
+import '../../features/home/presentation/views/doctors_speciality_.dart';
 import '../../features/home/presentation/views/doctor_details_view.dart';
 import '../../features/home/presentation/views/recommendation_doctor_view.dart';
 import '../../features/home/presentation/cubit/home_cubit.dart';

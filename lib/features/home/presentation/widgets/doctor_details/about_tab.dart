@@ -1,4 +1,4 @@
-import 'package:docdoc/features/home/data/models/specialization_response_model/doctor.dart';
+import '../../../data/models/specialization_response_model/doctor.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';

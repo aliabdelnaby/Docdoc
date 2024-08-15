@@ -1,8 +1,8 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/app_text_styles.dart';
-import 'package:docdoc/core/utils/assets.dart';
-import 'package:docdoc/features/home/presentation/widgets/book_appointment/book_item_info.dart';
-import 'package:docdoc/features/home/presentation/widgets/book_appointment/payment_info_list_tile.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_text_styles.dart';
+import '../../../../../core/utils/assets.dart';
+import 'book_item_info.dart';
+import 'payment_info_list_tile.dart';
 import 'package:flutter/material.dart';
 
 class SummaryPage extends StatelessWidget {

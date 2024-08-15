@@ -1,5 +1,5 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/features/home/presentation/widgets/book_appointment/step_circle.dart';
+import '../../../../../core/utils/app_colors.dart';
+import 'step_circle.dart';
 import 'package:flutter/material.dart';
 
 class StepIndicator extends StatelessWidget {

@@ -1,5 +1,5 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/app_text_styles.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -30,6 +30,9 @@ class PaymentInformationListTile extends StatelessWidget {
       ),
       subtitle: Text(
         subtitle,
+        style: AppStyles.style12W400.copyWith(
+          color: AppColors.textGrey,
+        ),
       ),
       leading: Container(
         constraints: const BoxConstraints(minHeight: 40, minWidth: 40),

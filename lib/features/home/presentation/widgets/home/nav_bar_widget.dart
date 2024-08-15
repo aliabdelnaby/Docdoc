@@ -2,7 +2,7 @@ import '../../cubit/home_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/utils/assets.dart';
-import '../../../../appointment/presentation/views/appointment_view.dart';
+import '../../../../my_appointment/presentation/views/appointment_view.dart';
 import 'user_bottom_nav_bar_widget.dart';
 import '../../../../messages/presentation/views/messages_view.dart';
 import '../../views/home_view.dart';

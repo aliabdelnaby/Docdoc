@@ -1,6 +1,6 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/assets.dart';
-import 'package:docdoc/features/home/presentation/widgets/book_appointment/appointment_type_item.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/assets.dart';
+import 'appointment_type_item.dart';
 import 'package:flutter/material.dart';
 
 class AppointmentType extends StatefulWidget {

@@ -1,8 +1,8 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/app_text_styles.dart';
-import 'package:docdoc/features/home/presentation/widgets/book_appointment/appointment_type.dart';
-import 'package:docdoc/features/home/presentation/widgets/book_appointment/select_date_widget.dart';
-import 'package:docdoc/features/home/presentation/widgets/book_appointment/time_selection.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_text_styles.dart';
+import 'appointment_type.dart';
+import 'select_date_widget.dart';
+import 'time_selection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker_plus/flutter_datetime_picker_plus.dart';
 
