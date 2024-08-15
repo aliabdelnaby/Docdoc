@@ -6,8 +6,9 @@ import 'payment_info_list_tile.dart';
 import 'package:flutter/material.dart';
 
 class SummaryPage extends StatelessWidget {
-  const SummaryPage({super.key});
-
+  const SummaryPage({super.key, this.selectedDateTime, this.note});
+  final DateTime? selectedDateTime;
+  final String? note;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -21,9 +22,11 @@ class SummaryPage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 24),
-          const CustomBookInfoItem(
+          CustomBookInfoItem(
             title: 'Date & Time',
-            subtitle: 'Wednesday, 08 May 2023\n14:00 PM',
+            subtitle: selectedDateTime != null
+                ? selectedDateTime.toString()
+                : 'Not selected',
             image: Assets.imagesScheduleChanged,
             backgroundColor: AppColors.scheduleChanged,
           ),
@@ -31,9 +34,9 @@ class SummaryPage extends StatelessWidget {
             color: AppColors.textFieldBorder,
             height: 30,
           ),
-          const CustomBookInfoItem(
+          CustomBookInfoItem(
             title: 'Appointment Type',
-            subtitle: 'In Person',
+            subtitle: note ?? 'Not provided',
             image: Assets.imagesAppointmentTypeBookInfo,
             backgroundColor: AppColors.videoCallAppointment,
           ),

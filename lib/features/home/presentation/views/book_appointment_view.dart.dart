@@ -19,7 +19,8 @@ class BookAppointmentView extends StatefulWidget {
 class _BookAppointmentViewState extends State<BookAppointmentView> {
   final PageController _pageController = PageController();
   int _currentIndex = 0;
-
+  DateTime? selectedDateTime;
+  String? note;
   @override
   void dispose() {
     _pageController.dispose();
@@ -51,17 +52,24 @@ class _BookAppointmentViewState extends State<BookAppointmentView> {
                 },
                 children: [
                   DateAndTimePage(
-                    onDateTimeChanged: (value) {
-                    },
                     onDateTimeConfirm: (value) {
+                      setState(() {
+                        selectedDateTime = value;
+                      });
                     },
                     onNoteChanged: (value) {
+                      setState(() {
+                        note = value;
+                      });
                     },
                   ),
                   PaymentPage(
                     onChanged: (value) {},
                   ),
-                  const SummaryPage(),
+                   SummaryPage(
+                    selectedDateTime: selectedDateTime,
+                    note: note,
+                  ),
                 ],
               ),
             ),
