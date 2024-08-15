@@ -2,6 +2,7 @@ import 'package:docdoc/core/utils/app_colors.dart';
 import 'package:docdoc/core/utils/app_text_styles.dart';
 import 'package:docdoc/features/home/presentation/widgets/book_appointment/select_date_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_datetime_picker_plus/flutter_datetime_picker_plus.dart';
 
 class DateAndTimePage extends StatelessWidget {
   const DateAndTimePage({super.key});
@@ -22,7 +23,20 @@ class DateAndTimePage extends StatelessWidget {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  DatePicker.showDateTimePicker(
+                    context,
+                    showTitleActions: true,
+                    minTime: DateTime.now(),
+                    maxTime: DateTime(2025, 1, 1),
+                    onChanged: (date) {
+                    },
+                    onConfirm: (date) {
+                    },
+                    currentTime: DateTime.now(),
+                    locale: LocaleType.en,
+                  );
+                },
                 child: Text(
                   'Set Manual',
                   style: AppStyles.style12W500.copyWith(
@@ -35,6 +49,13 @@ class DateAndTimePage extends StatelessWidget {
           const SizedBox(height: 24),
           SelectDateWidget(
             onDateChange: (value) {},
+          ),
+          const SizedBox(height: 24),
+          Text(
+            'Available time',
+            style: AppStyles.style16W600.copyWith(
+              color: AppColors.black2,
+            ),
           ),
           const SizedBox(height: 24),
         ],
