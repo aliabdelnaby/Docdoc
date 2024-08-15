@@ -93,4 +93,9 @@ class AppStyles {
     fontSize: 14,
     fontWeight: FontWeight.w700,
   );
+  static const TextStyle style14W500 = TextStyle(
+    color: AppColors.hintText,
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+  );
 }
