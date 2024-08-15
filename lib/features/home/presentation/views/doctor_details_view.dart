@@ -26,7 +26,9 @@ class DoctorDetailsView extends StatelessWidget {
           trailing: const CustomMoreBtn(),
         ),
         bottomNavigationBar: MakeAnAppointmentBtn(
-          onPressed: () {},
+          onPressed: () {
+            context.push('/bookAppointmentView');
+          },
         ),
         body: DoctorDetailsViewBody(
           doctor: doctor,

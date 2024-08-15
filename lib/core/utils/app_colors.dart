@@ -23,4 +23,5 @@ class AppColors {
   static const Color appointmentCancelled = Color(0xffFFEEEF);
   static const Color newPaymentAdded = Color(0xffEAF2FF);
   static const Color notificationTile = Color(0xffF2F4F7);
+  static const Color stepperGrey = Color(0xffE0E0E0);
 }
