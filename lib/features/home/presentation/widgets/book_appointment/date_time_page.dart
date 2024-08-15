@@ -1,5 +1,6 @@
 import 'package:docdoc/core/utils/app_colors.dart';
 import 'package:docdoc/core/utils/app_text_styles.dart';
+import 'package:docdoc/features/home/presentation/widgets/book_appointment/select_date_widget.dart';
 import 'package:flutter/material.dart';
 
 class DateAndTimePage extends StatelessWidget {
@@ -30,6 +31,10 @@ class DateAndTimePage extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+          const SizedBox(height: 24),
+          SelectDateWidget(
+            onDateChange: (value) {},
           ),
           const SizedBox(height: 24),
         ],
