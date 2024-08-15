@@ -1,5 +1,6 @@
-import '../../../../../core/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../../core/utils/app_text_styles.dart';
 
 class CustomAuthHeaderTextSection extends StatelessWidget {
   const CustomAuthHeaderTextSection(

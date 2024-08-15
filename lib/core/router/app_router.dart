@@ -1,23 +1,24 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../features/auth/presentation/cubit/auth_cubit.dart';
+import '../../features/auth/presentation/views/forgot_password_view.dart';
+import '../../features/auth/presentation/views/login_view.dart';
+import '../../features/auth/presentation/views/register_view.dart';
+import '../../features/home/presentation/cubit/home_cubit.dart';
 import '../../features/home/presentation/views/book_appointment_view.dart.dart';
 import '../../features/home/presentation/views/booking_details_view.dart';
-import '../../features/home/presentation/views/doctors_speciality_.dart';
 import '../../features/home/presentation/views/doctor_details_view.dart';
-import '../../features/home/presentation/views/recommendation_doctor_view.dart';
-import '../../features/home/presentation/cubit/home_cubit.dart';
 import '../../features/home/presentation/views/doctor_speciality_view.dart';
-import '../../features/home/presentation/views/notification_view.dart';
-import '../services/service_locator.dart';
+import '../../features/home/presentation/views/doctors_speciality_.dart';
 import '../../features/home/presentation/views/home_view.dart';
+import '../../features/home/presentation/views/notification_view.dart';
+import '../../features/home/presentation/views/recommendation_doctor_view.dart';
 import '../../features/home/presentation/widgets/home/nav_bar_widget.dart';
-import '../../features/search/presentation/views/search_view.dart';
-import '../../features/auth/presentation/views/forgot_password_view.dart';
-import '../../features/auth/presentation/views/register_view.dart';
-import '../../features/auth/presentation/cubit/auth_cubit.dart';
-import '../../features/auth/presentation/views/login_view.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../features/splash/presentation/views/splash_view.dart';
 import '../../features/onBorading/presentation/views/onborading_view.dart';
-import 'package:go_router/go_router.dart';
+import '../../features/search/presentation/views/search_view.dart';
+import '../../features/splash/presentation/views/splash_view.dart';
+import '../services/service_locator.dart';
 
 final GoRouter router = GoRouter(
   initialLocation: '/',

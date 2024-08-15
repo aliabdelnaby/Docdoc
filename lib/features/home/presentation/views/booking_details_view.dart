@@ -1,3 +1,6 @@
+import '../../data/models/specialization_response_model/doctor.dart';
+import 'package:go_router/go_router.dart';
+
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_text_styles.dart';
 import '../../../../core/utils/assets.dart';
@@ -12,10 +15,21 @@ class BookingDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final GoRouterState state = GoRouterState.of(context);
+    final extra = state.extra as Map<String, dynamic>?;
+    final Doctor doctor = extra?['doctor'] ?? 'Unknown Details';
+    final String image = extra?['image'] ?? 'Unknown Details';
+    final String rating = extra?['rating'] ?? 'Unknown Details';
+    final DateTime selectedDateTime =
+        extra?['selectedDateTime'] ?? 'Unknown Details';
+    final String note = extra?['note'] ?? 'Unknown Details';
+
     return Scaffold(
       appBar: buildAppBar(context, title: "Booking Details"),
       bottomNavigationBar: MakeAnAppointmentBtn(
-        onPressed: () {},
+        onPressed: () {
+          GoRouter.of(context).pop();
+        },
         text: "Done",
       ),
       body: SingleChildScrollView(
@@ -48,9 +62,9 @@ class BookingDetailsView extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 24),
-              const CustomBookInfoItem(
+              CustomBookInfoItem(
                 title: 'Date & Time',
-                subtitle: 'Wednesday, 08 May 2023\n14:00 PM',
+                subtitle: selectedDateTime.toString(),
                 image: Assets.imagesScheduleChanged,
                 backgroundColor: AppColors.scheduleChanged,
               ),
@@ -58,11 +72,11 @@ class BookingDetailsView extends StatelessWidget {
                 color: AppColors.textFieldBorder,
                 height: 30,
               ),
-              const PaymentInformationListTile(
+              PaymentInformationListTile(
                 backgroundColor: AppColors.videoCallAppointment,
                 btnText: 'Get Location',
                 image: Assets.imagesAppointmentTypeBookInfo,
-                subtitle: 'In Person',
+                subtitle: note,
                 title: 'Appointment Type',
               ),
               const Divider(
@@ -82,40 +96,40 @@ class BookingDetailsView extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadiusDirectional.circular(12),
                     child: Image.asset(
-                      Assets.imagesDoctor1,
+                      image,
                       fit: BoxFit.cover,
                       height: 80,
                       width: 80,
                     ),
                   ),
                   const SizedBox(width: 16),
-                  const Expanded(
+                  Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Dr. Randy Wigham',
+                          doctor.name!,
                           style: AppStyles.style16W700,
                           overflow: TextOverflow.ellipsis,
                         ),
-                        SizedBox(height: 8),
+                        const SizedBox(height: 8),
                         Text(
-                          "General | RSUD Gatot Subroto",
+                          "${doctor.specialization!.name} | ${doctor.degree}",
                           style: AppStyles.style12W500,
                           overflow: TextOverflow.ellipsis,
                         ),
-                        SizedBox(height: 12),
+                        const SizedBox(height: 12),
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.star,
                               color: AppColors.ratingStart,
                               size: 16,
                             ),
-                            SizedBox(width: 4),
+                            const SizedBox(width: 4),
                             Expanded(
                               child: Text(
-                                '4.8 (4,279 reviews)',
+                                rating,
                                 style: AppStyles.style12W500,
                                 overflow: TextOverflow.ellipsis,
                               ),

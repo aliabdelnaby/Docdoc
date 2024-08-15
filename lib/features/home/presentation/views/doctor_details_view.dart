@@ -1,11 +1,12 @@
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_text_styles.dart';
 import '../../data/models/specialization_response_model/doctor.dart';
 import '../widgets/doctor_details/doctor_details_view_body.dart';
 import '../widgets/notification/notifaction_app_bar.dart';
 import '../widgets/recommendation_doctor/recommendation_doctor_more_btn.dart';
-import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class DoctorDetailsView extends StatelessWidget {
   const DoctorDetailsView({super.key});

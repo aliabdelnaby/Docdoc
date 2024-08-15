@@ -1,4 +1,4 @@
-import 'package:docdoc/features/home/data/models/specialization_response_model/doctor.dart';
+import '../../data/models/specialization_response_model/doctor.dart';
 
 import 'doctor_details_view.dart';
 import '../widgets/book_appointment/date_time_page.dart';
@@ -95,7 +95,16 @@ class _BookAppointmentViewState extends State<BookAppointmentView> {
               curve: Curves.easeInOut,
             );
           } else {
-            context.pushReplacement('/bookingDetailsView');
+            context.pushReplacement(
+              '/bookingDetailsView',
+              extra: {
+                'selectedDateTime': selectedDateTime,
+                'note': note,
+                'doctor': doctor,
+                'image': image,
+                'rating': rating,
+              },
+            );
           }
         },
       ),
