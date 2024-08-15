@@ -26,6 +26,7 @@ class DoctorDetailsView extends StatelessWidget {
           trailing: const CustomMoreBtn(),
         ),
         bottomNavigationBar: MakeAnAppointmentBtn(
+          text: "Make An Appointment",
           onPressed: () {
             context.push('/bookAppointmentView');
           },
@@ -44,8 +45,9 @@ class DoctorDetailsView extends StatelessWidget {
 }
 
 class MakeAnAppointmentBtn extends StatelessWidget {
-  const MakeAnAppointmentBtn({super.key, this.onPressed});
+  const MakeAnAppointmentBtn({super.key, this.onPressed, required this.text});
   final void Function()? onPressed;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -60,8 +62,8 @@ class MakeAnAppointmentBtn extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
           ),
         ),
-        child: const Text(
-          "Make An Appointment",
+        child: Text(
+          text,
           style: AppStyles.style16W600,
         ),
       ),

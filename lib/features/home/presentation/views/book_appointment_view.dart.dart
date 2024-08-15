@@ -1,3 +1,4 @@
+import 'package:docdoc/features/home/presentation/views/doctor_details_view.dart';
 import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
 import 'package:docdoc/features/home/presentation/widgets/book_appointment/step_indicator.dart';
 import 'package:flutter/material.dart';
@@ -47,23 +48,18 @@ class _BookAppointmentViewState extends State<BookAppointmentView> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Padding(
-          padding: const EdgeInsetsDirectional.all(16.0),
-          child: ElevatedButton(
-            onPressed: () {
-              if (_currentIndex < 2) {
-                _pageController.nextPage(
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeInOut,
-                );
-              } else {
-                //! Perform the final booking action
-              }
-            },
-            child: Text(_currentIndex < 2 ? 'Continue' : 'Book Now'),
-          ),
-        ),
+      bottomNavigationBar: MakeAnAppointmentBtn(
+        text: _currentIndex < 2 ? 'Continue' : 'Book Now',
+        onPressed: () {
+          if (_currentIndex < 2) {
+            _pageController.nextPage(
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.easeInOut,
+            );
+          } else {
+            //! Perform the final booking action
+          }
+        },
       ),
     );
   }
@@ -128,59 +124,62 @@ class SummaryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text('Booking Information', style: TextStyle(fontSize: 18)),
-          ListTile(
-            leading: Icon(Icons.calendar_today),
-            title: Text('Wednesday, 08 May 2023'),
-            subtitle: Text('08:30 AM'),
-          ),
-          ListTile(
-            leading: Icon(Icons.accessibility),
-            title: Text('In Person'),
-          ),
-          Divider(),
-          Text('Doctor Information', style: TextStyle(fontSize: 18)),
-          ListTile(
-            leading: CircleAvatar(
-              backgroundImage: NetworkImage('https://via.placeholder.com/150'),
+    return const SingleChildScrollView(
+      child: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('Booking Information', style: TextStyle(fontSize: 18)),
+            ListTile(
+              leading: Icon(Icons.calendar_today),
+              title: Text('Wednesday, 08 May 2023'),
+              subtitle: Text('08:30 AM'),
             ),
-            title: Text('Dr. Randy Wigham'),
-            subtitle: Text('General | RSUD Gatot Subroto'),
-            trailing: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(Icons.star, color: Colors.yellow),
-                Text('4.8 (4,279 reviews)'),
-              ],
+            ListTile(
+              leading: Icon(Icons.accessibility),
+              title: Text('In Person'),
             ),
-          ),
-          Divider(),
-          Text('Payment Information', style: TextStyle(fontSize: 18)),
-          ListTile(
-            leading: Icon(Icons.payment),
-            title: Text('Paypal'),
-            subtitle: Text('**** 37842'),
-          ),
-          Divider(),
-          Text('Payment Info', style: TextStyle(fontSize: 18)),
-          ListTile(
-            title: Text('Subtotal'),
-            trailing: Text('\$4694'),
-          ),
-          ListTile(
-            title: Text('Tax'),
-            trailing: Text('\$250'),
-          ),
-          ListTile(
-            title: Text('Payment Total'),
-            trailing: Text('\$4944'),
-          ),
-        ],
+            Divider(),
+            Text('Doctor Information', style: TextStyle(fontSize: 18)),
+            ListTile(
+              leading: CircleAvatar(
+                backgroundImage:
+                    NetworkImage('https://via.placeholder.com/150'),
+              ),
+              title: Text('Dr. Randy Wigham'),
+              subtitle: Text('General | RSUD Gatot Subroto'),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.star, color: Colors.yellow),
+                  Text('4.8 (4,279 reviews)'),
+                ],
+              ),
+            ),
+            Divider(),
+            Text('Payment Information', style: TextStyle(fontSize: 18)),
+            ListTile(
+              leading: Icon(Icons.payment),
+              title: Text('Paypal'),
+              subtitle: Text('**** 37842'),
+            ),
+            Divider(),
+            Text('Payment Info', style: TextStyle(fontSize: 18)),
+            ListTile(
+              title: Text('Subtotal'),
+              trailing: Text('\$4694'),
+            ),
+            ListTile(
+              title: Text('Tax'),
+              trailing: Text('\$250'),
+            ),
+            ListTile(
+              title: Text('Payment Total'),
+              trailing: Text('\$4944'),
+            ),
+          ],
+        ),
       ),
     );
   }
