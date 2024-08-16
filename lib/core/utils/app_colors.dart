@@ -25,4 +25,5 @@ class AppColors {
   static const Color notificationTile = Color(0xffF2F4F7);
   static const Color stepperGrey = Color(0xffE0E0E0);
   static const Color steppergreen = Color(0xff22C55E);
+  static const Color chatBackground = Color(0xffF8F9FD);
 }

@@ -1,3 +1,4 @@
+import 'package:docdoc/features/messages/presentation/views/conversation_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
@@ -100,6 +101,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/bookingDetailsView',
       builder: (context, state) => const BookingDetailsView(),
+    ),
+     GoRoute(
+      path: '/conversationView',
+      builder: (context, state) => const ConversationView(),
     ),
   ],
 );

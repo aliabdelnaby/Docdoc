@@ -1,3 +1,5 @@
+import 'package:go_router/go_router.dart';
+
 import '../../data/models/message_item_model.dart';
 import 'message_item.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +20,19 @@ class MessagesList extends StatelessWidget {
           filteredMessages.length,
           (index) {
             var fMessages = filteredMessages[index];
-            return MessageItem(filteredMessages: fMessages);
+            return GestureDetector(
+              onTap: () {
+                context.push(
+                  '/conversationView',
+                  extra: {
+                    'message': fMessages,
+                  },
+                );
+              },
+              child: MessageItem(
+                filteredMessages: fMessages,
+              ),
+            );
           },
         ),
       ),
