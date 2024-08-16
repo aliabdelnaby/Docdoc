@@ -1,14 +1,12 @@
 import 'package:docdoc/core/utils/app_colors.dart';
 import 'package:docdoc/core/utils/app_text_styles.dart';
-import 'package:docdoc/core/utils/assets.dart';
 import 'package:docdoc/features/home/presentation/widgets/recommendation_doctor/search_and_filter_bar.dart';
+import 'package:docdoc/features/messages/data/datasource/messages_list.dart';
 import 'package:docdoc/features/messages/presentation/widgets/create_new_msg_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class CreateNewMessageBody extends StatelessWidget {
-  const CreateNewMessageBody({
-    super.key,
-  });
+  const CreateNewMessageBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +26,7 @@ class CreateNewMessageBody extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: List.generate(
-                  5,
+                  messagesList.length,
                   (index) {
                     return Column(
                       children: [
@@ -36,20 +34,20 @@ class CreateNewMessageBody extends StatelessWidget {
                           titleAlignment: ListTileTitleAlignment.top,
                           contentPadding: EdgeInsets.zero,
                           visualDensity: VisualDensity.compact,
-                          title: const Text(
-                            'Dr. John Doe',
+                          title: Text(
+                            messagesList[index].name,
                             style: AppStyles.style14W600,
                           ),
                           subtitle: Text(
-                            'General Doctor | RSUD Gatot Subroto',
+                            '${messagesList[index].specialization} | ${messagesList[index].degree}',
                             style: AppStyles.style10W400.copyWith(
                               color: const Color(0xff616161),
                             ),
                           ),
-                          leading: const CircleAvatar(
+                          leading: CircleAvatar(
                             radius: 24,
                             backgroundImage: AssetImage(
-                              Assets.imagesDoctor1,
+                              messagesList[index].image,
                             ),
                           ),
                         ),
