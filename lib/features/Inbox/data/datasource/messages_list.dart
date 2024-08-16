@@ -52,7 +52,7 @@ List<MessageItemModel> messagesList = [
     numberOfUnreadMessages: '1',
   ),
   MessageItemModel(
-    name: 'Michael Huang',
+    name: 'Dr. Michael Huang',
     specialization: "General Doctor",
     degree: "Consultant",
     image: Assets.imagesDoctor4,

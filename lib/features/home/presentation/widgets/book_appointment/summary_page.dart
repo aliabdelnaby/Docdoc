@@ -1,11 +1,11 @@
-import '../../../data/models/specialization_response_model/doctor.dart';
+import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/utils/assets.dart';
+import '../../../data/models/specialization_response_model/doctor.dart';
 import 'book_item_info.dart';
 import 'payment_info_list_tile.dart';
-import 'package:flutter/material.dart';
 
 class SummaryPage extends StatelessWidget {
   const SummaryPage({

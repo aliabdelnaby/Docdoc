@@ -1,11 +1,13 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/assets.dart';
-import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
-import 'package:docdoc/features/messages/data/models/message_item_model.dart';
-import 'package:docdoc/features/messages/presentation/widgets/conversation_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/assets.dart';
+import '../../../home/presentation/widgets/notification/notifaction_app_bar.dart';
+import '../../data/models/message_item_model.dart';
+import '../widgets/conversation_view_body.dart';
+import '../widgets/custom_type_msg_nav_bar.dart';
 
 class ConversationView extends StatelessWidget {
   const ConversationView({super.key});
@@ -47,6 +49,8 @@ class ConversationView extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: const CustomTypeMessage(),
+      resizeToAvoidBottomInset: false,
       body: ConversationViewBody(
         messageItemModel: messageItemModel,
       ),

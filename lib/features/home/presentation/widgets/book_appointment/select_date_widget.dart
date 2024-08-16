@@ -1,6 +1,7 @@
-import '../../../../../core/utils/app_colors.dart';
 import 'package:easy_date_timeline/easy_date_timeline.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../../core/utils/app_colors.dart';
 
 class SelectDateWidget extends StatelessWidget {
   const SelectDateWidget({

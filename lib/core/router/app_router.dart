@@ -1,7 +1,6 @@
-import 'package:docdoc/features/messages/presentation/views/conversation_view.dart';
+import '../../features/Inbox/presentation/views/conversation_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-
 import '../../features/auth/presentation/cubit/auth_cubit.dart';
 import '../../features/auth/presentation/views/forgot_password_view.dart';
 import '../../features/auth/presentation/views/login_view.dart';

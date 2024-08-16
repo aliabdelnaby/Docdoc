@@ -1,9 +1,10 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/utils/assets.dart';
 import 'payment_option_item.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class PaymentPage extends StatefulWidget {
   const PaymentPage({super.key, required this.onChanged});

@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/utils/assets.dart';
 import '../../../../my_appointment/presentation/views/appointment_view.dart';
 import 'user_bottom_nav_bar_widget.dart';
-import '../../../../messages/presentation/views/messages_view.dart';
+import '../../../../Inbox/presentation/views/inbox_view.dart';
 import '../../views/home_view.dart';
 import '../../../../profile/presentation/views/profile_view.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +30,7 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
         create: (context) => getIt<HomeCubit>()..getAllSpecialities(),
         child: const HomeView(),
       ),
-      const MessagesView(),
+      const InboxView(),
       const AppointmentView(),
       const ProfileView(),
     ];
