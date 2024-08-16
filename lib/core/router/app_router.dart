@@ -71,14 +71,14 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/doctorSpecialityView',
       builder: (context, state) => BlocProvider(
-        create: (context) => HomeCubit()..getAllSpecialities(),
+        create: (context) => getIt<HomeCubit>()..getAllSpecialities(),
         child: const DoctorSpecialityView(),
       ),
     ),
     GoRoute(
       path: '/recommendationDoctorView',
       builder: (context, state) => BlocProvider(
-        create: (context) => HomeCubit()..getAllSpecialities(),
+        create: (context) => getIt<HomeCubit>()..getAllSpecialities(),
         child: const RecommendationDoctorView(),
       ),
     ),
@@ -93,7 +93,7 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/bookAppointmentView',
       builder: (context, state) => BlocProvider(
-        create: (context) => HomeCubit(),
+        create: (context) => getIt<HomeCubit>(),
         child: const BookAppointmentView(),
       ),
     ),
