@@ -30,11 +30,7 @@ class UserBottomNavBarWidget extends StatelessWidget {
           tooltip: "Home",
           label: 'Home',
           activeIcon: SvgPicture.asset(
-            Assets.imagesNavhome,
-            colorFilter: const ColorFilter.mode(
-              AppColors.primary,
-              BlendMode.srcIn,
-            ),
+            Assets.imagesActiveHome,
           ),
           icon: SvgPicture.asset(
             Assets.imagesNavhome,
@@ -44,11 +40,7 @@ class UserBottomNavBarWidget extends StatelessWidget {
           tooltip: "Messages",
           label: 'Messages',
           activeIcon: SvgPicture.asset(
-            Assets.imagesNavmessage,
-            colorFilter: const ColorFilter.mode(
-              AppColors.primary,
-              BlendMode.srcIn,
-            ),
+            Assets.imagesActiveMessage,
           ),
           icon: SvgPicture.asset(
             Assets.imagesNavmessage,
@@ -58,11 +50,7 @@ class UserBottomNavBarWidget extends StatelessWidget {
           tooltip: "Appointment",
           label: 'Appointment',
           activeIcon: SvgPicture.asset(
-            Assets.imagesNavappointment,
-            colorFilter: const ColorFilter.mode(
-              AppColors.primary,
-              BlendMode.srcIn,
-            ),
+            Assets.imagesActiveAppointment,
           ),
           icon: SvgPicture.asset(
             Assets.imagesNavappointment,
@@ -72,11 +60,7 @@ class UserBottomNavBarWidget extends StatelessWidget {
           tooltip: "Profile",
           label: 'Profile',
           activeIcon: SvgPicture.asset(
-            Assets.imagesNavprofile,
-            colorFilter: const ColorFilter.mode(
-              AppColors.primary,
-              BlendMode.srcIn,
-            ),
+            Assets.imagesActiveProfile,
           ),
           icon: SvgPicture.asset(
             Assets.imagesNavprofile,

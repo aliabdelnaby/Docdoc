@@ -1,6 +1,22 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesActiveAppointment
+  /// assets/images/active_appointment.svg
+  static const String imagesActiveAppointment = "assets/images/active_appointment.svg";
+
+  /// Assets for imagesActiveHome
+  /// assets/images/active_home.svg
+  static const String imagesActiveHome = "assets/images/active_home.svg";
+
+  /// Assets for imagesActiveMessage
+  /// assets/images/active_message.svg
+  static const String imagesActiveMessage = "assets/images/active_message.svg";
+
+  /// Assets for imagesActiveProfile
+  /// assets/images/active_profile.svg
+  static const String imagesActiveProfile = "assets/images/active_profile.svg";
+
   /// Assets for imagesApple
   /// assets/images/apple.svg
   static const String imagesApple = "assets/images/apple.svg";
