@@ -5,7 +5,9 @@ class MessageItemModel {
   final String image;
   final bool isUnread;
   final String time;
-  final String message;
+  final String message1;
+  final String message2;
+
   final String? numberOfUnreadMessages;
 
   MessageItemModel({
@@ -15,7 +17,8 @@ class MessageItemModel {
     required this.image,
     required this.isUnread,
     required this.time,
-    required this.message,
+    required this.message1,
     this.numberOfUnreadMessages,
+    required this.message2,
   });
 }

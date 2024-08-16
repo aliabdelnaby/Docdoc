@@ -36,7 +36,7 @@ class MessageItem extends StatelessWidget {
             ],
           ),
           subtitle: Text(
-            filteredMessages.message,
+            filteredMessages.message2,
             style: AppStyles.style12W400.copyWith(
               color: AppColors.textGrey,
             ),
