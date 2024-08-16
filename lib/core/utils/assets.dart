@@ -125,6 +125,10 @@ class Assets {
   /// assets/images/mastercard.svg
   static const String imagesMastercard = "assets/images/mastercard.svg";
 
+  /// Assets for imagesMessageAdd
+  /// assets/images/message-add.svg
+  static const String imagesMessageAdd = "assets/images/message-add.svg";
+
   /// Assets for imagesNavSearch
   /// assets/images/navSearch.svg
   static const String imagesNavSearch = "assets/images/navSearch.svg";

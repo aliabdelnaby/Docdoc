@@ -1,3 +1,4 @@
+import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ PreferredSizeWidget buildAppBar(
     surfaceTintColor: Colors.transparent,
     leadingWidth: 60,
     leading: GestureDetector(
-      onTap: () => Navigator.pop(context),
+      onTap: () => GoRouter.of(context).pop(),
       child: Container(
         constraints: const BoxConstraints(minHeight: 40, minWidth: 40),
         margin: const EdgeInsetsDirectional.only(start: 16, top: 5, bottom: 5),
