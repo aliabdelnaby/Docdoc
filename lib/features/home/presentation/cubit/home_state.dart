@@ -17,3 +17,13 @@ final class GetAllSpecialitiesFailureState extends HomeState {
 
   GetAllSpecialitiesFailureState({required this.errMessage});
 }
+
+final class MakeAnAppointmentLoadingState extends HomeState {}
+
+final class MakeAnAppointmentSuccessState extends HomeState {}
+
+final class MakeAnAppointmentFailureState extends HomeState {
+  final String errMessage;
+
+  MakeAnAppointmentFailureState({required this.errMessage});
+}

@@ -92,9 +92,12 @@ final GoRouter router = GoRouter(
     ),
     GoRoute(
       path: '/bookAppointmentView',
-      builder: (context, state) => const BookAppointmentView(),
+      builder: (context, state) => BlocProvider(
+        create: (context) => HomeCubit(),
+        child: const BookAppointmentView(),
+      ),
     ),
-     GoRoute(
+    GoRoute(
       path: '/bookingDetailsView',
       builder: (context, state) => const BookingDetailsView(),
     ),

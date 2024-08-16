@@ -9,6 +9,9 @@ import 'package:http/http.dart' as http;
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
 
+  String? startTime;
+  String? note;
+
   Future<void> getAllSpecialities() async {
     try {
       emit(GetAllSpecialitiesLoadingState());
@@ -32,6 +35,36 @@ class HomeCubit extends Cubit<HomeState> {
       }
     } catch (e) {
       emit(GetAllSpecialitiesFailureState(errMessage: e.toString()));
+    }
+  }
+
+  void makeAnAppointment({required String doctorId}) async {
+    try {
+      emit(MakeAnAppointmentLoadingState());
+      var response = await http.post(
+        Uri.parse(
+          EndPoints.baserUrl + EndPoints.makeAppointment,
+        ),
+        headers: {
+          'Authorization': 'Bearer $token',
+        },
+        body: {
+          'doctor_id': doctorId,
+          'start_time': startTime,
+          'note': note,
+        },
+      );
+      var responseData = jsonDecode(response.body);
+      if (response.statusCode == 200 ||
+          response.statusCode == 201 ||
+          responseData[ApiKeys.status] == true) {
+        emit(MakeAnAppointmentSuccessState());
+      } else {
+        emit(MakeAnAppointmentFailureState(
+            errMessage: responseData[ApiKeys.data].toString()));
+      }
+    } catch (e) {
+      emit(MakeAnAppointmentFailureState(errMessage: e.toString()));
     }
   }
 }

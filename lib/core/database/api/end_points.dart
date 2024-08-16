@@ -5,6 +5,7 @@ class EndPoints {
   static const String logout = "auth/logout";
   static const String profile = "user/profile";
   static const String specialization = "specialization/index";
+  static const String makeAppointment = "appointment/store";
 }
 
 class ApiKeys {
