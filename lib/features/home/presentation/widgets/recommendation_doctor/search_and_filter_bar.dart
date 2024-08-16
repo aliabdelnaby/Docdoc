@@ -6,8 +6,8 @@ import 'recommendation_doctor_search.dart';
 import 'package:flutter/material.dart';
 
 class SearchAndFilterBar extends StatelessWidget {
-  const SearchAndFilterBar({super.key});
-
+  const SearchAndFilterBar({super.key, this.onTap});
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -17,9 +17,7 @@ class SearchAndFilterBar extends StatelessWidget {
         ),
         const SizedBox(width: 12),
         GestureDetector(
-          onTap: () {
-            _openModalSheet(context);
-          },
+          onTap: onTap,
           child: const Icon(
             Icons.filter_list_rounded,
             color: AppColors.black2,
@@ -30,7 +28,7 @@ class SearchAndFilterBar extends StatelessWidget {
   }
 }
 
-void _openModalSheet(BuildContext context) {
+void openModalSheet(BuildContext context) {
   var getAllSpecialities = context.read<HomeCubit>();
   showModalBottomSheet(
     showDragHandle: true,

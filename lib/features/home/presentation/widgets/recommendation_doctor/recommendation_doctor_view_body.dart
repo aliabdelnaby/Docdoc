@@ -8,14 +8,18 @@ class RecommendationDoctorViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsetsDirectional.only(start: 18, end: 18, top: 18),
+    return Padding(
+      padding: const EdgeInsetsDirectional.only(start: 18, end: 18, top: 18),
       child: SingleChildScrollView(
         child: Column(
           children: [
-            SearchAndFilterBar(),
-            SizedBox(height: 24),
-            RecommendationDoctorItemsList(
+            SearchAndFilterBar(
+              onTap: () {
+                openModalSheet(context);
+              },
+            ),
+            const SizedBox(height: 24),
+            const RecommendationDoctorItemsList(
               itemLength: 10,
             ),
           ],

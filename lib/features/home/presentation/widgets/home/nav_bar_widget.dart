@@ -27,8 +27,7 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
     super.initState();
     screens = [
       BlocProvider(
-        create: (context) => getIt<HomeCubit>()
-          ..getAllSpecialities(),
+        create: (context) => getIt<HomeCubit>()..getAllSpecialities(),
         child: const HomeView(),
       ),
       const MessagesView(),
@@ -40,6 +39,7 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         tooltip: 'Search',
