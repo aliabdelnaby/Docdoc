@@ -6,14 +6,20 @@ import 'recommendation_doctor_search.dart';
 import 'package:flutter/material.dart';
 
 class SearchAndFilterBar extends StatelessWidget {
-  const SearchAndFilterBar({super.key, this.onTap});
+  const SearchAndFilterBar(
+      {super.key, this.onTap, this.onChanged, this.controller});
   final void Function()? onTap;
+  final void Function(String)? onChanged;
+  final TextEditingController? controller;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Expanded(
-          child: RecommendationDoctorSearch(),
+        Expanded(
+          child: RecommendationDoctorSearch(
+            onChanged: onChanged,
+            controller: controller,
+          ),
         ),
         const SizedBox(width: 12),
         GestureDetector(

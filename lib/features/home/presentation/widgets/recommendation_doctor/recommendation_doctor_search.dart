@@ -8,11 +8,15 @@ import '../../../../../core/utils/assets.dart';
 class RecommendationDoctorSearch extends StatelessWidget {
   const RecommendationDoctorSearch({
     super.key,
+    this.onChanged,
+    this.controller,
   });
-
+  final void Function(String)? onChanged;
+  final TextEditingController? controller;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       cursorColor: AppColors.primary,
       decoration: InputDecoration(
         fillColor: AppColors.loginOptions,
@@ -37,6 +41,7 @@ class RecommendationDoctorSearch extends StatelessWidget {
           ),
         ),
       ),
+      onChanged: onChanged,
     );
   }
 }
