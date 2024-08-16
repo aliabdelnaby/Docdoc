@@ -1,6 +1,6 @@
-import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
-import 'package:docdoc/features/messages/presentation/widgets/create_new_message_btn.dart';
-import 'package:docdoc/features/messages/presentation/widgets/messages_view_body.dart';
+import '../../../home/presentation/widgets/notification/notifaction_app_bar.dart';
+import '../widgets/create_new_message_btn.dart';
+import '../widgets/messages_view_body.dart';
 import 'package:flutter/material.dart';
 
 class MessagesView extends StatelessWidget {

@@ -1,6 +1,6 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/assets.dart';
-import 'package:docdoc/features/messages/presentation/widgets/create_new_message_body.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/assets.dart';
+import 'create_new_message_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

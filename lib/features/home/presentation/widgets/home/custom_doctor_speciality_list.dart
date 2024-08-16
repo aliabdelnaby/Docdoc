@@ -29,12 +29,11 @@ class CustomDoctorSpecialityList extends StatelessWidget {
                         5,
                         (index) => GestureDetector(
                           onTap: () {
-                             context.push(
+                            context.push(
                               '/doctorsSpeciality',
                               extra: {
-                                'specialization': state.specializations.specializations[index],
-                                // 'doctors': state.specializations
-                                //     .specializations[index].doctors![index],
+                                'specialization': state
+                                    .specializations.specializations[index],
                                 'imageAndRating':
                                     reecommendationDoctorList[index],
                               },

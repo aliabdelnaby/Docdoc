@@ -1,6 +1,6 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/features/home/presentation/cubit/home_cubit.dart';
-import 'package:docdoc/features/home/presentation/cubit/home_state.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../cubit/home_cubit.dart';
+import '../cubit/home_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../data/models/specialization_response_model/doctor.dart';
 import 'doctor_details_view.dart';

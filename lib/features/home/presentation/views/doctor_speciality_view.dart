@@ -52,10 +52,7 @@ class DoctorSpecialityView extends StatelessWidget {
                               extra: {
                                 'specialization': state
                                     .specializations.specializations[index],
-                                // 'doctors': state.specializations
-                                //     .specializations[index].doctors![index],
-                                // 'imageAndRating':
-                                //     reecommendationDoctorList[index],
+                              
                               },
                             );
                           },

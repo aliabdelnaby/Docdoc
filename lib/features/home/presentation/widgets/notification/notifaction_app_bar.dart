@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 PreferredSizeWidget buildAppBar(
   context, {
   required String title,
-  Widget? trailing, // Make trailing optional and nullable
+  Widget? trailing,
 }) {
   return AppBar(
     backgroundColor: AppColors.white,
@@ -41,7 +41,7 @@ PreferredSizeWidget buildAppBar(
       ),
     ),
     actions: [
-      if (trailing != null) trailing, // Add trailing only if it's not null
+      if (trailing != null) trailing,
     ],
   );
 }

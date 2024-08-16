@@ -15,8 +15,8 @@ class FilterRecommendationDoctorsSheet extends StatefulWidget {
 
 class _FilterRecommendationDoctorsSheetState
     extends State<FilterRecommendationDoctorsSheet> {
-  int _selectedSpecialityIndex = -1; // (no selection)
-  int _selectedRatingIndex = -1; // (no selection)
+  int _selectedSpecialityIndex = -1;
+  int _selectedRatingIndex = -1;
 
   void _selectSpeciality(int index) {
     setState(() {

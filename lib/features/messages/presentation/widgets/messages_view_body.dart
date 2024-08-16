@@ -1,8 +1,8 @@
 import 'dart:async';
-import 'package:docdoc/features/home/presentation/widgets/recommendation_doctor/search_and_filter_bar.dart';
-import 'package:docdoc/features/messages/data/datasource/messages_list.dart';
-import 'package:docdoc/features/messages/data/models/message_item_model.dart';
-import 'package:docdoc/features/messages/presentation/widgets/messages_list.dart';
+import '../../../home/presentation/widgets/recommendation_doctor/search_and_filter_bar.dart';
+import '../../data/datasource/messages_list.dart';
+import '../../data/models/message_item_model.dart';
+import 'messages_list.dart';
 import 'package:flutter/material.dart';
 
 class MessagesViewBody extends StatefulWidget {

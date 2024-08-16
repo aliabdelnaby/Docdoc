@@ -1,5 +1,5 @@
-import 'package:docdoc/core/utils/assets.dart';
-import 'package:docdoc/features/messages/data/models/message_item_model.dart';
+import '../../../../core/utils/assets.dart';
+import '../models/message_item_model.dart';
 
 List<MessageItemModel> messagesList = [
   MessageItemModel(

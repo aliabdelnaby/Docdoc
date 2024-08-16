@@ -1,6 +1,6 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/app_text_styles.dart';
-import 'package:docdoc/features/messages/data/models/message_item_model.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_text_styles.dart';
+import '../../data/models/message_item_model.dart';
 import 'package:flutter/material.dart';
 
 class MessageItem extends StatelessWidget {
@@ -55,6 +55,10 @@ class MessageItem extends StatelessWidget {
                 style: AppStyles.style12W400,
               ),
               Container(
+                constraints: const BoxConstraints(
+                  minHeight: 20,
+                  minWidth: 20,
+                ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6),
                   color: filteredMessages.isUnread
