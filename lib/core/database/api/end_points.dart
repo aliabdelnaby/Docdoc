@@ -6,6 +6,7 @@ class EndPoints {
   static const String profile = "user/profile";
   static const String specialization = "specialization/index";
   static const String makeAppointment = "appointment/store";
+  static const String searchDoctor = "doctor/doctor-search?name=";
 }
 
 class ApiKeys {

@@ -1,4 +1,6 @@
 import 'dart:convert';
+import 'package:docdoc/features/home/data/models/specialization_response_model/doctor.dart';
+
 import '../../../../core/constants/constants.dart';
 import '../../../../core/database/api/end_points.dart';
 import '../../data/models/specialization_response_model/specialization_response_model.dart';
@@ -66,5 +68,32 @@ class HomeCubit extends Cubit<HomeState> {
     } catch (e) {
       emit(MakeAnAppointmentFailureState(errMessage: e.toString()));
     }
+  }
+
+  void searchDoctor(String query) async {
+    try {
+      emit(SearchDoctorLoadingState());
+      var resonse = await http.get(
+        Uri.parse('${EndPoints.baserUrl}${EndPoints.searchDoctor}$query'),
+        headers: {
+          'Authorization': 'Bearer $token',
+        },
+      );
+      var responseData = jsonDecode(resonse.body);
+      if (resonse.statusCode == 200 || responseData[ApiKeys.status] == true) {
+        List<dynamic> data = responseData[ApiKeys.data];
+        List<Doctor> doctors = data.map((e) => Doctor.fromJson(e)).toList();
+        emit(SearchDoctorSuccessState(doctors: doctors));
+      } else {
+        emit(SearchDoctorFailureState(
+            errMessage: responseData[ApiKeys.message].toString()));
+      }
+    } catch (e) {
+      emit(SearchDoctorFailureState(errMessage: e.toString()));
+    }
+  }
+
+  void clearSearchResult() {
+    emit(SearchDoctorSuccessState(doctors: []));
   }
 }
