@@ -1,5 +1,5 @@
 class DoctorSpecialityItemModel {
- final String image;
+  final String image;
 
   DoctorSpecialityItemModel({required this.image});
 }

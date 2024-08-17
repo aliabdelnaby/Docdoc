@@ -1,3 +1,4 @@
+import 'package:docdoc/features/my_appointment/presentation/cubit/my_appointment_cubit.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/services/service_locator.dart';
@@ -33,7 +34,10 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
         child: const HomeView(),
       ),
       const InboxView(),
-      const MyAppointmentView(),
+      BlocProvider(
+        create: (context) => MyAppointmentCubit()..fetchMyAppointment(),
+        child: const MyAppointmentView(),
+      ),
       const ProfileView(),
     ];
   }

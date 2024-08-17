@@ -122,7 +122,7 @@ List<ReecommendationDoctorItemModel> reecommendationDoctorList = [
     image: Assets.imagesDoctor1,
     rateAndReviews: '4.3 (690 reviews)',
   ),
-   ReecommendationDoctorItemModel(
+  ReecommendationDoctorItemModel(
     image: Assets.imagesDoctor10,
     rateAndReviews: '4.8 (1,220 reviews)',
   ),
@@ -162,7 +162,7 @@ List<ReecommendationDoctorItemModel> reecommendationDoctorList = [
     image: Assets.imagesDoctor1,
     rateAndReviews: '4.3 (690 reviews)',
   ),
-   ReecommendationDoctorItemModel(
+  ReecommendationDoctorItemModel(
     image: Assets.imagesDoctor10,
     rateAndReviews: '4.8 (1,220 reviews)',
   ),

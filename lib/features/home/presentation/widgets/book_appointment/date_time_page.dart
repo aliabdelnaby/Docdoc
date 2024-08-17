@@ -11,7 +11,8 @@ class DateAndTimePage extends StatelessWidget {
   const DateAndTimePage({
     super.key,
     this.onDateTimeChanged,
-    this.onDateTimeConfirm, required this.onNoteChanged,
+    this.onDateTimeConfirm,
+    required this.onNoteChanged,
   });
 
   final dynamic Function(DateTime)? onDateTimeChanged;

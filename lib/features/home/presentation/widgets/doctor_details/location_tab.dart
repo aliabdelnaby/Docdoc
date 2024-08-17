@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 class LocationTab extends StatelessWidget {
   const LocationTab({super.key, required this.doctor});
-final Doctor doctor;
+  final Doctor doctor;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -22,7 +22,7 @@ final Doctor doctor;
               ),
             ),
             const SizedBox(height: 12),
-             Text(
+            Text(
               doctor.address!,
               style: AppStyles.style14W400,
             ),
@@ -44,4 +44,3 @@ final Doctor doctor;
     );
   }
 }
-
