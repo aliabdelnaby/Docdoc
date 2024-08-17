@@ -1,3 +1,5 @@
+import 'package:docdoc/features/profile/presentation/views/settings_view.dart';
+
 import '../../features/Inbox/presentation/views/conversation_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -107,6 +109,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/conversationView',
       builder: (context, state) => const ConversationView(),
+    ),
+    GoRoute(
+      path: '/settingsView',
+      builder: (context, state) => const SettingsView(),
     ),
   ],
 );

@@ -9,6 +9,7 @@ class AppColors {
   static const Color textGrey = Color(0xFF757575);
   static const Color hintText = Color(0xFFC2C2C2);
   static const Color rememberMe = Color(0xFF9E9E9E);
+  static const Color profileGrey = Color(0xFFF8F8F8);
   static const Color loginOptions = Color(0xFFF5F5F5);
   static const Color flagArrow = Color(0xFFF5F5F5);
   static const Color black2 = Color(0xFF242424);
