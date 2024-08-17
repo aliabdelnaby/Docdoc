@@ -1,3 +1,5 @@
+import 'package:go_router/go_router.dart';
+
 import '../../../../../core/services/service_locator.dart';
 import '../../cubit/home_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -43,7 +45,9 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         tooltip: 'Search',
-        onPressed: () {},
+        onPressed: () {
+          context.push('/searchView');
+        },
         backgroundColor: AppColors.primary,
         elevation: 0,
         clipBehavior: Clip.none,
