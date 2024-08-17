@@ -1,8 +1,8 @@
 import 'dart:convert';
-import 'package:docdoc/core/constants/constants.dart';
-import 'package:docdoc/core/database/api/end_points.dart';
-import 'package:docdoc/features/my_appointment/data/models/my_appointment_model/my_appointment_model.dart';
-import 'package:docdoc/features/my_appointment/presentation/cubit/my_appointment_state.dart';
+import '../../../../core/constants/constants.dart';
+import '../../../../core/database/api/end_points.dart';
+import '../../data/models/my_appointment_model/my_appointment_model.dart';
+import 'my_appointment_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
 

@@ -1,7 +1,7 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/features/my_appointment/data/models/my_appointment_model/my_appointment_model.dart';
-import 'package:docdoc/features/my_appointment/presentation/widgets/doctor_card.dart';
-import 'package:docdoc/features/my_appointment/presentation/widgets/upcoming_btn.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../data/models/my_appointment_model/my_appointment_model.dart';
+import 'upcoming_doctor_card.dart';
+import 'upcoming_btn.dart';
 import 'package:flutter/material.dart';
 
 class MyAppointmentUpComingItem extends StatelessWidget {

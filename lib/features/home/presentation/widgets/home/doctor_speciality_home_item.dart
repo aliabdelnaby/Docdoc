@@ -1,8 +1,8 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/app_text_styles.dart';
-import 'package:docdoc/features/home/data/datasource/doctor_speciality_item_list.dart';
-import 'package:docdoc/features/home/data/datasource/reecommendation_doctor_item_list_model.dart';
-import 'package:docdoc/features/home/data/models/specialization_response_model/specialization_response_model.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_text_styles.dart';
+import '../../../data/datasource/doctor_speciality_item_list.dart';
+import '../../../data/datasource/reecommendation_doctor_item_list_model.dart';
+import '../../../data/models/specialization_response_model/specialization_response_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

@@ -1,6 +1,5 @@
 import 'dart:convert';
-import 'package:docdoc/features/home/data/models/specialization_response_model/doctor.dart';
-
+import '../../data/models/specialization_response_model/doctor.dart';
 import '../../../../core/constants/constants.dart';
 import '../../../../core/database/api/end_points.dart';
 import '../../data/models/specialization_response_model/specialization_response_model.dart';

@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
+
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/assets.dart';
 import 'appointment_type_item.dart';
-import 'package:flutter/material.dart';
 
 class AppointmentType extends StatefulWidget {
   const AppointmentType({super.key, required this.onChanged});

@@ -1,4 +1,4 @@
-import 'package:docdoc/features/home/presentation/widgets/recommendation_doctor/recommendation_doctor_item.dart';
+import '../recommendation_doctor/recommendation_doctor_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/utils/app_colors.dart';

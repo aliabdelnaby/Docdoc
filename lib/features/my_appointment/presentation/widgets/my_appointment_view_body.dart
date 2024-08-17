@@ -1,8 +1,8 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/app_text_styles.dart';
-import 'package:docdoc/features/my_appointment/presentation/widgets/cancelled_page.dart';
-import 'package:docdoc/features/my_appointment/presentation/widgets/completed_page.dart';
-import 'package:docdoc/features/my_appointment/presentation/widgets/upcoming_page.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_text_styles.dart';
+import 'cancelled_page.dart';
+import 'completed_page.dart';
+import 'upcoming_page.dart';
 import 'package:flutter/material.dart';
 
 class MyAppointmentViewBody extends StatelessWidget {

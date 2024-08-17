@@ -1,4 +1,4 @@
-import 'package:docdoc/features/my_appointment/presentation/cubit/my_appointment_cubit.dart';
+import '../../../../my_appointment/presentation/cubit/my_appointment_cubit.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/services/service_locator.dart';

@@ -1,7 +1,7 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/features/home/presentation/cubit/home_cubit.dart';
-import 'package:docdoc/features/home/presentation/cubit/home_state.dart';
-import 'package:docdoc/features/home/presentation/widgets/doctor_speciality/doctor_speciality_item.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../cubit/home_cubit.dart';
+import '../../cubit/home_state.dart';
+import 'doctor_speciality_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

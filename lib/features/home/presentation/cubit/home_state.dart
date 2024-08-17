@@ -1,4 +1,4 @@
-import 'package:docdoc/features/home/data/models/specialization_response_model/doctor.dart';
+import '../../data/models/specialization_response_model/doctor.dart';
 
 import '../../data/models/specialization_response_model/specialization_response_model.dart';
 

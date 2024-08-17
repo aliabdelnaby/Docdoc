@@ -1,7 +1,7 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/assets.dart';
-import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
-import 'package:docdoc/features/my_appointment/presentation/widgets/my_appointment_view_body.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/assets.dart';
+import '../../../home/presentation/widgets/notification/notifaction_app_bar.dart';
+import '../widgets/my_appointment_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

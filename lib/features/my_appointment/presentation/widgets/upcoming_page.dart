@@ -1,7 +1,7 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/features/my_appointment/presentation/cubit/my_appointment_cubit.dart';
-import 'package:docdoc/features/my_appointment/presentation/cubit/my_appointment_state.dart';
-import 'package:docdoc/features/my_appointment/presentation/widgets/upcoming_item.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../cubit/my_appointment_cubit.dart';
+import '../cubit/my_appointment_state.dart';
+import 'upcoming_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -24,7 +24,8 @@ class UpComingPage extends StatelessWidget {
                   children: List.generate(
                     cubit.myAppointmentModel.length,
                     (index) {
-                      var item = cubit.myAppointmentModel[index];
+                      var item =
+                          cubit.myAppointmentModel.reversed.toList()[index];
                       var i = index;
                       return MyAppointmentUpComingItem(
                         item: item,

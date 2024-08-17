@@ -1,5 +1,5 @@
-import 'package:docdoc/features/home/presentation/widgets/doctor_speciality/doctor_speciality_view_body.dart';
-import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
+import '../widgets/doctor_speciality/doctor_speciality_view_body.dart';
+import '../widgets/notification/notifaction_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class DoctorSpecialityView extends StatelessWidget {
