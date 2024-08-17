@@ -4,7 +4,7 @@ import '../../../../../core/services/service_locator.dart';
 import '../../cubit/home_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/utils/assets.dart';
-import '../../../../my_appointment/presentation/views/appointment_view.dart';
+import '../../../../my_appointment/presentation/views/my_appointment_view.dart';
 import 'user_bottom_nav_bar_widget.dart';
 import '../../../../Inbox/presentation/views/inbox_view.dart';
 import '../../views/home_view.dart';
@@ -33,7 +33,7 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
         child: const HomeView(),
       ),
       const InboxView(),
-      const AppointmentView(),
+      const MyAppointmentView(),
       const ProfileView(),
     ];
   }

@@ -18,35 +18,32 @@ class DoctorDetailsView extends StatelessWidget {
     final Doctor doctor = extra?['doctor'] ?? 'Unknown Details';
     final String image = extra?['image'] ?? 'Unknown Details';
     final String rating = extra?['rating'] ?? 'Unknown Details';
-    return DefaultTabController(
-      length: 3,
-      child: Scaffold(
-        appBar: buildAppBar(
-          context,
-          title: doctor.name!,
-          trailing: const CustomMoreBtn(),
-        ),
-        bottomNavigationBar: MakeAnAppointmentBtn(
-          text: "Make An Appointment",
-          onPressed: () {
-            context.push(
-              '/bookAppointmentView',
-              extra: {
-                'doctor': doctor,
-                'image': image,
-                'rating': rating,
-              },
-            );
-          },
-        ),
-        body: DoctorDetailsViewBody(
-          doctor: doctor,
-          name: doctor.name!,
-          image: image,
-          rating: rating,
-          degree: doctor.degree!,
-          specialization: doctor.specialization!.name!,
-        ),
+    return Scaffold(
+      appBar: buildAppBar(
+        context,
+        title: doctor.name!,
+        trailing: const CustomMoreBtn(),
+      ),
+      bottomNavigationBar: MakeAnAppointmentBtn(
+        text: "Make An Appointment",
+        onPressed: () {
+          context.push(
+            '/bookAppointmentView',
+            extra: {
+              'doctor': doctor,
+              'image': image,
+              'rating': rating,
+            },
+          );
+        },
+      ),
+      body: DoctorDetailsViewBody(
+        doctor: doctor,
+        name: doctor.name!,
+        image: image,
+        rating: rating,
+        degree: doctor.degree!,
+        specialization: doctor.specialization!.name!,
       ),
     );
   }
