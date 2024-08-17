@@ -28,6 +28,11 @@ class AppStyles {
     fontSize: 24,
     fontWeight: FontWeight.w700,
   );
+  static const TextStyle style12W600 = TextStyle(
+    color: AppColors.primary,
+    fontSize: 12,
+    fontWeight: FontWeight.w600,
+  );
   static const TextStyle style12W400 = TextStyle(
     color: AppColors.rememberMe,
     fontSize: 12,
