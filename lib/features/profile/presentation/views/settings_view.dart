@@ -32,7 +32,9 @@ class SettingsView extends StatelessWidget {
                 image: Assets.imagesSettingsFaq,
               ),
               SettingsListTile(
-                onTap: () {},
+                onTap: () {
+                  context.push("/securityView");
+                },
                 title: 'Security',
                 image: Assets.imagesSettingsLock,
               ),
