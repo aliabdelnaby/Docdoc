@@ -1,10 +1,11 @@
 import 'package:docdoc/core/utils/app_colors.dart';
 import 'package:docdoc/core/utils/app_text_styles.dart';
+import 'package:docdoc/features/profile/data/models/static/faq_item_model.dart';
 import 'package:flutter/material.dart';
 
 class FAQItem extends StatefulWidget {
-  const FAQItem({super.key, required this.index});
-final int index;
+  const FAQItem({super.key, required this.item});
+  final FAQItemModel item;
   @override
   State<FAQItem> createState() => _FAQItemState();
 }
@@ -40,7 +41,7 @@ class _FAQItemState extends State<FAQItem> with SingleTickerProviderStateMixin {
           child: ExpansionTile(
             tilePadding: EdgeInsets.zero,
             title: Text(
-              "What should I expect during a doctor's appointment?",
+              widget.item.title,
               style: AppStyles.style14W400.copyWith(
                 color: AppColors.black2,
               ),
@@ -63,7 +64,7 @@ class _FAQItemState extends State<FAQItem> with SingleTickerProviderStateMixin {
             },
             children: [
               Text(
-                "During a doctor's appointment, you can expect to discuss your medical history, current symptoms or concerns, and any medications or treatments you are taking. The doctor will likely perform a physical exam and may order additional tests or procedures if necessary.",
+                widget.item.description,
                 style: AppStyles.style11W400.copyWith(
                   color: AppColors.textGrey,
                 ),

@@ -1,5 +1,6 @@
 import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
 import 'package:docdoc/features/my_appointment/presentation/widgets/search_trailing_appbar.dart';
+import 'package:docdoc/features/profile/data/datasource/faq_items_list.dart';
 import 'package:docdoc/features/profile/presentation/widgets/settings/faq_item.dart';
 import 'package:flutter/material.dart';
 
@@ -21,11 +22,11 @@ class FAQView extends StatelessWidget {
           children: [
             Column(
               children: List.generate(
-                5,
+                faqItemsList.length,
                 (index) {
-                  var i = index;
+                  var item = faqItemsList[index];
                   return FAQItem(
-                    index: i,
+                    item: item,
                   );
                 },
               ),
