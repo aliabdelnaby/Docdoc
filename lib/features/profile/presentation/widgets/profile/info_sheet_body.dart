@@ -55,7 +55,9 @@ class CustomInfoSheetBody extends StatelessWidget {
             ),
             const SizedBox(width: 1),
             CustomContainerItem(
-              onTap: () {},
+              onTap: () {
+                context.push('/medicalRecordView');
+              },
               title: "Medical records",
               borderRadius: const BorderRadiusDirectional.only(
                 bottomEnd: Radius.circular(16),

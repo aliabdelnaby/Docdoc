@@ -1,3 +1,4 @@
+import 'package:docdoc/features/profile/presentation/views/medical_record_view.dart';
 import 'package:docdoc/features/profile/presentation/views/personal_information_view.dart';
 
 import '../../features/profile/presentation/cubit/profile_cubit.dart';
@@ -146,6 +147,10 @@ final GoRouter router = GoRouter(
         create: (context) => getIt<ProfileCubit>()..fetchUserProfile(),
         child: const PersonalInformationView(),
       ),
+    ),
+    GoRoute(
+      path: '/medicalRecordView',
+      builder: (context, state) => const MedicalRecordView(),
     ),
   ],
 );

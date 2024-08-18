@@ -79,45 +79,46 @@ class ProfileCubit extends Cubit<ProfileState> {
       );
       var responseData = jsonDecode(response.body);
       if (response.statusCode == 200 || responseData[ApiKeys.status] == true) {
-        print(responseData);
         emit(UpdateProfileSuccessState());
       } else {
         _handleUpdateUserErrors(responseData);
-        print(responseData);
       }
     } catch (e) {
       emit(UpdateProfileFailureState(errMessage: e.toString()));
-      print(e);
     }
   }
-void _handleUpdateUserErrors(Map<String, dynamic> responseData) {
-  if (responseData[ApiKeys.data] != null && responseData[ApiKeys.data] is Map<String, dynamic>) {
-    var errorMessage = responseData[ApiKeys.data] as Map<String, dynamic>;
-    List<String> errorMessages = [];
-    void addError(String key) {
-      if (errorMessage.containsKey(key) && 
-          errorMessage[key] is List && 
-          errorMessage[key].isNotEmpty && 
-          errorMessage[key][0] is String) {
-        errorMessages.add(errorMessage[key][0]);
+
+  void _handleUpdateUserErrors(Map<String, dynamic> responseData) {
+    if (responseData[ApiKeys.data] != null &&
+        responseData[ApiKeys.data] is Map<String, dynamic>) {
+      var errorMessage = responseData[ApiKeys.data] as Map<String, dynamic>;
+      List<String> errorMessages = [];
+      void addError(String key) {
+        if (errorMessage.containsKey(key) &&
+            errorMessage[key] is List &&
+            errorMessage[key].isNotEmpty &&
+            errorMessage[key][0] is String) {
+          errorMessages.add(errorMessage[key][0]);
+        }
       }
-    }
-    addError(ApiKeys.name);
-    addError(ApiKeys.email);
-    addError(ApiKeys.password);
-    addError(ApiKeys.gender);
-    addError(ApiKeys.confirmPassword);
-    addError(ApiKeys.phone);
-    
-    if (errorMessages.isNotEmpty) {
-      emit(UpdateProfileFailureState(errMessage: errorMessages.join(', ')));
+
+      addError(ApiKeys.name);
+      addError(ApiKeys.email);
+      addError(ApiKeys.password);
+      addError(ApiKeys.gender);
+      addError(ApiKeys.confirmPassword);
+      addError(ApiKeys.phone);
+
+      if (errorMessages.isNotEmpty) {
+        emit(UpdateProfileFailureState(errMessage: errorMessages.join(', ')));
+      } else {
+        emit(UpdateProfileFailureState(errMessage: 'Unknown error occurred.'));
+      }
+    } else if (responseData[ApiKeys.data] != null) {
+      emit(UpdateProfileFailureState(
+          errMessage: responseData[ApiKeys.data].toString()));
     } else {
       emit(UpdateProfileFailureState(errMessage: 'Unknown error occurred.'));
     }
-  } else if (responseData[ApiKeys.data] != null) {
-    emit(UpdateProfileFailureState(errMessage: responseData[ApiKeys.data].toString()));
-  } else {
-    emit(UpdateProfileFailureState(errMessage: 'Unknown error occurred.'));
   }
-}
 }
