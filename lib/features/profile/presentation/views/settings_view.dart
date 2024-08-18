@@ -39,7 +39,9 @@ class SettingsView extends StatelessWidget {
                 image: Assets.imagesSettingsLock,
               ),
               SettingsListTile(
-                onTap: () {},
+                onTap: () {
+                  context.push("/languageView");
+                },
                 title: 'Language',
                 image: Assets.imagesSettingsLanguage,
               ),

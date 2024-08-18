@@ -1,4 +1,5 @@
 import 'package:docdoc/features/profile/presentation/views/faq_view.dart';
+import 'package:docdoc/features/profile/presentation/views/language_view.dart';
 import 'package:docdoc/features/profile/presentation/views/notification_view.dart';
 import 'package:docdoc/features/profile/presentation/views/security_view.dart';
 import 'package:docdoc/features/profile/presentation/views/settings_view.dart';
@@ -128,6 +129,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/securityView',
       builder: (context, state) => const SecurityView(),
+    ),
+       GoRoute(
+      path: '/languageView',
+      builder: (context, state) => const LanguageView(),
     ),
   ],
 );
