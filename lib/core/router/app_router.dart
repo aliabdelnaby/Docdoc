@@ -1,3 +1,4 @@
+import 'package:docdoc/features/profile/presentation/views/notification_view.dart';
 import 'package:docdoc/features/profile/presentation/views/settings_view.dart';
 
 import '../../features/Inbox/presentation/views/conversation_view.dart';
@@ -63,8 +64,8 @@ final GoRouter router = GoRouter(
       builder: (context, state) => const HomeView(),
     ),
     GoRoute(
-      path: '/notificationView',
-      builder: (context, state) => const NotificationView(),
+      path: '/HomeNotificationView',
+      builder: (context, state) => const HomeNotificationView(),
     ),
     GoRoute(
       path: '/searchView',
@@ -113,6 +114,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/settingsView',
       builder: (context, state) => const SettingsView(),
+    ),
+    GoRoute(
+      path: '/notificationView',
+      builder: (context, state) => const SettingsNotificationView(),
     ),
   ],
 );

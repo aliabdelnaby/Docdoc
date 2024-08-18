@@ -6,8 +6,8 @@ import '../widgets/notification/custom_notification_header.dart';
 import '../widgets/notification/notifaction_app_bar.dart';
 import '../widgets/notification/notifaction_view_body.dart';
 
-class NotificationView extends StatelessWidget {
-  const NotificationView({super.key});
+class HomeNotificationView extends StatelessWidget {
+  const HomeNotificationView({super.key});
 
   @override
   Widget build(BuildContext context) {

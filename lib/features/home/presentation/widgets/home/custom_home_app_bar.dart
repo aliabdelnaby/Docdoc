@@ -40,7 +40,7 @@ class CustomHomeAppBar extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                context.push('/notificationView');
+                context.push('/HomeNotificationView');
               },
               child: Container(
                 constraints: const BoxConstraints(minHeight: 48, minWidth: 48),
