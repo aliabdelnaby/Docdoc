@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/material.dart';
 import '../../../../core/cache/cache_helper.dart';
 import '../../../../core/constants/constants.dart';
 import '../../../../core/database/api/end_points.dart';
@@ -11,6 +12,8 @@ import 'package:http/http.dart' as http;
 class ProfileCubit extends Cubit<ProfileState> {
   ProfileCubit() : super(ProfileInitial());
   ProfileModel? profileModel;
+  GlobalKey<FormState> updateProfileKey = GlobalKey<FormState>();
+  
   Future<void> getProfile() async {
     try {
       emit(GetProfileLoadingState());
