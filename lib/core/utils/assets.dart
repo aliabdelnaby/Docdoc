@@ -1,9 +1,10 @@
 class Assets {
   Assets._();
-  
+
   /// Assets for imagesActiveAppointment
   /// assets/images/active_appointment.svg
-  static const String imagesActiveAppointment = "assets/images/active_appointment.svg";
+  static const String imagesActiveAppointment =
+      "assets/images/active_appointment.svg";
 
   /// Assets for imagesActiveHome
   /// assets/images/active_home.svg
@@ -21,21 +22,25 @@ class Assets {
   /// assets/images/apple.svg
   static const String imagesApple = "assets/images/apple.svg";
 
-  /// Assets for imagesAppointmentCancelled 
+  /// Assets for imagesAppointmentCancelled
   /// assets/images/AppointmentCancelled .svg
-  static const String imagesAppointmentCancelled  = "assets/images/AppointmentCancelled .svg";
+  static const String imagesAppointmentCancelled =
+      "assets/images/AppointmentCancelled .svg";
 
-  /// Assets for imagesAppointmentSuccess 
+  /// Assets for imagesAppointmentSuccess
   /// assets/images/AppointmentSuccess .svg
-  static const String imagesAppointmentSuccess  = "assets/images/AppointmentSuccess .svg";
+  static const String imagesAppointmentSuccess =
+      "assets/images/AppointmentSuccess .svg";
 
   /// Assets for imagesAppointmentTypeBookInfo
   /// assets/images/AppointmentTypeBookInfo.svg
-  static const String imagesAppointmentTypeBookInfo = "assets/images/AppointmentTypeBookInfo.svg";
+  static const String imagesAppointmentTypeBookInfo =
+      "assets/images/AppointmentTypeBookInfo.svg";
 
   /// Assets for imagesBlueCardBackground
   /// assets/images/blue_card_Background.png
-  static const String imagesBlueCardBackground = "assets/images/blue_card_Background.png";
+  static const String imagesBlueCardBackground =
+      "assets/images/blue_card_Background.png";
 
   /// Assets for imagesCall
   /// assets/images/call.svg
@@ -115,7 +120,8 @@ class Assets {
 
   /// Assets for imagesGastroenterology
   /// assets/images/Gastroenterology.png
-  static const String imagesGastroenterology = "assets/images/Gastroenterology.png";
+  static const String imagesGastroenterology =
+      "assets/images/Gastroenterology.png";
 
   /// Assets for imagesGoogle
   /// assets/images/google.svg
@@ -149,9 +155,9 @@ class Assets {
   /// assets/images/message-add.svg
   static const String imagesMessageAdd = "assets/images/message-add.svg";
 
-  /// Assets for imagesMyTest 
+  /// Assets for imagesMyTest
   /// assets/images/MyTest .svg
-  static const String imagesMyTest  = "assets/images/MyTest .svg";
+  static const String imagesMyTest = "assets/images/MyTest .svg";
 
   /// Assets for imagesNavSearch
   /// assets/images/navSearch.svg
@@ -179,7 +185,8 @@ class Assets {
 
   /// Assets for imagesNewPaymentAdded
   /// assets/images/NewPaymentAdded.svg
-  static const String imagesNewPaymentAdded = "assets/images/NewPaymentAdded.svg";
+  static const String imagesNewPaymentAdded =
+      "assets/images/NewPaymentAdded.svg";
 
   /// Assets for imagesNotofication
   /// assets/images/notofication.svg
@@ -227,7 +234,8 @@ class Assets {
 
   /// Assets for imagesScheduleChanged
   /// assets/images/ScheduleChanged.svg
-  static const String imagesScheduleChanged = "assets/images/ScheduleChanged.svg";
+  static const String imagesScheduleChanged =
+      "assets/images/ScheduleChanged.svg";
 
   /// Assets for imagesSetting
   /// assets/images/setting.svg
@@ -235,7 +243,8 @@ class Assets {
 
   /// Assets for imagesSmallMoneyIconSvg
   /// assets/images/small-money-icon-svg.svg
-  static const String imagesSmallMoneyIconSvg = "assets/images/small-money-icon-svg.svg";
+  static const String imagesSmallMoneyIconSvg =
+      "assets/images/small-money-icon-svg.svg";
 
   /// Assets for imagesSplash
   /// assets/images/splash.png
@@ -247,6 +256,6 @@ class Assets {
 
   /// Assets for imagesVideoCallAppointment
   /// assets/images/VideoCallAppointment.svg
-  static const String imagesVideoCallAppointment = "assets/images/VideoCallAppointment.svg";
+  static const String imagesVideoCallAppointment =
+      "assets/images/VideoCallAppointment.svg";
 }
-
