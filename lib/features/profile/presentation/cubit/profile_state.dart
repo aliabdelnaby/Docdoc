@@ -21,3 +21,13 @@ final class LogoutFailureState extends ProfileState {
 
   LogoutFailureState({required this.errMessage});
 }
+
+final class UpdateProfileLoadingState extends ProfileState {}
+
+final class UpdateProfileSuccessState extends ProfileState {}
+
+final class UpdateProfileFailureState extends ProfileState {
+  final String errMessage;
+
+  UpdateProfileFailureState({required this.errMessage});
+}

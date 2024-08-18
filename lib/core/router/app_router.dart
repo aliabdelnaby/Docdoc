@@ -143,7 +143,7 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/personalInformationView',
       builder: (context, state) => BlocProvider(
-        create: (context) => getIt<ProfileCubit>()..getProfile(),
+        create: (context) => getIt<ProfileCubit>()..fetchUserProfile(),
         child: const PersonalInformationView(),
       ),
     ),

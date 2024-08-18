@@ -41,7 +41,7 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
         child: const MyAppointmentView(),
       ),
       BlocProvider(
-        create: (context) => getIt<ProfileCubit>()..getProfile(),
+        create: (context) => getIt<ProfileCubit>()..fetchUserProfile(),
         child: const ProfileView(),
       ),
     ];

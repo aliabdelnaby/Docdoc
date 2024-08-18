@@ -8,6 +8,7 @@ import 'package:docdoc/features/profile/presentation/cubit/profile_cubit.dart';
 import 'package:docdoc/features/profile/presentation/cubit/profile_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class PersonalInformationView extends StatefulWidget {
   const PersonalInformationView({super.key});
@@ -56,7 +57,7 @@ class _PersonalInformationViewState extends State<PersonalInformationView> {
           builder: (context, state) {
             final cubit = context.read<ProfileCubit>();
             return Form(
-              key: context.read<ProfileCubit>().updateProfileKey,
+              key: cubit.updateProfileKey,
               child: Column(
                 children: [
                   Expanded(
@@ -78,7 +79,9 @@ class _PersonalInformationViewState extends State<PersonalInformationView> {
                                 controller: nameController,
                                 hintText: "Name",
                                 keyboardType: TextInputType.name,
-                                onChanged: (name) {},
+                                onChanged: (name) {
+                                  cubit.name = name;
+                                },
                                 validator: (name) {
                                   if (name == null || name.isEmpty) {
                                     return 'Please enter your name';
@@ -90,7 +93,9 @@ class _PersonalInformationViewState extends State<PersonalInformationView> {
                                 controller: emailController,
                                 hintText: "Email",
                                 keyboardType: TextInputType.emailAddress,
-                                onChanged: (email) {},
+                                onChanged: (email) {
+                                  cubit.email = email;
+                                },
                                 validator: (email) {
                                   if (email == null || email.isEmpty) {
                                     return 'Please enter your email';
@@ -106,7 +111,9 @@ class _PersonalInformationViewState extends State<PersonalInformationView> {
                                 controller: phoneController,
                                 hintText: "Phone",
                                 keyboardType: TextInputType.number,
-                                onChanged: (phone) {},
+                                onChanged: (phone) {
+                                  cubit.phone = phone;
+                                },
                                 validator: (phone) {
                                   if (phone == null || phone.isEmpty) {
                                     return 'Please enter your phone';
@@ -117,10 +124,11 @@ class _PersonalInformationViewState extends State<PersonalInformationView> {
                               CustomAuthTextField(
                                 hintText: "Password",
                                 obscureText: true,
-                                onChanged: (password) {},
-                                validator: (confirmPassword) {
-                                  if (confirmPassword == null ||
-                                      confirmPassword.isEmpty) {
+                                onChanged: (password) {
+                                  cubit.password = password;
+                                },
+                                validator: (password) {
+                                  if (password == null || password.isEmpty) {
                                     return 'Please enter your password';
                                   }
                                   return null;
@@ -129,10 +137,16 @@ class _PersonalInformationViewState extends State<PersonalInformationView> {
                               CustomAuthTextField(
                                 hintText: "Confirm Password",
                                 obscureText: true,
-                                onChanged: (password) {},
-                                validator: (password) {
-                                  if (password == null || password.isEmpty) {
+                                onChanged: (confirmPassword) {
+                                  cubit.confirmPassword = confirmPassword;
+                                },
+                                validator: (confirmPassword) {
+                                  if (confirmPassword == null ||
+                                      confirmPassword.isEmpty) {
                                     return 'Please enter your password';
+                                  } else if (cubit.password !=
+                                      confirmPassword) {
+                                    return 'Passwords do not match';
                                   }
                                   return null;
                                 },
@@ -147,15 +161,48 @@ class _PersonalInformationViewState extends State<PersonalInformationView> {
                             ],
                           ),
                   ),
-                  Padding(
-                    padding:
-                        const EdgeInsetsDirectional.symmetric(horizontal: 8),
-                    child: CustomAuthBtn(
-                      onPressed: () {
-                        if (cubit.updateProfileKey.currentState!.validate()) {}
-                      },
-                      text: "Save",
-                    ),
+                  BlocConsumer<ProfileCubit, ProfileState>(
+                    listener: (context, state) {
+                      if (state is UpdateProfileSuccessState) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Profile Updated Successfuly'),
+                            backgroundColor: AppColors.primary,
+                            behavior: SnackBarBehavior.floating,
+                          ),
+                        );
+                        context.pop();
+                      } else if (state is UpdateProfileFailureState) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(state.errMessage),
+                            backgroundColor: AppColors.red,
+                            behavior: SnackBarBehavior.floating,
+                          ),
+                        );
+                      }
+                    },
+                    builder: (context, state) {
+                      return state is UpdateProfileLoadingState
+                          ? const Center(
+                              child: CircularProgressIndicator(
+                                color: AppColors.primary,
+                              ),
+                            )
+                          : Padding(
+                              padding: const EdgeInsetsDirectional.symmetric(
+                                  horizontal: 8),
+                              child: CustomAuthBtn(
+                                onPressed: () async {
+                                  if (cubit.updateProfileKey.currentState!
+                                      .validate()) {
+                                    await cubit.updateProfile();
+                                  }
+                                },
+                                text: "Save",
+                              ),
+                            );
+                    },
                   ),
                 ],
               ),
