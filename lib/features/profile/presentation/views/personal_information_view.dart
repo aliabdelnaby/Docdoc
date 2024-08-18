@@ -175,7 +175,8 @@ class _PersonalInformationViewState extends State<PersonalInformationView> {
                       } else if (state is UpdateProfileFailureState) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
-                            content: Text(state.errMessage),
+                            content:
+                                Text(state.errMessage),
                             backgroundColor: AppColors.red,
                             behavior: SnackBarBehavior.floating,
                           ),

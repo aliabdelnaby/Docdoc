@@ -20,6 +20,24 @@ class ProfileCubit extends Cubit<ProfileState> {
   String? password;
   String? confirmPassword;
 
+  void logout() async {
+    emit(LogoutLoadingState());
+    var response = await http.post(
+      Uri.parse(EndPoints.baserUrl + EndPoints.logout),
+      headers: {
+        'Authorization': 'Bearer $token',
+      },
+    );
+    var responseData = jsonDecode(response.body);
+    if (response.statusCode == 200 || responseData[ApiKeys.status] == true) {
+      await getIt<CacheHelper>().removeData(key: 'token');
+      emit(LogoutSuccessState());
+    } else {
+      emit(LogoutFailureState(
+          errMessage: responseData[ApiKeys.message].toString()));
+    }
+  }
+
   Future<void> fetchUserProfile() async {
     try {
       emit(GetProfileLoadingState());
@@ -42,36 +60,18 @@ class ProfileCubit extends Cubit<ProfileState> {
     }
   }
 
-  void logout() async {
-    emit(LogoutLoadingState());
-    var response = await http.post(
-      Uri.parse(EndPoints.baserUrl + EndPoints.logout),
-      headers: {
-        'Authorization': 'Bearer $token',
-      },
-    );
-    var responseData = jsonDecode(response.body);
-    if (response.statusCode == 200 || responseData[ApiKeys.status] == true) {
-      await getIt<CacheHelper>().removeData(key: 'token');
-      emit(LogoutSuccessState());
-    } else {
-      emit(LogoutFailureState(
-          errMessage: responseData[ApiKeys.message].toString()));
-    }
-  }
-
   Future<void> updateProfile() async {
     try {
       emit(UpdateProfileLoadingState());
       var response = await http.post(
         Uri.parse(EndPoints.baserUrl + EndPoints.updateProfile),
         body: {
-          ApiKeys.name: name,
-          ApiKeys.email: email,
-          ApiKeys.phone: phone,
+          if (name != null) ApiKeys.name: name,
+          if (email != null) ApiKeys.email: email,
+          if (phone != null) ApiKeys.phone: phone,
           ApiKeys.gender: '0',
-          ApiKeys.password: password,
-          ApiKeys.confirmPassword: confirmPassword,
+          if (password != null) ApiKeys.password: password,
+          if (confirmPassword != null) ApiKeys.confirmPassword: confirmPassword,
         },
         headers: {
           'Authorization': 'Bearer $token',
@@ -90,36 +90,34 @@ class ProfileCubit extends Cubit<ProfileState> {
       print(e);
     }
   }
-
-  void _handleUpdateUserErrors(responseData) {
-    if (responseData[ApiKeys.data] != null) {
-      var errorMessage = responseData[ApiKeys.data];
-      if (errorMessage is Map<String, dynamic>) {
-        List<String> errorMessages = [];
-        if (errorMessage.containsKey(ApiKeys.name)) {
-          errorMessages.add(errorMessage[ApiKeys.name][0]);
-        }
-        if (errorMessage.containsKey(ApiKeys.email)) {
-          errorMessages.add(errorMessage[ApiKeys.email][0]);
-        }
-        if (errorMessage.containsKey(ApiKeys.password)) {
-          errorMessages.add(errorMessage[ApiKeys.password][0]);
-        }
-        if (errorMessage.containsKey(ApiKeys.gender)) {
-          errorMessages.add(errorMessage[ApiKeys.gender][0]);
-        }
-        if (errorMessage.containsKey(ApiKeys.confirmPassword)) {
-          errorMessages.add(errorMessage[ApiKeys.confirmPassword][0]);
-        }
-        if (errorMessage.containsKey(ApiKeys.phone)) {
-          errorMessages.add(errorMessage[ApiKeys.phone][0]);
-        }
-        emit(UpdateProfileFailureState(errMessage: errorMessages.join(', ')));
-      } else {
-        emit(UpdateProfileFailureState(errMessage: errorMessage.toString()));
+void _handleUpdateUserErrors(Map<String, dynamic> responseData) {
+  if (responseData[ApiKeys.data] != null && responseData[ApiKeys.data] is Map<String, dynamic>) {
+    var errorMessage = responseData[ApiKeys.data] as Map<String, dynamic>;
+    List<String> errorMessages = [];
+    void addError(String key) {
+      if (errorMessage.containsKey(key) && 
+          errorMessage[key] is List && 
+          errorMessage[key].isNotEmpty && 
+          errorMessage[key][0] is String) {
+        errorMessages.add(errorMessage[key][0]);
       }
+    }
+    addError(ApiKeys.name);
+    addError(ApiKeys.email);
+    addError(ApiKeys.password);
+    addError(ApiKeys.gender);
+    addError(ApiKeys.confirmPassword);
+    addError(ApiKeys.phone);
+    
+    if (errorMessages.isNotEmpty) {
+      emit(UpdateProfileFailureState(errMessage: errorMessages.join(', ')));
     } else {
       emit(UpdateProfileFailureState(errMessage: 'Unknown error occurred.'));
     }
+  } else if (responseData[ApiKeys.data] != null) {
+    emit(UpdateProfileFailureState(errMessage: responseData[ApiKeys.data].toString()));
+  } else {
+    emit(UpdateProfileFailureState(errMessage: 'Unknown error occurred.'));
   }
+}
 }
