@@ -1,5 +1,5 @@
-import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
-import 'package:docdoc/features/profile/presentation/widgets/settings/notification_switch_tile.dart';
+import '../../../home/presentation/widgets/notification/notifaction_app_bar.dart';
+import '../widgets/settings/notification_switch_tile.dart';
 import 'package:flutter/material.dart';
 
 class SettingsNotificationView extends StatefulWidget {

@@ -1,8 +1,10 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/assets.dart';
-import 'package:docdoc/features/profile/presentation/widgets/settings/logout_dialog.dart';
-import 'package:docdoc/features/profile/presentation/widgets/settings/settings_list_tile.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/assets.dart';
+import '../../cubit/profile_cubit.dart';
+import 'logout_dialog.dart';
+import 'settings_list_tile.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LogOutWidget extends StatelessWidget {
   const LogOutWidget({
@@ -13,11 +15,15 @@ class LogOutWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SettingsListTile(
       onTap: () {
+        var profileCubit = context.read<ProfileCubit>();
         showCupertinoDialog(
           context: context,
           barrierDismissible: true,
           builder: (BuildContext context) {
-            return const LogOutDialog();
+            return BlocProvider.value(
+              value: profileCubit,
+              child: const LogOutDialog(),
+            );
           },
         );
       },

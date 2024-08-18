@@ -1,10 +1,10 @@
-import 'package:docdoc/features/profile/data/models/static/language_list.dart';
-import 'package:docdoc/features/profile/presentation/widgets/settings/search_language_text_field.dart';
+import '../../data/models/static/language_list.dart';
+import '../widgets/settings/search_language_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/features/onBorading/presentation/widgets/auth_brn.dart';
-import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../onBorading/presentation/widgets/auth_brn.dart';
+import '../../../home/presentation/widgets/notification/notifaction_app_bar.dart';
 
 class LanguageView extends StatefulWidget {
   const LanguageView({super.key});

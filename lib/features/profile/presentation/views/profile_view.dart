@@ -1,7 +1,7 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/app_text_styles.dart';
-import 'package:docdoc/core/utils/assets.dart';
-import 'package:docdoc/features/profile/presentation/widgets/profile/profile_view_body.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_text_styles.dart';
+import '../../../../core/utils/assets.dart';
+import '../widgets/profile/profile_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';

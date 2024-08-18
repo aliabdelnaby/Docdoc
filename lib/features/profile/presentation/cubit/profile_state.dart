@@ -11,3 +11,13 @@ final class GetProfileFailureState extends ProfileState {
 
   GetProfileFailureState({required this.errMessage});
 }
+
+final class LogoutLoadingState extends ProfileState {}
+
+final class LogoutSuccessState extends ProfileState {}
+
+final class LogoutFailureState extends ProfileState {
+  final String errMessage;
+
+  LogoutFailureState({required this.errMessage});
+}

@@ -1,5 +1,5 @@
-import 'package:docdoc/core/utils/assets.dart';
-import 'package:docdoc/features/profile/presentation/widgets/profile/profile_info_sheet.dart';
+import '../../../../../core/utils/assets.dart';
+import 'profile_info_sheet.dart';
 import 'package:flutter/material.dart';
 
 class ProfileViewBody extends StatelessWidget {

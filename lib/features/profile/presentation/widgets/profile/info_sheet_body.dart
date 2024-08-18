@@ -1,9 +1,9 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/app_text_styles.dart';
-import 'package:docdoc/core/utils/assets.dart';
-import 'package:docdoc/features/profile/data/models/profile_model/profile_model.dart';
-import 'package:docdoc/features/profile/presentation/widgets/profile/custom_container_item.dart';
-import 'package:docdoc/features/profile/presentation/widgets/profile/profile_list_tile.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_text_styles.dart';
+import '../../../../../core/utils/assets.dart';
+import '../../../data/models/profile_model/profile_model.dart';
+import 'custom_container_item.dart';
+import 'profile_list_tile.dart';
 import 'package:flutter/material.dart';
 
 class CustomInfoSheetBody extends StatelessWidget {

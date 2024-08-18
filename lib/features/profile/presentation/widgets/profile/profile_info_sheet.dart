@@ -1,7 +1,7 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/features/profile/presentation/cubit/profile_cubit.dart';
-import 'package:docdoc/features/profile/presentation/cubit/profile_state.dart';
-import 'package:docdoc/features/profile/presentation/widgets/profile/info_sheet_body.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../cubit/profile_cubit.dart';
+import '../../cubit/profile_state.dart';
+import 'info_sheet_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

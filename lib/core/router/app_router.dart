@@ -1,8 +1,9 @@
-import 'package:docdoc/features/profile/presentation/views/faq_view.dart';
-import 'package:docdoc/features/profile/presentation/views/language_view.dart';
-import 'package:docdoc/features/profile/presentation/views/notification_view.dart';
-import 'package:docdoc/features/profile/presentation/views/security_view.dart';
-import 'package:docdoc/features/profile/presentation/views/settings_view.dart';
+import '../../features/profile/presentation/cubit/profile_cubit.dart';
+import '../../features/profile/presentation/views/faq_view.dart';
+import '../../features/profile/presentation/views/language_view.dart';
+import '../../features/profile/presentation/views/notification_view.dart';
+import '../../features/profile/presentation/views/security_view.dart';
+import '../../features/profile/presentation/views/settings_view.dart';
 
 import '../../features/Inbox/presentation/views/conversation_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -116,7 +117,10 @@ final GoRouter router = GoRouter(
     ),
     GoRoute(
       path: '/settingsView',
-      builder: (context, state) => const SettingsView(),
+      builder: (context, state) => BlocProvider(
+        create: (context) => getIt<ProfileCubit>(),
+        child: const SettingsView(),
+      ),
     ),
     GoRoute(
       path: '/notificationView',
@@ -130,7 +134,7 @@ final GoRouter router = GoRouter(
       path: '/securityView',
       builder: (context, state) => const SecurityView(),
     ),
-       GoRoute(
+    GoRoute(
       path: '/languageView',
       builder: (context, state) => const LanguageView(),
     ),

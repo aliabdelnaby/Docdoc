@@ -1,4 +1,4 @@
-import 'package:docdoc/features/profile/data/models/static/faq_item_model.dart';
+import '../models/static/faq_item_model.dart';
 
 List<FAQItemModel> faqItemsList = [
   FAQItemModel(

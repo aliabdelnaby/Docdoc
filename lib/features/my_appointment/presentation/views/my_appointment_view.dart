@@ -1,4 +1,4 @@
-import 'package:docdoc/features/my_appointment/presentation/widgets/search_trailing_appbar.dart';
+import '../widgets/search_trailing_appbar.dart';
 import '../../../home/presentation/widgets/notification/notifaction_app_bar.dart';
 import '../widgets/my_appointment_view_body.dart';
 import 'package:flutter/material.dart';

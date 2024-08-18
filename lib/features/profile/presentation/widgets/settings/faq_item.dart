@@ -1,6 +1,6 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/app_text_styles.dart';
-import 'package:docdoc/features/profile/data/models/static/faq_item_model.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_text_styles.dart';
+import '../../../data/models/static/faq_item_model.dart';
 import 'package:flutter/material.dart';
 
 class FAQItem extends StatefulWidget {

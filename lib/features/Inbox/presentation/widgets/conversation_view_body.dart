@@ -1,8 +1,9 @@
+import 'package:chat_bubbles/chat_bubbles.dart';
+import 'package:flutter/material.dart';
+
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_text_styles.dart';
 import '../../data/models/message_item_model.dart';
-import 'package:flutter/material.dart';
-import 'package:chat_bubbles/chat_bubbles.dart';
 
 class ConversationViewBody extends StatelessWidget {
   const ConversationViewBody({super.key, required this.messageItemModel});
