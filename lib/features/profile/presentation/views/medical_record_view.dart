@@ -1,6 +1,6 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/app_text_styles.dart';
-import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_text_styles.dart';
+import '../../../home/presentation/widgets/notification/notifaction_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class MedicalRecordView extends StatelessWidget {

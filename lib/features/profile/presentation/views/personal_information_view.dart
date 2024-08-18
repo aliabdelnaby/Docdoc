@@ -1,14 +1,15 @@
-import 'package:docdoc/core/utils/app_colors.dart';
-import 'package:docdoc/core/utils/app_text_styles.dart';
-import 'package:docdoc/core/utils/assets.dart';
-import 'package:docdoc/features/auth/presentation/widgets/custom_auth_text_field.dart';
-import 'package:docdoc/features/home/presentation/widgets/notification/notifaction_app_bar.dart';
-import 'package:docdoc/features/onBorading/presentation/widgets/auth_brn.dart';
-import 'package:docdoc/features/profile/presentation/cubit/profile_cubit.dart';
-import 'package:docdoc/features/profile/presentation/cubit/profile_state.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_text_styles.dart';
+import '../../../../core/utils/assets.dart';
+import '../../../auth/presentation/widgets/custom_auth_text_field.dart';
+import '../../../home/presentation/widgets/notification/notifaction_app_bar.dart';
+import '../../../onBorading/presentation/widgets/auth_brn.dart';
+import '../cubit/profile_cubit.dart';
+import '../cubit/profile_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 class PersonalInformationView extends StatefulWidget {
   const PersonalInformationView({super.key});
@@ -175,8 +176,7 @@ class _PersonalInformationViewState extends State<PersonalInformationView> {
                       } else if (state is UpdateProfileFailureState) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
-                            content:
-                                Text(state.errMessage),
+                            content: Text(state.errMessage),
                             backgroundColor: AppColors.red,
                             behavior: SnackBarBehavior.floating,
                           ),

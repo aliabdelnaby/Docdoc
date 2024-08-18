@@ -21,6 +21,10 @@ class Assets {
   /// assets/images/apple.svg
   static const String imagesApple = "assets/images/apple.svg";
 
+  /// Assets for imagesApplepay
+  /// assets/images/applepay.svg
+  static const String imagesApplepay = "assets/images/applepay.svg";
+
   /// Assets for imagesAppointmentCancelled 
   /// assets/images/AppointmentCancelled .svg
   static const String imagesAppointmentCancelled  = "assets/images/AppointmentCancelled .svg";
@@ -44,6 +48,10 @@ class Assets {
   /// Assets for imagesCardiology
   /// assets/images/Cardiology.png
   static const String imagesCardiology = "assets/images/Cardiology.png";
+
+  /// Assets for imagesDana
+  /// assets/images/dana.svg
+  static const String imagesDana = "assets/images/dana.svg";
 
   /// Assets for imagesDermatology
   /// assets/images/Dermatology.png
@@ -193,6 +201,14 @@ class Assets {
   /// assets/images/Orthopedics.png
   static const String imagesOrthopedics = "assets/images/Orthopedics.png";
 
+  /// Assets for imagesPayPal
+  /// assets/images/PayPal.svg
+  static const String imagesPayPal = "assets/images/PayPal.svg";
+
+  /// Assets for imagesPayoneer
+  /// assets/images/Payoneer.svg
+  static const String imagesPayoneer = "assets/images/Payoneer.svg";
+
   /// Assets for imagesPediatric
   /// assets/images/Pediatric.png
   static const String imagesPediatric = "assets/images/Pediatric.png";
@@ -224,6 +240,10 @@ class Assets {
   /// Assets for imagesReview4
   /// assets/images/review4.jpg
   static const String imagesReview4 = "assets/images/review4.jpg";
+
+  /// Assets for imagesScanner
+  /// assets/images/scanner.svg
+  static const String imagesScanner = "assets/images/scanner.svg";
 
   /// Assets for imagesScheduleChanged
   /// assets/images/ScheduleChanged.svg

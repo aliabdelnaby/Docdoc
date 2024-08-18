@@ -1,5 +1,6 @@
-import 'package:docdoc/features/profile/presentation/views/medical_record_view.dart';
-import 'package:docdoc/features/profile/presentation/views/personal_information_view.dart';
+import '../../features/profile/presentation/views/medical_record_view.dart';
+import '../../features/profile/presentation/views/payment_view.dart';
+import '../../features/profile/presentation/views/personal_information_view.dart';
 
 import '../../features/profile/presentation/cubit/profile_cubit.dart';
 import '../../features/profile/presentation/views/faq_view.dart';
@@ -151,6 +152,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/medicalRecordView',
       builder: (context, state) => const MedicalRecordView(),
+    ),
+     GoRoute(
+      path: '/paymentView',
+      builder: (context, state) => const PaymentView(),
     ),
   ],
 );

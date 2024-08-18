@@ -87,7 +87,9 @@ class CustomInfoSheetBody extends StatelessWidget {
           backgroundColor: AppColors.videoCallAppointment,
         ),
         ProfileListTile(
-          onTap: () {},
+          onTap: () {
+            context.push('/paymentView');
+          },
           title: "Payment",
           image: Assets.imagesNewPaymentAdded,
           backgroundColor: AppColors.appointmentCancelled,
