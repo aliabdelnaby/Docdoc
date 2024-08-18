@@ -233,9 +233,9 @@ class Assets {
   /// assets/images/setting.svg
   static const String imagesSetting = "assets/images/setting.svg";
 
-  /// Assets for imagesSettingsFag
-  /// assets/images/settings__fag.svg
-  static const String imagesSettingsFag = "assets/images/settings__fag.svg";
+  /// Assets for imagesSettingsFaq
+  /// assets/images/settings__faq.svg
+  static const String imagesSettingsFaq = "assets/images/settings__faq.svg";
 
   /// Assets for imagesSettingsLanguage
   /// assets/images/settings_language.svg

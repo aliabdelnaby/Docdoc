@@ -1,3 +1,4 @@
+import 'package:docdoc/features/profile/presentation/views/faq_view.dart';
 import 'package:docdoc/features/profile/presentation/views/notification_view.dart';
 import 'package:docdoc/features/profile/presentation/views/settings_view.dart';
 
@@ -118,6 +119,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/notificationView',
       builder: (context, state) => const SettingsNotificationView(),
+    ),
+     GoRoute(
+      path: '/faqView',
+      builder: (context, state) => const FAQView(),
     ),
   ],
 );

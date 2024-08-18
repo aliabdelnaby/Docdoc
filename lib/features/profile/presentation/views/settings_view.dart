@@ -25,9 +25,11 @@ class SettingsView extends StatelessWidget {
                 image: Assets.imagesSettingsNotification,
               ),
               SettingsListTile(
-                onTap: () {},
+                onTap: () {
+                  context.push("/faqView");
+                },
                 title: 'FAQ',
-                image: Assets.imagesSettingsFag,
+                image: Assets.imagesSettingsFaq,
               ),
               SettingsListTile(
                 onTap: () {},
