@@ -1,3 +1,5 @@
+import 'package:docdoc/features/profile/presentation/views/personal_information_view.dart';
+
 import '../../features/profile/presentation/cubit/profile_cubit.dart';
 import '../../features/profile/presentation/views/faq_view.dart';
 import '../../features/profile/presentation/views/language_view.dart';
@@ -137,6 +139,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/languageView',
       builder: (context, state) => const LanguageView(),
+    ),
+    GoRoute(
+      path: '/personalInformationView',
+      builder: (context, state) => const PersonalInformationView(),
     ),
   ],
 );

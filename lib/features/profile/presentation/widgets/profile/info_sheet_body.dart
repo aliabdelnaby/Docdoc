@@ -1,3 +1,5 @@
+import 'package:go_router/go_router.dart';
+
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/utils/assets.dart';
@@ -64,7 +66,14 @@ class CustomInfoSheetBody extends StatelessWidget {
         ),
         const SizedBox(height: 24),
         ProfileListTile(
-          onTap: () {},
+          onTap: () {
+            context.push(
+              '/personalInformationView',
+              extra: {
+                'profile': profile,
+              },
+            );
+          },
           title: "Personal Information",
           image: Assets.imagesPersonalcard,
           backgroundColor: AppColors.scheduleChanged,
