@@ -1,8 +1,12 @@
+
+
 # Dodoc - Telemedicine Application
 
 Dodoc is a telemedicine platform that allows users to book appointments for virtual consultations or in-person visits at a clinic.
 
 This project leverages various Flutter packages to manage state, handle API data, and provide a seamless user experience.
+
+https://github.com/user-attachments/assets/dd33932d-1b5f-43b1-a65b-52b30a39bf6b
 
 ## Features
 
